@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div class="box" id="test">123</div>
+		<script>
+		//遍历节点
+		$('div').each(function(i, elem) {});
+		
+		function forEach(elems, callback) {
+		  if([].forEach) {
+		    [].forEach.call(elems, callback);
+		  } else {
+		    for(var i = 0; i < elems.length; i++) {
+		      callback(elems[i], i);
+		    }
+		  }
+		}
+		var div = document.querySelectorAll('div');
+		forEach(div, function(elem, i){
+		
+		});		
+		
+		//增加类名称
+		$('#test').addClass('a')
+		function addClass(elem,className){
+			if(elem.className){
+				elem.classList.add(className);
+			}else{
+				elem.className +=''+className
+			}
+		}
+		addClass(document.getElementById('test'), 'a');
+		
+		//删除类名称
+		$('#test').removeClass('a');
+		function removeClass(elem,className){
+			if(elem.className){
+				elem.classList.remove(className);
+			}eles{
+				elem.className = elem.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'), ' ');
+			}
+		}
+		removeClass(document.getElementById('test'),);
+		
+//		类名包含
+		$('#test').hasClass('a');
+		
+		function hasClass(elem, className) {
+		  if(elem.classList) {
+		    return elem.classList.contains(className);
+		  } else {
+		    return new RegExp('(^| )' + className + '( |$)', 'gi').test(elem.className);
+		  }
+		}
+		hasClass(document.getElementById('test'), 'a');	
+
+		//获取Element子节点
+		$('#test').children()
+		
+		function children(elem) {
+		  if(elem.children) {
+		    return elem.children;
+		  } else {
+		    var children = [];     
+		    for (var i = el.children.length; i--;) {       
+		        if (el.children[i].nodeType != 8)      
+		          children.unshift(el.children[i]);    
+		    }
+		    return children;
+		  }
+		}
+		
+		children(document.getElementById('test'));
+		</script>
+	</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.pop{background:#fff;width:260px;border:1px solid #e0e0e0;font-size:12px;position:fixed;right:10px;bottom:-175px;}
+			.pop .pophead{line-height:32px;background:#1eaad4;border-bottom:1px solid #e0e0e0;position:relative;font-size:12px;padding:0 0 0 10px;}
+			.pop .pophead h2{font-size:14px;color:#fff;line-height:32px;height:32px;margin: 0;}
+			.pop .pophead .popclose{position:absolute;right:10px;top:1px;color: #fff;}
+			.pop .pophead .popclose:hover{cursor:pointer;}
+			.pop .popcontent{padding:5px 10px;}
+			.pop .poptitle a{line-height:24px;font-size:14px;font-family:'微软雅黑';color:#333;font-weight:bold;text-decoration:none;}
+			.pop .popintro{text-indent:24px;line-height:160%;margin:5px 0;color:#666;}
+			.pop .popintro ul {list-style: none;}
+			.pop .popmore{text-align:right;border-top:1px dotted #ccc;line-height:24px;padding-top: 4px;}
+			.eye-pointer {cursor: pointer; margin-top: 10px; margin-left: -50px;}
+		</style>
+	</head>
+	<body>
+		<div class="pop" id="pop">
+			<div class="pophead"> <a class="popclose" title="关闭">关闭</a>
+				<h2>温馨提示</h2>
+			</div>
+			<div class="popcontent">
+				<dl>
+					<dt class="poptitle"><a href="https://www.baidu.com/" target="_blank">工程A类测试项目</a></dt>
+					<dd class="popintro">
+						<ul>
+							<li>任务:B类测试项目</li>
+							<li>节点:方案的资料已经提交!</li>
+						</ul>
+					</dd>
+				</dl>
+				<p class="popmore"><a class="btn btn-blue">点击查看</a></p>
+			</div>
+		</div>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script>
+			$(function(){
+				$('#pop').animate({bottom:'10px'},700);
+			})
+			$('#pop .popclose').click(function(){
+				$('#pop').hide();
+			})
+		</script>
+	</body>
+</html>

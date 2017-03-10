@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			ul li {list-style: none;}
+			.project {
+				width: 260px;
+    			height: 140px;
+			}
+			.project {
+			    position: relative;
+			    height: 150px;
+			    margin:40px 18px;
+			    background-color: #de9227;
+			    background-position: center;
+			    -webkit-transform: translate3d(0,0,0);
+			    transform: translate3d(0,0,0);
+			    -webkit-transition: all .5s;
+			    transition: all .5s;
+			    border-top-right-radius: 4px;
+			    border-top-left-radius: 0px;
+			    cursor: pointer;
+			}
+			.project:before{
+			    content: "";
+			    position: absolute;
+			    top:-30px;
+			    left: 0px;
+			    width: 120px;
+			    height:30px;
+			    padding:4px 14px;
+			    background-color: #de9227;
+			    border-top-left-radius: 4px;
+			    border-top-right-radius: 4px;
+			    -webkit-transition: all .5s;
+			    transition: all .5s;;
+			    z-index: -1;
+			}
+			.project:after{
+			    content: "";
+			    position: absolute;
+			    z-index: -2;
+			    top:-10px;
+			    left: 0;
+			    bottom: 0;
+			    width: 235px;
+			    padding:4px 14px;
+			    background-color: #de9227;
+			    border-top-left-radius: 0;
+			    border-top-right-radius: 4px;
+			    -webkit-transition: all .5s;
+			    transition: all .5s;;
+			}
+			.project-info{
+			    display: -webkit-flex;
+			    display: -ms-flexbox;
+			    display: flex;
+			    -webkit-flex-direction: column;
+			    flex-direction: column;
+			    margin: 0;
+			    padding: 10px 15px 20px;
+			    color: #FFF;
+			    border-top-right-radius: 4px;
+			    border-top-left-radius: 0px;
+			    -webkit-transition: all .5s;
+			    transition: all .5s;
+			}
+			.project-info:before{
+			    content: "";
+			    background-image: linear-gradient(to bottom,rgb(240, 173, 78) 0,rgb(226, 135, 6) 100%);
+			    width: 100%;
+			    height: 100%;
+			    top: 0;
+			    left: 0;
+			    position: absolute;
+			    z-index: -1;
+			    border-top-right-radius: 4px;
+			    border-top-left-radius: 4px;
+			    -webkit-transform: rotate(0deg) scale(1) skew(-2deg) translate(4px);
+			    transform: rotate(0deg) scale(1) skew(-2deg) translate(4px);
+			    -webkit-transition: all .5s;
+			    transition: all .5s;;
+			}
+			/*文件夹打开动画*/
+			.project:hover:before{
+			    -webkit-transition: all .5s;
+			    transition: all .5s;;
+			    -webkit-transform: scale(1) rotate(0deg) translateX(-11px) translateY(-4px) skewX(4deg) skewY(0deg);
+			    transform:scale(1) rotate(0deg) translateX(-11px) translateY(-4px) skewX(4deg) skewY(0deg);
+			}
+			.project:hover:after{
+			    -webkit-transition: all .5s;
+			    transition: all .5s;;
+			    -webkit-transform: scale(1) rotate(0deg) translateX(-5px) translateY(-4px) skewX(4deg) skewY(0deg);
+			    transform:scale(1) rotate(0deg) translateX(-5px) translateY(-4px) skewX(4deg) skewY(0deg);
+			}
+			.project:hover .project-info{
+			    padding:10px 22px 20px;
+			    -webkit-transition: all .5s;
+			    transition: all .5s;;
+			}
+			.project.add-project-button:hover:before,
+			.project.add-project-button:hover:after,
+			.project.add-project-button .project-info:hover{
+			    transform: none;
+			    -webkit-transform: none;
+			}
+			.project:hover .project-info:before{
+			    -webkit-transform: rotate(0deg) scale(1) skew(-4deg) translateX(6px) translateY(0px);
+			    transform: rotate(0deg) scale(1) skew(-4deg) translateX(6px) translateY(0px);
+			    -webkit-transition: all .5s;
+			    transition: all .5s;;
+			}
+		</style>
+	</head>
+	<body>
+		<ul class="projects">
+            <li class="project fs-media">
+                <div>
+                    <header class="project-info" onclick="location.href='taskManage.html'">
+                    </header>
+                </div>
+            </li>
+        </ul>		
+	</body>
+</html>

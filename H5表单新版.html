@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	   <form>
+	        <input type="url" name="url" value="http://www.baidu.com">
+	        <input type="email" name="email" value="853113210@qq.com">
+	        <input type="date" name="date" value="">
+	        <input type="time" name="time" value="10:00">
+	        <input type="datetime" name="datetime" value="">
+	        <input type="month" name="month" value="2016-01-01">
+	        <input type="week" name="week" value="">
+	        <input type="number" name="number" value="" min="10" max="50" step="5">
+	        <input type="range" name="range" value="15" min="0" max="20">
+	        <input type="search" name="search" value="">
+	        <input type="tel">
+	        <input type="color" onChange="document.body.style.backgroundColor=document.getElementById('bcolor').textContent=this.value";>
+	        <span id="bcolor"></span>
+	        <input type="submit" value="提交(相当于表单验证)">
+	    </form>
+	    <ol>
+			<li><span style="color:#ff0000 ">email</span> 类型用于验证email的格式，当表单提交时，会自动验证email的值</li>
+			<li><span style="color:#ff0000 ">url</span> 类型用于验证url的格式，当表单提交时，会自动验证url的格式</li>
+			<li><span style="color:#ff0000 ">number </span>根据你的设置提供数字的功能，min属性设置最小值，max属性设置最大值，value设置当前的值，sept设置每次的增长值</li>
+			<li><span style="color:#ff0000 ">range</span>用于包含一定范围内数字值，会以一个滑块显示，min属性设置最小值，max属性设置最大值，vaule设置当前值，如果没有设置，则默认的范围是1-100</li>
+			<li><span style="color:#ff0000 ">date </span>选取年月日</li>
+			<li><span style="color:#ff0000 ">time </span>选取时间</li>
+			<li><span style="color:#ff0000 ">datetime </span>选取时间、年月日（UTC时间）</li>
+			<li><span style="color:#ff0000 ">datetime-local </span> 选取时间、年月日（本地时间）</li>
+			<li><span style="color:#ff0000 ">search&nbsp;&nbsp;</span>用于搜索域 </li>
+			<li><span style="color:#ff0000 ">tel</span> 验证输入电话格式</li>
+			<li><span style="color:#ff0000 ">color </span> 颜色选择器，供用户选择，并将用户选择的颜色填充到此元素中</li>
+		</ol>
+	表单的属性：
+	<br>
+	<span>autocomplete</span>
+	<br> novalidate
+	<br> form
+	<br> form overrides(formaction,formentype,formmrethod,formnovalidate,formtarget)<br> height,width
+	<br> list
+	<br> min,max,step,
+	<br> multiple,
+	<br> pattern(ragexp)
+	<br> placeholder
+	<br> required
+	</body>
+</html>

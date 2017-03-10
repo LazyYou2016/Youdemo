@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<style>
+				ul {
+				    list-style: none;
+				    padding: 0;
+				}
+				.cardlist {
+				    display: block;
+				    max-width: 1244px;
+				    margin-left: auto;
+				    margin-right: auto;
+				}
+				.cardlist li {
+					padding: 0;
+				    margin: 0;
+				    float: left;
+				    position: relative;
+				    width: 25%;
+				    box-sizing: border-box;
+				}
+				.cardlist .img-responsive {
+					width: 100%;
+				}
+				.cardlist-warp {
+				    max-width: 249px;
+				    max-height: 228px;
+				    position: relative;
+				}
+				.hoveropacity {
+				    -o-transition: opacity .4s ease-in-out;
+				    -ms-transition: opacity .4s ease-in-out;
+				    -moz-transition: opacity .4s ease-in-out;
+				    -webkit-transition: opacity .4s ease-in-out;
+				    transition: opacity .4s ease-in-out;
+				}				
+				.cardlist .cl-img {
+					position: absolute;
+					top: 0;
+				    left: 0;
+				    width: 100%;
+				    height: 100%;
+				    background: #000;
+				    opacity: .5;
+				}
+				.cardlist .cl-warp:hover .cl-img{
+					opacity: 0;
+				}
+				.cardlist .cl-title {
+					position: absolute;
+				    bottom: 0;
+				    left: 0;
+				    width: 100%;
+				    background: rgba(0,0,0,.5);
+				    font-size: 16px;
+				    padding: 10px 25px;
+				    color: #fff;
+				}
+				.cardlist .cl-warp:hover .cl-title{
+					background: rgba(0,0,0,.4);
+				}
+				@media (max-width: 640px){
+					.cardlist {
+						text-align: center;
+					}
+					.cardlist li {
+					    display: inline-block;
+					    float: none;
+					    width: 48%;
+					}
+				}
+				@media (max-width: 480px){
+					.cardlist li {
+					    display: inline-block;
+					    width: 100%;
+					}
+				}			
+		</style>
+	</head>
+	<body>
+		<ul class="cardlist">
+			<li>
+				<div class="cl-warp">
+					<img class="img-responsive" src="imgs/project-7.png"/>
+					<div class="cl-img hoveropacity">
+						
+					</div>
+					<div class="cl-title hoveropacity">
+						互联网行业
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="cl-warp">
+					<img class="img-responsive" src="imgs/project-7.png"/>
+					<div class="cl-img hoveropacity">
+						
+					</div>
+					<div class="cl-title hoveropacity">
+						互联网行业
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="cl-warp">
+					<img class="img-responsive" src="imgs/project-7.png"/>
+					<div class="cl-img hoveropacity">
+						
+					</div>
+					<div class="cl-title hoveropacity">
+						互联网行业
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="cl-warp">
+					<img class="img-responsive" src="imgs/project-7.png"/>
+					<div class="cl-img hoveropacity">
+						
+					</div>
+					<div class="cl-title hoveropacity">
+						互联网行业
+					</div>
+				</div>
+			</li>			
+		</ul>		
+	</body>
+</html>

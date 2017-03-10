@@ -1,0 +1,92 @@
+and "A".  Thus "2dAs"
+    deletes the current and previous sentence. (Jens Paulus)
+7   Add "g{" and "g}" to move to the first/last character of a paragraph
+    (instead of the line just before/after a paragraph as with "{" and "}").
+6   Ignore comment leaders for objects.  Make "das" work in reply-email.
+5   Make it possible to use syntax group matches as a text object.  For
+    example, define a "ccItem" group, then do "da<ccItem>" to delete one.
+    Or, maybe just define "dai", delete-an-item, to delete the syntax item the
+    cursor is on.
+
+
+Select mode:
+8   In blockwise mode, typed characters are inserted in front of the block,
+    backspace deletes a column before the block. (Steve Hall)
+7   Alt-leftmouse starts block mode selection in MS Word.
+    See http://vim.wikia.com/wiki/Use_Alt-Mouse_to_select_blockwise.
+7   Add Cmdline-select mode.  Like Select mode, but used on the command line.
+    - Change gui_send_mouse_event() to pass on mouse events when 'mouse'
+      contains 'C' or 'A'.
+    - Catch mouse events in ex_getln.c.  Also shift-cursor, etc., like in
+      normal_cmd().
+    - remember start and end of selection in cmdline_info.
+    - Typing text replaces the selection.
+
+
+Visual mode:
+8   Support using "." in Visual mode. Use the operator applied to the Visual
+    selection, if possible.
+-   When dragging the Visual selection with the mouse and 'scrolloff' is zero,
+    behave like 'scrolloff' is one, so that the text scrolls when the pointer
+    is in the top line.
+-   Displaying size of Visual area: use 24-33 column display.
+    When selecting multiple lines, up to about a screenful, also count the
+    characters.
+8   When using "I" or "A" in Visual block mode, short lines do not get the new
+    text.  Make it possible to add the text to short lines too, with padding
+    where needed.
+7   With a Visual block selected, "2x" deletes a block of double the width,
+    "3y" yanks a block of triple width, etc.
+7   When selecting linewise, using "itext" should insert "text" at the start
+    of each selected line.
+8   What is "R" supposed to do in Visual mode?
+8   Make Visual mode local to the buffer.  Allow changing to another buffer.
+    When starting a new Visual selection, remove the Visual selection in any
+    other buffer. (Ron Aaron)
+8   Support dragging the Visual area to drop it somewhere else. (Ron Aaron,
+    Ben Godfrey)
+7   Support dragging the Visual area to drop it in another program, and
+    receive dropped text from another program. (Ben Godfrey)
+7   With blockwise Visual mode and "c", "C", "I", "A", etc., allow the use of
+    a <CR>.  The entered lines are repeated over the Visual area.
+7   Filtering a block should only apply to the block, not to the whole lines.
+    When the number of lines is increased, add lines. When decreased, pad with
+    spaces or delete? Use ":`<,`>" on the command line.
+8   After filtering the Visual area, make "gv" select the filtered text?
+    Currently "gv" only selects a single line, not useful.
+7   Don't move the cursor when scrolling?  Needed when the selection should
+    stay the same.  Scroll to the cursor at any movement command.  With an
+    option!
+7   In Visual block mode, need to be able to define a corner on a position
+    that doesn't have text?  Also: when using the mouse, be able to select
+    part of a TAB.  Even more: Add a mode where the cursor can be on a screen
+    position where there is no text.  When typing, add spaces to fill the gap.
+    Other solution: Always use curswant, so that you can move the cursor to
+    the right column, and then use up/down movements to select the line,
+    without changing the column.
+6   ":left" and ":right" should work in Visual block mode.
+7   CTRL-I and CTRL-O should work in Visual mode, but only jump to marks in the
+    current buffer.
+6   In non-Block mode, "I" should insert the same text in front of each line,
+    before the first non-blank, "gI" in column 1.
+6   In non-Block mode, "A" should append the same text after each line.
+6   When in blockwise visual selection (CTRL-V), allow cursor to be placed
+    right of the line.  Could also allow cursor to be placed anywhere on a TAB
+    or other special character.
+6   Add commands to move selected text, without deselecting.
+
+
+More advanced repeating commands:
+-   Add "." command for visual mode: redo last visual command (e.g. ":fmt").
+-   Add command to repeat last movement.  Including count.
+-   Add "." command after operator: repeat last command of same operator.  E.g.
+    "c." will repeat last change, also when "x" used since then (Webb).
+    "y." will repeat last yank.
+    "c2." will repeat the last but one change?
+    Also: keep history of Normal mode commands, add command to list the history
+    and/or pick an older command.
+-   History stack for . command?  Use "g." command.
+
+
+Mappings and Abbreviations:
+8   When "0" is mapped (it is a movement c

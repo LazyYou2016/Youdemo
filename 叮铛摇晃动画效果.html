@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.main {width: 500px;margin: auto;}
+			.news-icon {width: 50px;height: 50px;background-color: #0087CB;}
+			.badge-anim {
+				-webkit-animation: badge-anim 300ms infinite;				
+				animation: badge-anim 300ms infinite;
+			}
+			#newsanim {display: none;}
+			@-webkit-keyframes badge-anim {
+			  0% {
+				@-webkit-transform-origin: top left;
+			    @-webkit-transform: rotate(-10deg);
+			  }
+			  50% {
+				@-webkit-transform-origin: top right;
+			    @-webkit-transform: rotate(10deg);
+			  }
+			  100% {
+				@-webkit-transform-origin: top left;
+			    @-webkit-transform: rotate(-10deg);
+			  }
+			}
+			@keyframes badge-anim {
+			  0% {
+				transform-origin: top left;
+			    transform: rotate(-10deg);
+			  }
+			  50% {
+				transform-origin: top right;
+			    transform: rotate(10deg);
+			  }
+			  100% {
+				transform-origin: top left;
+			    transform: rotate(-10deg);
+			  }
+			}			
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="news-icon" id="fa-bell-o">
+				
+			</div>
+			<span class="badge-tips" id="newsanim">10</span>
+		</div>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script>
+			// 新增消息叮铛 摇晃   数量为0  停止摇晃
+			$(function(){
+				var NewsNumber = $('#newsanim').text();
+				if(NewsNumber>0){
+					$('#fa-bell-o').addClass('badge-anim');
+					$('#newsanim').show();
+				}				
+			})
+
+		</script>
+	</body>
+</html>

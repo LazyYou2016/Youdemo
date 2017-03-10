@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.min.css"/>
+		<style>
+.block-list,.block-center {
+	position: relative;
+    color: #6C6C6C;
+    background-color: #fff;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.bl-box {
+	padding: 5px 10px;
+}
+.labeltitle,
+.labelinput{
+	width: 7rem;
+	padding: 7px 10px;
+}
+.labeltitle {
+	float: left;
+	width: 105px;
+	text-align: right;
+}
+.labelinput {
+	float: left;
+	width: 440PX;
+	position: relative;
+}
+.labelinput input
+{
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.labelinput .iconfont {
+	position: absolute;
+    top: -3px;
+    right: 11px;
+    cursor: pointer;
+}
+.bl-radio{
+    background-color: #FFF;
+    border: 1px solid #E7E7E7;
+    border-radius: 3px;
+    padding: 5px 0;
+}
+.bl-radio.username {
+	border: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    padding-left: 10px;
+}
+.bl-radio input{
+	-webkit-box-shadow:none;
+	box-shadow:none
+}
+#error-tips {
+	text-align: center;
+	margin: auto;
+	color: #FF4351;
+}
+.modal-footer.text-center {
+	text-align: center;
+}
+.modal-footer .btn-primary {
+	background: #59b7d0;
+	border-color: #59b7d0;
+}
+		</style>
+	</head>
+	<body>
+		<a href="#" data-toggle="modal" data-target="#myModal">修改密码</a>
+		<!-- 修改密码 -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+			    <div class="modal-content">
+			        <div class="modal-header">
+				        <h4 class="modal-title text-center">修改密码</h4>
+			        </div>
+				    <div class="modal-body">
+						<div class="block-list">
+							<div class="bl-box">
+								<div class="bl-radio username clearfix">
+										用户名XXXXXXXXX
+								</div>
+							</div>						
+							<div class="bl-box">
+								<div class="bl-radio clearfix">
+									<div class="labeltitle">
+										旧密码：
+									</div>
+									<div class="labelinput eye">
+										<input type="password" placeholder="请输入旧密码">
+										<i class="iconfont icon-mimayincang icon-2x">eye</i>
+									</div>
+								</div>
+							</div>
+							<div class="bl-box">
+								<div class="bl-radio clearfix">
+									<div class="labeltitle">
+										新密码：
+									</div>
+									<div class="labelinput eye">
+										<input id="newpw" type="password" placeholder="6-15位数字或字符">
+										<i class="iconfont icon-mimayincang icon-2x">eye</i>
+									</div>
+								</div>
+							</div>
+							<div class="bl-box">
+								<div class="bl-radio clearfix">
+									<div class="labeltitle">
+										确认密码：
+									</div>
+									<div class="labelinput eye">
+										<input id="again-newpw" type="password" placeholder="6-15位数字或字符">
+										<i class="iconfont icon-mimayincang icon-2x">eye</i>
+									</div>
+								</div>
+							</div>	
+						</div>
+						<div id="error-tips"></div>
+				    </div>
+			        <div class="modal-footer text-center">
+			        	<a class="btn btn-primary" href="javascript:editPW()">确认</a>
+				        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+			        </div>
+			    </div>
+		    </div>
+		</div>		
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script>
+		    function editPW(){
+				var newPW = $('#newpw').val();
+				var again_newPW = $('#again-newpw').val();
+				if (newPW!=again_newPW){
+					$('#error-tips').text('新密码与确认密码不一致!');
+					return false;
+				}else{
+					alert('修改成功！')
+				}
+			}
+			$('.eye i').click(function(){
+				var eyeicon = $(this).siblings('[type="password"]').attr('type');
+				var eyeinput = $(this).siblings('input');
+				if(eyeicon=='password'){
+					eyeinput.attr('type','text');
+					$(this).removeClass('icon-mimayincang').addClass('icon-caozuo-yincangmima')
+				}else{
+					eyeinput.attr('type','password');
+					$(this).removeClass('icon-caozuo-yincangmima').addClass('icon-mimayincang');
+				}
+			})
+		</script>
+	</body>
+</html>
