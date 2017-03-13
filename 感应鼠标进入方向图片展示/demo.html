@@ -1,20 +1,65 @@
-function header, with each argument on its own line.
--   "[p" and "]p" should use 'cindent' code if it's on (only for the first
-    line).
--   Add option to 'cindent' to set indent for comments outside of {}?
--   Make a command to line up a comment after a code line with a previous
-    comment after a code line.	Can 'cindent' do this automatically?
--   When 'cindent'ing a '}', showmatch is done before fixing the indent.  It
-    looks better when the indent is fixed before the showmatch. (Webb)
--   Add option to make indenting work in comments too (for commented-out
-    code), unless the line starts with "*".
--   Don't use 'cindent' when doing formatting with "gq"?
--   When formatting a comment after some text, insert the '*' for the new line
-    (indent is correct if 'cindent' is set, but '*' doesn't get inserted).
-8   When 'comments' has both "s1:/*,mb:*,ex:*/" and "s1:(*,mb:*,ex:*)", the
-    'x' flag always uses the first match.  Need to continue looking for more
-    matches of "*" and remember all characters that could end the comment.
--   For smartindent: When typing 'else' line it up with matching 'if'.
--   'smartindent': allow patterns in 'cinwords', for e.g. TeX files, where
-    lines start with "\item".
--   Support this style of comments (with an o
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.main {
+				width: 1200px;
+				margin: 0 auto;
+			}
+			.example{
+				width: 250px;
+				height: 250px;
+				background:powderblue;
+				float: left;
+				margin: 25px;
+			}
+			.intro{
+				background:firebrick;
+			}
+								
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="box example">
+				<span class="intro"></span>
+			</div>
+			<div class="box example">
+				<span class="intro"></span>
+			</div>
+			<div class="box example">
+				<span class="intro"></span>
+			</div>
+			<div class="box example">
+				<span class="intro"></span>
+			</div>
+			<div class="box example">
+				<span class="intro"></span>
+			</div>
+			<div class="box example">
+				<span class="intro"></span>
+			</div>
+			<div class="box example">
+				<span class="intro"></span>
+			</div>		
+			<div class="box example">
+				<span class="intro"></span>
+			</div>
+			<div class="box example">
+				<span class="intro"></span>
+			</div>
+			
+		</div>
+		<script src="sHover.min.js"></script>
+		<script>
+			var example=new sHover("example","intro");
+			example.set({
+				speed:7,
+				opacity:80,						
+				opacityChange:true
+			});	
+		</script>
+	</body>
+</html>

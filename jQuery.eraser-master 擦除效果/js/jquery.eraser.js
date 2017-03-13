@@ -1,208 +1,411 @@
-zcyAzIFB1YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9y
-aXR5IC0gRzQwHhcNMDcxMTA1MDAwMDAwWhcNMzgwMTE4MjM1OTU5WjCByjELMAkG
-A1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZWZXJp
-U2lnbiBUcnVzdCBOZXR3b3JrMTowOAYDVQQLEzEoYykgMjAwNyBWZXJpU2lnbiwg
-SW5jLiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5MUUwQwYDVQQDEzxWZXJpU2ln
-biBDbGFzcyAzIFB1YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9yaXR5
-IC0gRzQwdjAQBgcqhkjOPQIBBgUrgQQAIgNiAASnVnp8Utpkmw4tXNherJI9/gHm
-GUo9FANL+mAnINmDiWn6VMaaGF5VKmTeBvaNSjutEDxlPZCIBIngMGGzrl0Bp3ve
-fLK+ymVhAIau2o970ImtTR1ZmkGxvEeA3J5iw/mjgbIwga8wDwYDVR0TAQH/BAUw
-AwEB/zAOBgNVHQ8BAf8EBAMCAQYwbQYIKwYBBQUHAQwEYTBfoV2gWzBZMFcwVRYJ
-aW1hZ2UvZ2lmMCEwHzAHBgUrDgMCGgQUj+XTGoasjY5rw8+AatRIGCx7GS4wJRYj
-aHR0cDovL2xvZ28udmVyaXNpZ24uY29tL3ZzbG9nby5naWYwHQYDVR0OBBYEFLMW
-kf3upm7ktS5Jj4d4gYDs5bG1MAoGCCqGSM49BAMDA2gAMGUCMGYhDBgmYFo4e1ZC
-4Kf8NoRRkSAsdk1DPcQdhCPQrNZ8NQbOzWm9kA3bbEhCHQ6qQgIxAJw9SDkjOVga
-FRJZap7v1VmyHVIsmXHNxynfGyphe3HR3vPA5Q06Sqotp9iGKt0uEA==
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-MIIE0zCCA7ugAwIBAgIQGNrRniZ96LtKIVjNzGs7SjANBgkqhkiG9w0BAQUFADCB
-yjELMAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQL
-ExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTowOAYDVQQLEzEoYykgMjAwNiBWZXJp
-U2lnbiwgSW5jLiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5MUUwQwYDVQQDEzxW
-ZXJpU2lnbiBDbGFzcyAzIFB1YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0
-aG9yaXR5IC0gRzUwHhcNMDYxMTA4MDAwMDAwWhcNMzYwNzE2MjM1OTU5WjCByjEL
-MAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQLExZW
-ZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTowOAYDVQQLEzEoYykgMjAwNiBWZXJpU2ln
-biwgSW5jLiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5MUUwQwYDVQQDEzxWZXJp
-U2lnbiBDbGFzcyAzIFB1YmxpYyBQcmltYXJ5IENlcnRpZmljYXRpb24gQXV0aG9y
-aXR5IC0gRzUwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCvJAgIKXo1
-nmAMqudLO07cfLw8RRy7K+D+KQL5VwijZIUVJ/XxrcgxiV0i6CqqpkKzj/i5Vbex
-t0uz/o9+B1fs70PbZmIVYc9gDaTY3vjgw2IIPVQT60nKWVSFJuUrjxuf6/WhkcIz
-SdhDY2pSS9KP6HBRTdGJaXvHcPaz3BJ023tdS1bTlr8Vd6Gw9KIl8q8ckmcY5fQG
-BO+QueQA5N06tRn/Arr0PO7gi+s3i+z016zy9vA9r911kTMZHRxAy3QkGSGT2RT+
-rCpSx4/VBEnkjWNHiDxpg8v+R70rfk/Fla4OndTRQ8Bnc+MUCH7lP59zuDMKz10/
-NIeWiu5T6CUVAgMBAAGjgbIwga8wDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8E
-BAMCAQYwbQYIKwYBBQUHAQwEYTBfoV2gWzBZMFcwVRYJaW1hZ2UvZ2lmMCEwHzAH
-BgUrDgMCGgQUj+XTGoasjY5rw8+AatRIGCx7GS4wJRYjaHR0cDovL2xvZ28udmVy
-aXNpZ24uY29tL3ZzbG9nby5naWYwHQYDVR0OBBYEFH/TZafC3ey78DAJ80M5+gKv
-MzEzMA0GCSqGSIb3DQEBBQUAA4IBAQCTJEowX2LP2BqYLz3q3JktvXf2pXkiOOzE
-p6B4Eq1iDkVwZMXnl2YtmAl+X6/WzChl8gGqCBpH3vn5fJJaCGkgDdk+bW48DW7Y
-5gaRQBi5+MHt39tBquCWIMnNZBU4gcmU7qKEKQsTb47bDN0lAtukixlE0kF6BWlK
-WE9gyn6CagsCqiUXObXbf+eEZSqVir2G3l6BFoMtEMze/aiCKm0oHw0LxOXnGiYZ
-4fQRbxC1lfznQgUy286dUV4otp6F01vvpX1FQHKOtw5rDgb7MzVIcbidJ4vEZV8N
-hnacRHr2lVz2XTIIM6RUthg/aFzyQkqFOFSDX9HoLPKsEdao7WNq
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-MIIEuTCCA6GgAwIBAgIQQBrEZCGzEyEDDrvkEhrFHTANBgkqhkiG9w0BAQsFADCB
-vTELMAkGA1UEBhMCVVMxFzAVBgNVBAoTDlZlcmlTaWduLCBJbmMuMR8wHQYDVQQL
-ExZWZXJpU2lnbiBUcnVzdCBOZXR3b3JrMTowOAYDVQQLEzEoYykgMjAwOCBWZXJp
-U2lnbiwgSW5jLiAtIEZvciBhdXRob3JpemVkIHVzZSBvbmx5MTgwNgYDVQQDEy9W
-ZXJpU2lnbiBVbml2ZXJzYWwgUm9vdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAe
-Fw0wODA0MDIwMDAwMDBaFw0zNzEyMDEyMzU5NTlaMIG9MQswCQYDVQQGEwJVUzEX
-MBUGA1UEChMOVmVyaVNpZ24sIEluYy4xHzAdBgNVBAsTFlZlcmlTaWduIFRydXN0
-IE5ldHdvcmsxOjA4BgNVBAsTMShjKSAyMDA4IFZlcmlTaWduLCBJbmMuIC0gRm9y
-IGF1dGhvcml6ZWQgdXNlIG9ubHkxODA2BgNVBAMTL1ZlcmlTaWduIFVuaXZlcnNh
-bCBSb290IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MIIBIjANBgkqhkiG9w0BAQEF
-AAOCAQ8AMIIBCgKCAQEAx2E3XrEBNNti1xWb/1hajCMj1mCOkdeQmIN65lgZOIzF
-9uVkhbSicfvtvbnazU0AtMgtc6XHaXGVHzk8skQHnOgO+k1KxCHfKWGPMiJhgsWH
-H26MfF8WIFFE0XBPV+rjHOPMee5Y2A7Cs0WTwCznmhcrewA3ekEzeOEz4vMQGn+H
-LL729fdC4uW/h2KJXwBL38Xd5HVEMkE6HnFuacsLdUYI0crSK5XQz/u5QGtkjFdN
-/BMReYTtXlT2NJ8IAfMQJQYXStrxHXpma5hgZqTZ79IugvHw7wnqRMkVauIDbjPT
-rJ9VAMf2CGqUuV/c4DPxhGD5WycRtPwW8rtWaoAljQIDAQABo4GyMIGvMA8GA1Ud
-EwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQDAgEGMG0GCCsGAQUFBwEMBGEwX6FdoFsw
-WTBXMFUWCWltYWdlL2dpZjAhMB8wBwYFKw4DAhoEFI/l0xqGrI2Oa8PPgGrUSBgs
-exkuMCUWI2h0dHA6Ly9sb2dvLnZlcmlzaWduLmNvbS92c2xvZ28uZ2lmMB0GA1Ud
-DgQWBBS2d/ppSEefUxLVwuoHMnYH0ZcHGTANBgkqhkiG9w0BAQsFAAOCAQEASvj4
-sAPmLGd75JR3Y8xuTPl9Dg3cyLk1uXBPY/ok+myDjEedO2Pzmvl2MpWRsXe8rJq+
-seQxIcaBlVZaDrHC1LGmWazxY8u4TB1ZkErvkBYoH1quEPuBUDgMbMzxPcP1Y+Oz
-4yHJJDnp/RVmRvQbEdBNc6N9Rvk97ahfYtTxP/jgdFcrGJ2BtMQo2pSXpXDrrB2+
-BxHw1dvd5Yzw1TKwg+ZX4o+/vqGqvz0dtdQ46tewXDpPaj+PwGZsY6rp2aQW9IHR
-lRQOfc2VNNnSj3BzgXucfr2YYdhFh5iQxeuGMMY1v/D/w1WIg0vvBZIGcfK4mJO3
-7M2CYfE45k+XmCpajQ==
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-MIIEGjCCAwICEQCbfgZJoz5iudXukEhxKe9XMA0GCSqGSIb3DQEBBQUAMIHKMQsw
-CQYDVQQGEwJVUzEXMBUGA1UEChMOVmVyaVNpZ24sIEluYy4xHzAdBgNVBAsTFlZl
-cmlTaWduIFRydXN0IE5ldHdvcmsxOjA4BgNVBAsTMShjKSAxOTk5IFZlcmlTaWdu
-LCBJbmMuIC0gRm9yIGF1dGhvcml6ZWQgdXNlIG9ubHkxRTBDBgNVBAMTPFZlcmlT
-aWduIENsYXNzIDMgUHVibGljIFByaW1hcnkgQ2VydGlmaWNhdGlvbiBBdXRob3Jp
-dHkgLSBHMzAeFw05OTEwMDEwMDAwMDBaFw0zNjA3MTYyMzU5NTlaMIHKMQswCQYD
-VQQGEwJVUzEXMBUGA1UEChMOVmVyaVNpZ24sIEluYy4xHzAdBgNVBAsTFlZlcmlT
-aWduIFRydXN0IE5ldHdvcmsxOjA4BgNVBAsTMShjKSAxOTk5IFZlcmlTaWduLCBJ
-bmMuIC0gRm9yIGF1dGhvcml6ZWQgdXNlIG9ubHkxRTBDBgNVBAMTPFZlcmlTaWdu
-IENsYXNzIDMgUHVibGljIFByaW1hcnkgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkg
-LSBHMzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAMu6nFL8eB8aHm8b
-N3O9+MlrlBIwT/A2R/XQkQr1F8ilYcEWQE37imGQ5XYgwREGfassbqb1EUGO+i2t
-KmFZpGcmTNDovFJbcCAEWNF6yaRpvIMXZK0Fi7zQWM6NjPXr8EJJC52XJ2cybuGu
-kxUccLwgTS8Y3pKI6GyFVxEa6X7jJhFUokWWVYPKMIno3Nij7SqAP395ZVc+FSBm
-CC+Vk7+qRy+oRpfwEuL+wgorUeZ25rdGt+INpsyow0xZVYnm6FNcHOqd8GIWC6fJ
-Xwzw3sJ2zq/3avL6QaaiMxTJ5Xpj055iN9WFZZ4O5lMkdBteHRJTW8cs54NJOxWu
-imi5V5cCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAERSWwauSCPc/L8my/uRan2Te
-2yFPhpk0djZX3dAVL8WtfxUfN2JzPtTnX84XA9s1+ivbrmAJXx5fj267Cz3qWhMe
-DGBvtcC1IyIuBwvLqXTLR7sdwdela8wv0kL9Sd2nic9TutoAWii/gt/4uhMdUIaC
-/Y4wjylGsB49Ndo4YhYYSq3mtlFs3q9i6wHQHiT+eo8SGhJouPtmmRQURVyu565p
-F4ErWjfJXir0xuKhXFSbplQAz/DxwceYMBo7Nhbbo27q/a2ywtrvAkcTisDxszGt
-TxzhT5yvDwyd93gN2PQ1VoDat20Xj50egWTh/sVFuq1ruQp6Tk9LhO5L8X3dEQ==
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-MIIEGjCCAwICEQDsoKeLbnVqAc/EfMwvlF7XMA0GCSqGSIb3DQEBBQUAMIHKMQsw
-CQYDVQQGEwJVUzEXMBUGA1UEChMOVmVyaVNpZ24sIEluYy4xHzAdBgNVBAsTFlZl
-cmlTaWduIFRydXN0IE5ldHdvcmsxOjA4BgNVBAsTMShjKSAxOTk5IFZlcmlTaWdu
-LCBJbmMuIC0gRm9yIGF1dGhvcml6ZWQgdXNlIG9ubHkxRTBDBgNVBAMTPFZlcmlT
-aWduIENsYXNzIDQgUHVibGljIFByaW1hcnkgQ2VydGlmaWNhdGlvbiBBdXRob3Jp
-dHkgLSBHMzAeFw05OTEwMDEwMDAwMDBaFw0zNjA3MTYyMzU5NTlaMIHKMQswCQYD
-VQQGEwJVUzEXMBUGA1UEChMOVmVyaVNpZ24sIEluYy4xHzAdBgNVBAsTFlZlcmlT
-aWduIFRydXN0IE5ldHdvcmsxOjA4BgNVBAsTMShjKSAxOTk5IFZlcmlTaWduLCBJ
-bmMuIC0gRm9yIGF1dGhvcml6ZWQgdXNlIG9ubHkxRTBDBgNVBAMTPFZlcmlTaWdu
-IENsYXNzIDQgUHVibGljIFByaW1hcnkgQ2VydGlmaWNhdGlvbiBBdXRob3JpdHkg
-LSBHMzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK3LpRFpxlmr8Y+1
-GQ9Wzsy1HyDkniYlS+BzZYlZ3tCD5PUPtbut8XzoIfzk6AzufEUiGXaStBO3IFsJ
-+mGuqPKljYXCKtbeZjbSmwL0qJJgfJxptI8kHtCGUvYynEFYHiK9zUVilQhu0Gbd
-U6LM8BDcVHOLBKFGMzNcF0C5nk3T875Vg+ixiY5afJqWIpA7iCXy0lOIAgwLePLm
-NxdLMEYH5IBtptiWLugs+BGzOA1mppvqySNb247i8xOOGlktqgLw7KSHZtzBP/XY
-ufTsgsbSPZUd5cBPhMnZo0QoBmrXRazwa2rvTl/4EYIeOGM0ZlDUPpNz+jDDZq3/
-ky2X7wMCAwEAATANBgkqhkiG9w0BAQUFAAOCAQEAj/ola09b5KROJ1WrIhVZPMq1
-CtRK26vdoV9TxaBXOcLORyu+OshWv8LZJxA6sQU8wHcxuzrTBXttmhwwjIDLk5Mq
-g6sFUYICABFna/OIYUdfA5PVWw3g8dShMjWFsjrbsIKr0csKvE+MW8VLADsfKoKm
-fjaF3H48ZwC15DtS4KjrXRX5xm3wrR0OhbepmnMUWluPQSjA1egtTaRezarZ7c7c
-2NU8Qh0XwRJdRTjDOPP8hS6DRkiy1yBfkjaP53kPmF6Z6PDQpLv1U70qzlmwr25/
-bLvSHgCwIe34QWKCudiyxLtGUPMxxY8BqHTr9Xgn2uf3ZkPznoM+IKrDNWCRzg==
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-MIIDojCCAoqgAwIBAgIQE4Y1TR0/BvLB+WUF1ZAcYjANBgkqhkiG9w0BAQUFADBr
-MQswCQYDVQQGEwJVUzENMAsGA1UEChMEVklTQTEvMC0GA1UECxMmVmlzYSBJbnRl
-cm5hdGlvbmFsIFNlcnZpY2UgQXNzb2NpYXRpb24xHDAaBgNVBAMTE1Zpc2EgZUNv
-bW1lcmNlIFJvb3QwHhcNMDIwNjI2MDIxODM2WhcNMjIwNjI0MDAxNjEyWjBrMQsw
-CQYDVQQGEwJVUzENMAsGA1UEChMEVklTQTEvMC0GA1UECxMmVmlzYSBJbnRlcm5h
-dGlvbmFsIFNlcnZpY2UgQXNzb2NpYXRpb24xHDAaBgNVBAMTE1Zpc2EgZUNvbW1l
-cmNlIFJvb3QwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCvV95WHm6h
-2mCxlCfLF9sHP4CFT8icttD0b0/Pmdjh28JIXDqsOTPHH2qLJj0rNfVIsZHBAk4E
-lpF7sDPwsRROEW+1QK8bRaVK7362rPKgH1g/EkZgPI2h4H3PVz4zHvtH8aoVlwdV
-ZqW1LS7YgFmypw23RuwhY/81q6UCzyr0TP579ZRdhE2o8mCP2w4lPJ9zcc+U30rq
-299yOIzzlr3xF7zSujtFWsan9sYXiwGd/BmoKoMWuDpI/k4+oKsGGelT84ATB+0t
-vz8KPFUgOSwsAGl0lUq8ILKpeeUYiZGo3BxN77t+Nwtd/jmliFKMAGzsGHxBvfaL
-dXe6YJ2E5/4tAgMBAAGjQjBAMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQD
-AgEGMB0GA1UdDgQWBBQVOIMPPyw/cDMezUb+B4wg4NfDtzANBgkqhkiG9w0BAQUF
-AAOCAQEAX/FBfXxcCLkr4NWSR/pnXKUTwwMhmytMiUbPWU3J/qVAtmPN3XEolWcR
-zCSs00Rsca4BIGsDoo8Ytyk6feUWYFN4PMCvFYP3j1IzJL1kk5fui/fbGKhtcbP3
-LBfQdCVp9/5rPJS+TUtBjE7ic9DjkCJzQ83z7+pzzkWKsKZJ/0x9nXGIxHYdkFsd
-7v3M9+79YKWxehZx0RbQfBI8bGmX265fOZpwLwU8GUYEmSA20GBuYQa7FkKMcPcw
-++DbZqMAAb3mLNqRX6BGi01qnD093QVG/na/oAo85ADmJ7f/hC3euiInlhBx6yLt
-398znM/jra6O1I7mT1GvFpLgXPYHDw==
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-MIIEvTCCA6WgAwIBAgIBATANBgkqhkiG9w0BAQUFADCBhTELMAkGA1UEBhMCVVMx
-IDAeBgNVBAoMF1dlbGxzIEZhcmdvIFdlbGxzU2VjdXJlMRwwGgYDVQQLDBNXZWxs
-cyBGYXJnbyBCYW5rIE5BMTYwNAYDVQQDDC1XZWxsc1NlY3VyZSBQdWJsaWMgUm9v
-dCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwHhcNMDcxMjEzMTcwNzU0WhcNMjIxMjE0
-MDAwNzU0WjCBhTELMAkGA1UEBhMCVVMxIDAeBgNVBAoMF1dlbGxzIEZhcmdvIFdl
-bGxzU2VjdXJlMRwwGgYDVQQLDBNXZWxscyBGYXJnbyBCYW5rIE5BMTYwNAYDVQQD
-DC1XZWxsc1NlY3VyZSBQdWJsaWMgUm9vdCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkw
-ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDub7S9eeKPCCGeOARBJe+r
-WxxTkqxtnt3CxC5FlAM1iGd0V+PfjLindo8796jE2yljDpFoNoqXjopxaAkH5OjU
-Dk/41itMpBb570OYj7OeUt9tkTmPOL13i0Nj67eT/DBMHAGTthP796EfvyXhdDcs
-HqRePGj4S78NuR4uNuip5Kf4D8uCdXw1LSLWwr8L87T8bJVhHlfXBIEyg1J55oNj
-z7fLY4sR4r1e6/aN7ZVyKLSsEmLpSjPmgzKuBXWVvYSV2ypcm44uDLiBK0HmOFaf
-SZtsdvqKXfcBeYF8wYNABf5x/Qw/zE5gCQ5lRxAvAcAFP4/4s0HvWkJ+We/Slwxl
-AgMBAAGjggE0MIIBMDAPBgNVHRMBAf8EBTADAQH/MDkGA1UdHwQyMDAwLqAsoCqG
-KGh0dHA6Ly9jcmwucGtpLndlbGxzZmFyZ28uY29tL3dzcHJjYS5jcmwwDgYDVR0P
-AQH/BAQDAgHGMB0GA1UdDgQWBBQmlRkQ2eihl5H/3BnZtQQ+0nMKajCBsgYDVR0j
-BIGqMIGngBQmlRkQ2eihl5H/3BnZtQQ+0nMKaqGBi6SBiDCBhTELMAkGA1UEBhMC
-VVMxIDAeBgNVBAoMF1dlbGxzIEZhcmdvIFdlbGxzU2VjdXJlMRwwGgYDVQQLDBNX
-ZWxscyBGYXJnbyBCYW5rIE5BMTYwNAYDVQQDDC1XZWxsc1NlY3VyZSBQdWJsaWMg
-Um9vdCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHmCAQEwDQYJKoZIhvcNAQEFBQADggEB
-ALkVsUSRzCPIK0134/iaeycNzXK7mQDKfGYZUMbVmO2rvwNa5U3lHshPcZeG1eMd
-/ZDJPHV3V3p9+N701NX3leZ0bh08rnyd2wIDBSxxSyU+B+NemvVmFymIGjifz6pB
-A4SXa5M4esowRBskRDPQ5NHcKDj0E0M1NSljqHyita04pO2t/caaH/+Xc/77szWn
-k4bGdpEA5qxRFsQnMlzbc9qlk1eOPm01JghZ1edE13YgY+esE2fDbbFwRnzVlhE9
-iW9dqKHrjQrawx0zbKPqZxmamX9LPYNRKh3KL4YMon4QLSvUFpULB6ouFJJJtylv
-2G0xffX8oRAHh84vWdw+WNs=
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-MIIFdjCCA16gAwIBAgIQXmjWEXGUY1BWAGjzPsnFkTANBgkqhkiG9w0BAQUFADBV
-MQswCQYDVQQGEwJDTjEaMBgGA1UEChMRV29TaWduIENBIExpbWl0ZWQxKjAoBgNV
-BAMTIUNlcnRpZmljYXRpb24gQXV0aG9yaXR5IG9mIFdvU2lnbjAeFw0wOTA4MDgw
-MTAwMDFaFw0zOTA4MDgwMTAwMDFaMFUxCzAJBgNVBAYTAkNOMRowGAYDVQQKExFX
-b1NpZ24gQ0EgTGltaXRlZDEqMCgGA1UEAxMhQ2VydGlmaWNhdGlvbiBBdXRob3Jp
-dHkgb2YgV29TaWduMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAvcqN
-rLiRFVaXe2tcesLea9mhsMMQI/qnobLMMfo+2aYpbxY94Gv4uEBf2zmoAHqLoE1U
-fcIiePyOCbiohdfMlZdLdNiefvAA5A6JrkkoRBoQmTIPJYhTpA2zDxIIFgsDcScc
-f+Hb0v1naMQFXQoOXXDX2JegvFNBmpGN9J42Znp+VsGQX+axaCA2pIwkLCxHC1l2
-ZjC1vt7tj/id07sBMOby8w7gLJKA84X5KIq0VC6a7fd2/BVoFutKbOsuEo/Uz/4M
-x1wdC34FMr5esAkqQtXJTpCzWQ27en7N1QhatH/YHGkR+ScPewavVIMYe+HdVHpR
-aG53/Ma/UkpmRqGyZxq7o093oL5d//xWC0Nyd5DKnvnyOfUNqfTq1+ezEC8wQjch
-zDBwyYaYD8xYTYO7feUapTeNtqwylwA6Y3EkHp43xP901DfA4v6IRmAR3Qg/UDar
-uHqklWJqbrDKaiFaafPz+x1wOZXzp26mgYmhiMU7ccqjUu6Du/2gd/Tkb+dC221K
-mYo0SLwX3OSACCK28jHAPwQ+658geda4BmRkAjHXqc1S+4RFaQkAKtxVi8QGRkvA
-Sh0JWzko/amrzgD5LkhLJuYwTKVYyrREgk/nkR4zw7CT/xH8gdLKH3Ep3XZPkiWv
-HYG3Dy+MwwbMLyejSuQOmbp8HkUff6oZRZb9/D0CAwEAAaNCMEAwDgYDVR0PAQH/
-BAQDAgEGMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFOFmzw7R8bNLtwYgFP6H
-EtX2/vs+MA0GCSqGSIb3DQEBBQUAA4ICAQCoy3JAsnbBfnv8rWTjMnvMPLZdRtP1
-LOJwXcgu2AZ9mNELIaCJWSQBnfmvCX0KI4I01fx8cpm5o9dU9OpScA7F9dY74ToJ
-MuYhOZO9sxXqT2r09Ys/L3yNWC7F4TmgPsc9SnOeQHrAK2GpZ8nzJLmzbVUsWh2e
-JXLOC62qx1ViC777Y7NhRCOjy+EaDveaBk3e1CNOIZZbOVtXHS9dCF4Jef98l7VN
-g64N1uajeeAz0JmWAjCnPv/So0M/BVoG6kQC2nz4SNAzqfkHx5Xh9T71XXG68pWp
-dIhhWeO/yloTunK0jF02h+mmxTwTv97QRCbut+wucPrXnbes5cVAWubXbHssw1ab
-R80LzvobtCHXt2a49CUwi1wNuepnsvRtrtWhnk/Yn+knArAdBtaP4/tIEp9/EaEQ
-PkxROpaw0RPxx9gmrjrKkcRpnd8BKWRRb2jaFOwIQZeQjdCygPLPwj2/kWjFgGce
-xGATVdVhmVd8upUPYUk6ynW8yQqTP2cOEvIo4jEbwFcW3wh8GcF+Dx+FHgo2fFt+
-J7x6v+Db9NpSvd4MVHAxkUOVyLzwPt0JfjBkUO1/AaQzZ01oT74V77D2AhGiGxMl
-OtzCWfHjXEa7ZywCRuoeSKbmW9m1vFGikpbbqsY3Iqb+zCB0oy2pLmvLwIIRIbWT
-ee5Ehr7XHuQe+w==
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-MIIFWDCCA0CgAwIBAgIQUHBrzdgT/BtOOzNy0hFIjTANBgkqhkiG9w0BAQsFADBG
-MQswCQYDVQQGEwJDTjEaMBgGA1UEChMRV29TaWduIENBIExpbWl0ZWQxGzAZBgNV
-BAMMEkNBIOayg+mAmuagueivgeS5pjAeFw0wOTA4MDgwMTAwMDFaFw0zOTA4MDgw
-MTAwMDFaMEYxCzAJBgNVBAYTAkNOMRowGAYDVQQKExFXb1NpZ24gQ0EgTGltaXRl
-ZDE
+/*
+* jQuery.eraser v0.5.2
+* makes any image or canvas erasable by the user, using touch or mouse input
+* https://github.com/boblemarin/jQuery.eraser
+*
+* Usage:
+*
+* $('#myImage').eraser(); // simple way
+*
+* $('#canvas').eraser( {
+*   size: 20, // define brush size (default value is 40)
+*   completeRatio: .65, // allows to call function when a erased ratio is reached (between 0 and 1, default is .7 )
+*   completeFunction: myFunction // callback function when complete ratio is reached
+* } );
+*
+* $('#image').eraser( 'clear' ); // erases all canvas content
+*
+* $('#image').eraser( 'reset' ); // revert back to original content
+*
+* $('#image').eraser( 'size', 80 ); // change the eraser size
+*
+* $('#image').eraser( 'enable/disable' ); // enable or disable erasing
+*
+* $('#image').eraser( 'enabled' ); // returns whether the eraser is enabled
+*
+*
+* https://github.com/boblemarin/jQuery.eraser
+* http://minimal.be/lab/jQuery.eraser/
+*
+* Copyright (c) 2010 boblemarin emeric@minimal.be http://www.minimal.be
+*
+* Permission is hereby granted, free of charge, to any person
+* obtaining a copy of this software and associated documentation
+* files (the "Software"), to deal in the Software without
+* restriction, including without limitation the rights to use,
+* copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the
+* Software is furnished to do so, subject to the following
+* conditions:
+*
+* The above copyright notice and this permission notice shall be
+* included in all copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+* EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+* OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+* NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+* HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+* FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+* OTHER DEALINGS IN THE SOFTWARE.
+*/
+
+(function($){
+  var methods = {
+
+    init: function(options) {
+      return this.each(function(){
+        var $this = $(this),
+            data = $this.data('eraser');
+
+        if (!data) {
+
+          var handleImage = function() {
+            var $canvas = $('<canvas/>'),
+                canvas = $canvas.get(0),
+                ctx = canvas.getContext('2d'),
+
+                // calculate scale ratio for high DPI devices
+                // http://www.html5rocks.com/en/tutorials/canvas/hidpi/
+                devicePixelRatio = window.devicePixelRatio || 1,
+                backingStoreRatio = ctx.webkitBackingStorePixelRatio ||
+                    ctx.mozBackingStorePixelRatio ||
+                    ctx.msBackingStorePixelRatio ||
+                    ctx.oBackingStorePixelRatio ||
+                    ctx.backingStorePixelRatio || 1,
+                scaleRatio = devicePixelRatio / backingStoreRatio,
+
+                realWidth = $this.width(),
+                realHeight = $this.height(),
+                width = realWidth * scaleRatio,
+                height = realHeight * scaleRatio,
+                pos = $this.offset(),
+                enabled = (options && options.enabled === false) ? false : true,
+                size = ((options && options.size) ? options.size : 40) * scaleRatio,
+                completeRatio = (options && options.completeRatio) ? options.completeRatio : .7,
+                completeFunction = (options && options.completeFunction) ? options.completeFunction : null,
+                progressFunction = (options && options.progressFunction) ? options.progressFunction : null,
+                zIndex = $this.css('z-index') == "auto"?1:$this.css('z-index'),
+                parts = [],
+                colParts = Math.floor(width / size),
+                numParts = colParts * Math.floor(height / size),
+                n = numParts,
+                that = $this[0];
+
+            // replace target with canvas
+            $this.after($canvas);
+            canvas.id = that.id;
+            canvas.className = that.className;
+            canvas.width = width;
+            canvas.height = height;
+            canvas.style.width = realWidth.toString() + "px";
+            canvas.style.height = realHeight.toString() + "px";
+            ctx.drawImage(that, 0, 0, width, height);
+            $this.remove();
+
+            // prepare context for drawing operations
+            ctx.globalCompositeOperation = 'destination-out';
+            ctx.strokeStyle = 'rgba(255,0,0,255)';
+            ctx.lineWidth = size;
+
+            ctx.lineCap = 'round';
+            // bind events
+            $canvas.bind('mousedown.eraser', methods.mouseDown);
+            $canvas.bind('touchstart.eraser', methods.touchStart);
+            $canvas.bind('touchmove.eraser', methods.touchMove);
+            $canvas.bind('touchend.eraser', methods.touchEnd);
+
+            // reset parts
+            while(n--) parts.push(1);
+
+            // store values
+            data = {
+              posX: pos.left,
+              posY: pos.top,
+              touchDown: false,
+              touchID: -999,
+              touchX: 0,
+              touchY: 0,
+              ptouchX: 0,
+              ptouchY: 0,
+              canvas: $canvas,
+              ctx: ctx,
+              w: width,
+              h: height,
+              scaleRatio: scaleRatio,
+              source: that,
+              size: size,
+              parts: parts,
+              colParts: colParts,
+              numParts: numParts,
+              ratio: 0,
+              enabled: enabled,
+              complete: false,
+              completeRatio: completeRatio,
+              completeFunction: completeFunction,
+              progressFunction: progressFunction,
+              zIndex: zIndex
+            };
+            $canvas.data('eraser', data);
+
+            // listen for resize event to update offset values
+            $(window).resize(function() {
+              var pos = $canvas.offset();
+              data.posX = pos.left;
+              data.posY = pos.top;
+            });
+          }
+
+          if (this.complete && this.naturalWidth > 0) {
+            handleImage();
+          } else {
+            //this.onload = handleImage;
+            $this.on('load', handleImage);
+          }
+        }
+      });
+    },
+
+    touchStart: function(event) {
+      var $this = $(this),
+          data = $this.data('eraser');
+
+      if (!data.touchDown) {
+        var t = event.originalEvent.changedTouches[0],
+            tx = t.pageX - data.posX,
+            ty = t.pageY - data.posY;
+        tx *= data.scaleRatio;
+        ty *= data.scaleRatio;
+
+        if (data.enabled) {
+          methods.evaluatePoint(data, tx, ty);
+        }
+
+        data.touchDown = true;
+        data.touchID = t.identifier;
+        data.touchX = tx;
+        data.touchY = ty;
+        event.preventDefault();
+      }
+    },
+
+    touchMove: function(event) {
+      var $this = $(this),
+          data = $this.data('eraser');
+
+      if (data.touchDown) {
+        var ta = event.originalEvent.changedTouches,
+            n = ta.length;
+        while (n--) {
+          if (ta[n].identifier == data.touchID) {
+            var tx = ta[n].pageX - data.posX,
+                ty = ta[n].pageY - data.posY;
+            tx *= data.scaleRatio;
+            ty *= data.scaleRatio;
+
+            if (data.enabled) {
+              methods.evaluatePoint(data, tx, ty);
+              data.ctx.beginPath();
+              data.ctx.moveTo(data.touchX, data.touchY);
+              data.ctx.lineTo(tx, ty);
+              data.ctx.stroke();
+              $this.css({"z-index":$this.css('z-index')==data.zIndex?parseInt(data.zIndex)+1:data.zIndex});
+            }
+
+            data.touchX = tx;
+            data.touchY = ty;
+
+            event.preventDefault();
+            break;
+          }
+        }
+      }
+    },
+
+    touchEnd: function(event) {
+      var $this = $(this),
+        data = $this.data('eraser');
+
+      if ( data.touchDown ) {
+        var ta = event.originalEvent.changedTouches,
+          n = ta.length;
+        while( n-- ) {
+          if ( ta[n].identifier == data.touchID ) {
+            data.touchDown = false;
+            event.preventDefault();
+            break;
+          }
+        }
+      }
+    },
+
+    evaluatePoint: function(data, tx, ty) {
+      if (!data.enabled) return;
+      var p = Math.floor(tx/data.size) + Math.floor( ty / data.size ) * data.colParts;
+
+      if ( p >= 0 && p < data.numParts ) {
+        data.ratio += data.parts[p];
+        data.parts[p] = 0;
+        if (!data.complete) {
+          p = data.ratio/data.numParts;
+          if ( p >= data.completeRatio ) {
+            data.complete = true;
+            if ( data.completeFunction != null ) data.completeFunction();
+          } else {
+            if ( data.progressFunction != null ) data.progressFunction(p);
+          }
+        }
+      }
+
+    },
+
+    mouseDown: function(event) {
+      var $this = $(this),
+          data = $this.data('eraser'),
+          tx = event.pageX - data.posX,
+          ty = event.pageY - data.posY;
+      tx *= data.scaleRatio;
+      ty *= data.scaleRatio;
+
+      data.touchDown = true;
+      data.touchX = tx;
+      data.touchY = ty;
+
+      if (data.enabled) {
+        methods.evaluatePoint( data, tx, ty );
+
+        data.ctx.beginPath();
+        data.ctx.moveTo(data.touchX-1, data.touchY);
+        data.ctx.lineTo(data.touchX, data.touchY);
+        data.ctx.stroke();
+      }
+
+      $this.bind('mousemove.eraser', methods.mouseMove);
+      $(document).bind('mouseup.eraser', data, methods.mouseUp);
+      event.preventDefault();
+    },
+
+    mouseMove: function(event) {
+      var $this = $(this),
+          data = $this.data('eraser'),
+          tx = event.pageX - data.posX,
+          ty = event.pageY - data.posY;
+      tx *= data.scaleRatio;
+      ty *= data.scaleRatio;
+
+      if (data.enabled) {
+        methods.evaluatePoint( data, tx, ty );
+        data.ctx.beginPath();
+        data.ctx.moveTo( data.touchX, data.touchY );
+        data.ctx.lineTo( tx, ty );
+        data.ctx.stroke();
+        $this.css({"z-index":$this.css('z-index')==data.zIndex?parseInt(data.zIndex)+1:data.zIndex});
+      }
+
+      data.touchX = tx;
+      data.touchY = ty;
+
+      event.preventDefault();
+    },
+
+    mouseUp: function(event) {
+      var data = event.data,
+          $this = data.canvas;
+
+      data.touchDown = false;
+      $this.unbind('mousemove.eraser');
+      $(document).unbind('mouseup.eraser');
+      event.preventDefault();
+    },
+
+    clear: function() {
+      var $this = $(this),
+          data = $this.data('eraser');
+
+      if (data) {
+        data.ctx.clearRect(0, 0, data.w, data.h);
+        var n = data.numParts;
+        while(n--) data.parts[n] = 0;
+        data.ratio = data.numParts;
+        data.complete = true;
+        if (data.completeFunction != null) data.completeFunction();
+      }
+    },
+
+    enabled: function() {
+      var $this = $(this),
+          data = $this.data('eraser');
+
+      if (data && data.enabled) {
+        return true;
+      }
+      return false;
+    },
+
+    enable: function() {
+      var $this = $(this),
+          data = $this.data('eraser');
+
+      if (data) {
+        data.enabled = true;
+      }
+    },
+
+    disable: function() {
+      var $this = $(this),
+          data = $this.data('eraser');
+
+      if (data) {
+        data.enabled = false;
+      }
+    },
+
+    size: function(value) {
+      var $this = $(this),
+          data = $this.data('eraser');
+
+      if (data && value) {
+        data.size = value;
+        data.ctx.lineWidth = value;
+      }
+    },
+
+    reset: function() {
+      var $this = $(this),
+          data = $this.data('eraser');
+
+      if (data) {
+        data.ctx.globalCompositeOperation = 'source-over';
+        data.ctx.drawImage( data.source, 0, 0, data.w, data.h);
+        data.ctx.globalCompositeOperation = 'destination-out';
+        var n = data.numParts;
+        while (n--) data.parts[n] = 1;
+        data.ratio = 0;
+        data.complete = false;
+        data.touchDown = false;
+      }
+    },
+
+    progress: function() {
+      var $this = $(this),
+          data = $this.data('eraser');
+
+      if (data) {
+        return data.ratio/data.numParts;
+      }
+      return 0;
+    }
+
+  };
+
+  $.fn.eraser = function(method) {
+    if (methods[method]) {
+      return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+    } else if (typeof method === 'object' || ! method) {
+      return methods.init.apply(this, arguments);
+    } else {
+      $.error('Method ' +  method + ' does not yet exist on jQuery.eraser');
+    }
+  };
+})(jQuery);

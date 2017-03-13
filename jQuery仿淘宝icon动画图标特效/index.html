@@ -1,19 +1,46 @@
-e6YJ2E5/4tAgMBAAGjQjBAMA8GA1UdEwEB/wQFMAMBAf8wDgYDVR0PAQH/BAQD
-AgEGMB0GA1UdDgQWBBQVOIMPPyw/cDMezUb+B4wg4NfDtzANBgkqhkiG9w0BAQUF
-AAOCAQEAX/FBfXxcCLkr4NWSR/pnXKUTwwMhmytMiUbPWU3J/qVAtmPN3XEolWcR
-zCSs00Rsca4BIGsDoo8Ytyk6feUWYFN4PMCvFYP3j1IzJL1kk5fui/fbGKhtcbP3
-LBfQdCVp9/5rPJS+TUtBjE7ic9DjkCJzQ83z7+pzzkWKsKZJ/0x9nXGIxHYdkFsd
-7v3M9+79YKWxehZx0RbQfBI8bGmX265fOZpwLwU8GUYEmSA20GBuYQa7FkKMcPcw
-++DbZqMAAb3mLNqRX6BGi01qnD093QVG/na/oAo85ADmJ7f/hC3euiInlhBx6yLt
-398znM/jra6O1I7mT1GvFpLgXPYHDw==
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-MIIEvTCCA6WgAwIBAgIBATANBgkqhkiG9w0BAQUFADCBhTELMAkGA1UEBhMCVVMx
-IDAeBgNVBAoMF1dlbGxzIEZhcmdvIFdlbGxzU2VjdXJlMRwwGgYDVQQLDBNXZWxs
-cyBGYXJnbyBCYW5rIE5BMTYwNAYDVQQDDC1XZWxsc1NlY3VyZSBQdWJsaWMgUm9v
-dCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwHhcNMDcxMjEzMTcwNzU0WhcNMjIxMjE0
-MDAwNzU0WjCBhTELMAkGA1UEBhMCVVMxIDAeBgNVBAoMF1dlbGxzIEZhcmdvIFdl
-bGxzU2VjdXJlMRwwGgYDVQQLDBNXZWxscyBGYXJnbyBCYW5rIE5BMTYwNAYDVQQD
-DC1XZWxsc1NlY3VyZSBQdWJsaWMgUm9vdCBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkw
-ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDub7S9eeKPCCGeOARBJe+r
-WxxTkqx
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery仿淘宝icon动画图标特效</title>
+		<link rel="stylesheet" type="text/css" href="style.css"/>
+	</head>
+	<body>
+		<div id="move">
+			<a href="#"><i><img src="images/zhu.png"></i>
+				<p>租房</p>
+			</a>
+			<a href="#"><i><img src="images/zhu2.png"></i>
+				<p>租房</p>
+			</a>
+			<a href="#"><i><img src="images/zhu3.png"></i>
+				<p>租房</p>
+			</a>
+			<a href="#"><i><img src="images/zhu4.png"></i>
+				<p>租房</p>
+			</a>
+			<a href="#"><i><img src="images/zhu.png"></i>
+				<p>租房</p>
+			</a>
+			<a href="#"><i><img src="images/zhu2.png"></i>
+				<p>租房</p>
+			</a>
+		</div>
+		<script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+		<script>
+			$(function() {
+				$('#move a').mouseenter(function() {
+					$(this).find('i').animate({
+						top: "-25px",opacity: "0"
+					}, 300, function() {
+						$(this).css({top: '25px'});
+						$(this).animate({
+							top: '12px',opacity: '1'
+						}, 600)
+					})
+				})
+			})
+		</script>
+	</body>
+</html>

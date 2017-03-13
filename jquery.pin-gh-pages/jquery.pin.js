@@ -1,71 +1,114 @@
-KOp4yw4sLjmdjItuFhwv
-JoIQ4uNllAoEwF73XVv4EOLQunpL+943AAAaWyjj0pxzPjKHmKHJUS/X3qwzs08C
-AwEAAaNCMEAwDwYDVR0TAQH/BAUwAwEB/zAOBgNVHQ8BAf8EBAMCAcYwHQYDVR0O
-BBYEFOCMm9slSbPxfIbWskKHC9BroNnkMA0GCSqGSIb3DQEBBQUAA4IBAQA+0hyJ
-LjX8+HXd5n9liPRyTMks1zJO890ZeUe9jjtbkw9QSSQTaxQGcu8J06Gh40CEyecY
-MnQ8SG4Pn0vU9x7Tk4ZkVJdjclDVVc/6IJMCopvDI5NOFlV2oHB5bc0hH88vLbwZ
-44gx+FkagQnIl6Z0x2DEW8xXjrJ1/RsCCdtZb3KTafcxQdaIOL+Hsr0Wefmq5L6I
-Jd1hJyMctTEHBDa0GpC9oHRxUIltvBTjD4au8as+x6AJzKNI0eDbZOeStc+vckNw
-i/nDhDwTqn6Sm1dTk/pwwpEOMfmbZ13pljheX7NzTogVZ96edhBiIL5VaZVDADlN
-9u6wWk5JRFRYX0KD
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-MIIFsDCCA5igAwIBAgIQFci9ZUdcr7iXAF7kBtK8nTANBgkqhkiG9w0BAQUFADBe
-MQswCQYDVQQGEwJUVzEjMCEGA1UECgwaQ2h1bmdod2EgVGVsZWNvbSBDby4sIEx0
-ZC4xKjAoBgNVBAsMIWVQS0kgUm9vdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTAe
-Fw0wNDEyMjAwMjMxMjdaFw0zNDEyMjAwMjMxMjdaMF4xCzAJBgNVBAYTAlRXMSMw
-IQYDVQQKDBpDaHVuZ2h3YSBUZWxlY29tIENvLiwgTHRkLjEqMCgGA1UECwwhZVBL
-SSBSb290IENlcnRpZmljYXRpb24gQXV0aG9yaXR5MIICIjANBgkqhkiG9w0BAQEF
-AAOCAg8AMIICCgKCAgEA4SUP7o3biDN1Z82tH306Tm2d0y8U82N0ywEhajfqhFAH
-SyZbCUNsIZ5qyNUD9WBpj8zwIuQf5/dqIjG3LBXy4P4AakP/h2XGtRrBp0xtInAh
-ijHyl3SJCRImHJ7K2RKilTza6We/CKBk49ZCt0Xvl/T29de1ShUCWH2YWEtgvM3X
-DZoTM1PRYfl61dd4s5oz9wCGzh1NlDivqOx4UXCKXBCDUSH3ET00hl7lSM2XgYI1
-TBnsZfZrxQWh7kcT1rMhJ5QQCtkkO7q+RBNGMD+XPNjX12ruOzjjK9SXDrkb5wdJ
-fzcq+Xd4z1TtW0ado4AOkUPB1ltfFLqfpo0kR0BZv3I4sjZsN/+Z0V0OWQqraffA
-sgRFelQArr5T9rXn4fg8ozHSqf4hUmTFpmfwdQcGlBSBVcYn5AGPF8Fqcde+S/uU
-WH1+ETOxQvdibBjWzwloPn9s9h6PYq2lY9sJpx8iQkEeb5mKPtf5P0B6ebClAZLS
-nT0IFaUQAS2zMnaolQ2zepr7BxB4EW/hj8e6DyUadCrlHJhBmd8hh+iVBmoKs2pH
-dmX2Os+PYhcZewoozRrSgx4hxyy/vv9haLdnG7t4TY3OZ+XkwY63I2binZB1NJip
-NiuKmpS5nezMirH4JYlcWrYvjB9teSSnUmjDhDXiZo1jDiVN1Rmy5nk3pyKdVDEC
-AwEAAaNqMGgwHQYDVR0OBBYEFB4M97Zn8uGSJglFwFU5Lnc/QkqiMAwGA1UdEwQF
-MAMBAf8wOQYEZyoHAAQxMC8wLQIBADAJBgUrDgMCGgUAMAcGBWcqAwAABBRFsMLH
-ClZ87lt4DJX5GFPBphzYEDANBgkqhkiG9w0BAQUFAAOCAgEACbODU1kBPpVJufGB
-uvl2ICO1J2B01GqZNF5sAFPZn/KmsSQHRGoqxqWOeBLoR9lYGxMqXnmbnwoqZ6Yl
-PwZpVnPDimZI+ymBV3QGypzqKOg4ZyYr8dW1P2WT+DZdjo2NQCCHGervJ8A9tDkP
-JXtoUHRVnAxZfVo9QZQlUgjgRywVMRnVvwdVxrsStZf0X4OFunHB2WyBEXYKCrC/
-gpf36j36+uwtqSiUO1bd0lEursC9CBWMd1I0ltabrNMdjmEPNXubrjlpC2JgQCA2
-j6/7Nu4tCEoduL+bXPjqpRugc6bY+G7gMwRfaKonh+3ZwZCc7b3jajWvY9+rGNm6
-5ulK6lCKD2GTHuItGeIwlDWSXQ62B68ZgI9HkFFLLk3dheLSClIKF5r8GrBQAuUB
-o2M3IUxExJtRmREOc5wGj1QupyheRDmHVi03vYVElOEMSyycw5KFNGHLD7ibSkNS
-/jQ6fbjpKdx2qcgw+BRxgMYeNkh0IkFch4LoGHGLQYlE535YW6i4jRPpp2zDR+2z
-Gp1iro2C6pSe3VkQw63d4k3jMdXH7OjysP6SHhYKGvzZ8/gntsm+HbRsZJB/9OTE
-W9c3rkIO3aQab3yIVMUWbuF6aC74Or8NpDyJO3inTmODBCEIZ43ygknQW/2xzQ+D
-hNQ+IIX3Sj0rnP0qCglN6oH4EZw=
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-MIICiDCCAg2gAwIBAgIQNfwmXNmET8k9Jj1Xm67XVjAKBggqhkjOPQQDAzCBhDEL
-MAkGA1UEBhMCVVMxFTATBgNVBAoTDHRoYXd0ZSwgSW5jLjE4MDYGA1UECxMvKGMp
-IDIwMDcgdGhhd3RlLCBJbmMuIC0gRm9yIGF1dGhvcml6ZWQgdXNlIG9ubHkxJDAi
-BgNVBAMTG3RoYXd0ZSBQcmltYXJ5IFJvb3QgQ0EgLSBHMjAeFw0wNzExMDUwMDAw
-MDBaFw0zODAxMTgyMzU5NTlaMIGEMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMdGhh
-d3RlLCBJbmMuMTgwNgYDVQQLEy8oYykgMjAwNyB0aGF3dGUsIEluYy4gLSBGb3Ig
-YXV0aG9yaXplZCB1c2Ugb25seTEkMCIGA1UEAxMbdGhhd3RlIFByaW1hcnkgUm9v
-dCBDQSAtIEcyMHYwEAYHKoZIzj0CAQYFK4EEACIDYgAEotWcgnuVnfFSeIf+iha/
-BebfowJPDQfGAFG6DAJSLSKkQjnE/o/qycG+1E3/n3qe4rF8mq2nhglzh9HnmuN6
-papu+7qzcMBniKI11KOasf2twu8x+qi58/sIxpHR+ymVo0IwQDAPBgNVHRMBAf8E
-BTADAQH/MA4GA1UdDwEB/wQEAwIBBjAdBgNVHQ4EFgQUmtgAMADna3+FGO6Lts6K
-DPgR4bswCgYIKoZIzj0EAwMDaQAwZgIxAN344FdHW6fmCsO99YCKlzUNG4k8VIZ3
-KMqh9HneteY4sPBlcIx/AlTCv//YoT7ZzwIxAMSNlPzcU9LcnXgWHxUzI1NS41ox
-XZ3Krr0TKUQNJ1uo52icEvdYPy5yAlejj6EULg==
------END CERTIFICATE-----
------BEGIN CERTIFICATE-----
-MIIEKjCCAxKgAwIBAgIQYAGXt0an6rS0mtZLL/eQ+zANBgkqhkiG9w0BAQsFADCB
-rjELMAkGA1UEBhMCVVMxFTATBgNVBAoTDHRoYXd0ZSwgSW5jLjEoMCYGA1UECxMf
-Q2VydGlmaWNhdGlvbiBTZXJ2aWNlcyBEaXZpc2lvbjE4MDYGA1UECxMvKGMpIDIw
-MDggdGhhd3RlLCBJbmMuIC0gRm9yIGF1dGhvcml6ZWQgdXNlIG9ubHkxJDAiBgNV
-BAMTG3RoYXd0ZSBQcmltYXJ5IFJvb3QgQ0EgLSBHMzAeFw0wODA0MDIwMDAwMDBa
-Fw0zNzEyMDEyMzU5NTlaMIGuMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMdGhhd3Rl
-LCBJbmMuMSgwJgYDVQQLEx9DZXJ0aWZpY2F0aW9uIFNlcnZpY2VzIERpdmlzaW9u
-MTgwNgYDVQQLEy8oYykgMjAwOCB0aGF3dGUsIEluYy4gLSBGb3IgYXV0aG9yaXpl
-ZCB1c2Ugb25seTEkMCIGA1UEAxMbdGhhd3RlIFByaW1hcnkgUm9vdCBDQSAtIEcz
-MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+(function ($) {
+    "use strict";
+    $.fn.pin = function (options) {
+        var scrollY = 0, elements = [], disabled = false, $window = $(window);
+
+        options = options || {};
+
+        var recalculateLimits = function () {
+            for (var i=0, len=elements.length; i<len; i++) {
+                var $this = elements[i];
+
+                if (options.minWidth && $window.width() <= options.minWidth) {
+                    if ($this.parent().is(".pin-wrapper")) { $this.unwrap(); }
+                    $this.css({width: "", left: "", top: "", position: ""});
+                    if (options.activeClass) { $this.removeClass(options.activeClass); }
+                    disabled = true;
+                    continue;
+                } else {
+                    disabled = false;
+                }
+
+                var $container = options.containerSelector ? $this.closest(options.containerSelector) : $(document.body);
+                var offset = $this.offset();
+                var containerOffset = $container.offset();
+                var parentOffset = $this.offsetParent().offset();
+
+                if (!$this.parent().is(".pin-wrapper")) {
+                    $this.wrap("<div class='pin-wrapper'>");
+                }
+
+                var pad = $.extend({
+                  top: 0,
+                  bottom: 0
+                }, options.padding || {});
+
+                $this.data("pin", {
+                    pad: pad,
+                    from: (options.containerSelector ? containerOffset.top : offset.top) - pad.top,
+                    to: containerOffset.top + $container.height() - $this.outerHeight() - pad.bottom,
+                    end: containerOffset.top + $container.height(),
+                    parentTop: parentOffset.top
+                });
+
+                $this.css({width: $this.outerWidth()});
+                $this.parent().css("height", $this.outerHeight());
+            }
+        };
+
+        var onScroll = function () {
+            if (disabled) { return; }
+
+            scrollY = $window.scrollTop();
+
+            var elmts = [];
+            for (var i=0, len=elements.length; i<len; i++) {          
+                var $this = $(elements[i]),
+                    data  = $this.data("pin");
+
+                if (!data) { // Removed element
+                  continue;
+                }
+
+                elmts.push($this); 
+                  
+                var from = data.from - data.pad.bottom,
+                    to = data.to - data.pad.top;
+              
+                if (from + $this.outerHeight() > data.end) {
+                    $this.css('position', '');
+                    continue;
+                }
+              
+                if (from < scrollY && to > scrollY) {
+                    !($this.css("position") == "fixed") && $this.css({
+                        left: $this.offset().left,
+                        top: data.pad.top
+                    }).css("position", "fixed");
+                    if (options.activeClass) { $this.addClass(options.activeClass); }
+                } else if (scrollY >= to) {
+                    $this.css({
+                        left: "",
+                        top: to - data.parentTop + data.pad.top
+                    }).css("position", "absolute");
+                    if (options.activeClass) { $this.addClass(options.activeClass); }
+                } else {
+                    $this.css({position: "", top: "", left: ""});
+                    if (options.activeClass) { $this.removeClass(options.activeClass); }
+                }
+          }
+          elements = elmts;
+        };
+
+        var update = function () { recalculateLimits(); onScroll(); };
+
+        this.each(function () {
+            var $this = $(this), 
+                data  = $(this).data('pin') || {};
+
+            if (data && data.update) { return; }
+            elements.push($this);
+            $("img", this).one("load", recalculateLimits);
+            data.update = update;
+            $(this).data('pin', data);
+        });
+
+        $window.scroll(onScroll);
+        $window.resize(function () { recalculateLimits(); });
+        recalculateLimits();
+
+        $window.load(update);
+
+        return this;
+      };
+})(jQuery);

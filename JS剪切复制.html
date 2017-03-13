@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button class="copybtn">点击复制</button>
+		<textarea name="" rows="" cols="">
+			******************
+		</textarea>
+	<script src="js/jquery-1.10.2.min.js"></script>
+	<script>
+		$('.copybtn').click(function() {
+			var textareatext = $(this).siblings('textarea');
+			textareatext.select(); // 选择对象
+			document.execCommand("Copy"); // 执行浏览器复制命令
+		})
+	</script>
+	</body>
+</html>

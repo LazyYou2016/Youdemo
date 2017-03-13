@@ -1,27 +1,22 @@
-k, better restart Vim.
+MIT license
 
-							*E296* *E297*  >
-  Seek error in swap file write
-  Write error in swap file
+Copyright (c) 2014-2015 SpryMedia Limited
+http://datatables.net
 
-This mostly happens when the disk is full.  Vim could not write text into the
-|swap-file|.  It's not directly harmful, but when Vim unexpectedly exits some
-text may be lost without recovery being possible.  Vim might run out of memory
-when this problem persists.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-						*connection-refused*  >
-  Xlib: connection to "<machine-name:0.0" refused by server
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-This happens when Vim tries to connect to the X server, but the X server does
-not allow a connection.  The connection to the X server is needed to be able
-to restore the title and for the xterm clipboard support.  Unfortunately this
-error message cannot be avoided, except by disabling the |+xterm_clipboard|
-and |+X11| features.
-
-							*E10*  >
-  \\ should be followed by /, ? or &
-
-A command line started with a backslash or the range of a command contained a
-backslash in a wrong place.  This is often caused by command-line continuation
-being disabled.  Remove the 'C' flag from the 'cpoptions' option to enable it.
-Or use ":set nocp
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

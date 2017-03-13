@@ -1,56 +1,64 @@
-deas about
-the number of parameters passed to the C function C<constant>]
-
-You can call the perl visible subroutine something other than C<constant> if
-you give the parameter I<XS_SUBNAME>. The C subroutine it calls defaults to
-the name of the perl visible subroutine, unless you give the parameter
-I<C_SUBNAME>.
-
-=cut
-
-sub XS_constant {
-  my $package = shift;
-  my $what = shift;
-  my $XS_subname = shift;
-  my $C_subname = shift;
-  $XS_subname ||= 'constant';
-  $C_subname ||= $XS_subname;
-
-  if (!ref $what) {
-    # Convert line of the form IV,UV,NV to hash
-    $what = {map {$_ => 1} split /,\s*/, ($what)};
-  }
-  my $params = ExtUtils::Constant::XS->params ($what);
-  my $type;
-
-  my $xs = <<"EOT";
-void
-$XS_subname(sv)
-    PREINIT:
-#ifdef dXSTARG
-	dXSTARG; /* Faster if we have it.  */
-#else
-	dTARGET;
-#endif
-	STRLEN		len;
-        int		type;
-EOT
-
-  if ($params->{IV}) {
-    $xs .= "	IV		iv;\n";
-  } else {
-    $xs .= "	/* IV\t\tiv;\tUncomment this if you need to return IVs */\n";
-  }
-  if ($params->{NV}) {
-    $xs .= "	NV		nv;\n";
-  } else {
-    $xs .= "	/* NV\t\tnv;\tUncomment this if you need to return NVs */\n";
-  }
-  if ($params->{PV}) {
-    $xs .= "	const char	*pv;\n";
-  } else {
-    $xs .=
-      "	/* const char\t*pv;\tUncomment this if you need to return PVs */\n";
-  }
-
-  $xs .= 
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+		<style>
+			html,body{margin: 0;padding: 0;}
+			.main {
+				display: -webkit-flex;
+				display: flex;
+				flex-direction: column;
+				min-height: 568px;
+			}
+			.container {
+				display: -webkit-flex;
+				display: flex;
+			}
+			header,.container,footer {
+				flex: 1;	
+			}
+			.container .nav {order: -1;}
+			.container .nav,
+			.container .content,
+			.container .ads {
+				border: 1px solid forestgreen;
+			}
+			.container .content {
+				flex: 1;
+			}
+			.container .nav,
+			.container .ads {
+				flex: 0 0 120px;
+			}
+			@media only screen and (max-width: 768px) {
+				.container {
+					flex-direction: column;
+				}
+				.container .nav,
+				.container .content,
+				.container .ads {
+					flex: auto;
+				}			
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<header style="background: blanchedalmond;">顶部</header>
+			<div class="container">
+				<div class="content">
+					内容
+				</div>
+				<div class="nav">
+					左边导航条
+				</div>				
+				<div class="ads">
+					广告
+				</div>
+			</div>
+			<footer style="background: beige;">脚部</footer>
+		</div>
+	</body>
+</html>
