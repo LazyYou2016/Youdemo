@@ -201,9 +201,9 @@ gulp.task('modify', function(){
 gulp.task('help',function () {
 	console.log('	gulp				打开gulp参数说明');
 	console.log('	gulp auto			执行自动任务（监听修改）');
-	console.log('	gulp online			执行上线任务（合并html、压缩css js min版');
+	console.log('	gulp online			执行上线任务（合并html、压缩css js min版)');
 	console.log('	gulp online-md5			执行md5生成任务');
-	console.log('	gulp online-md5-rev			执行上线md5任务（需要先执行gulp online-md5');
+	console.log('	gulp online-md5-rev		执行上线md5任务（需要先执行gulp online-md5)');
 	console.log('	gulp minihtml			执行html压缩任务');
 	console.log('	gulp test			执行测试任务（合并html、输出css js 原版');
 //	console.log('	gulp modify			执行修改自定义任务');
