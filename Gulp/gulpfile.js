@@ -78,16 +78,7 @@ gulp.task('less', function () {
 
 
 var buildBasePath = 'dist/';//构建输出的目录
-//jsmd5，压缩后并用md5进行命名，下面使用revCollector进行路径替换
-gulp.task('minifyjsmd5', function() {
-    gulp.src('docs/dist/js/*.js')
-        //.pipe(concat('common.min.js'))//压缩后的js
-        .pipe(minijs())//压缩js到一行
-        .pipe(rev())//文件名加MD5后缀
-        .pipe(gulp.dest(buildBasePath+'js'))//输出到js目录
-        .pipe(rev.manifest('rev-js-manifest.json'))////生成一个rev-manifest.json
-        .pipe(gulp.dest('rev'));//将 rev-manifest.json 保存到 rev 目录内
-});
+
 //cssmd5，压缩后并用md5进行命名，下面使用revCollector进行路径替换
 gulp.task('minifycssmd5', function (){
     gulp.src('docs/dist/css/*.css')
@@ -106,6 +97,17 @@ gulp.task('minifyimgmd5', function (){
         .pipe(rev.manifest('rev-img-manifest.json'))//生成一个rev-manifest.json
         .pipe(gulp.dest('rev'));//将 rev-manifest.json 保存到 rev 目录内
 });
+//jsmd5，压缩后并用md5进行命名，下面使用revCollector进行路径替换
+gulp.task('minifyjsmd5', function() {
+    gulp.src('docs/dist/js/*.js')
+        //.pipe(concat('common.min.js'))//压缩后的js
+        .pipe(minijs())//压缩js到一行
+        .pipe(rev())//文件名加MD5后缀
+        .pipe(gulp.dest(buildBasePath+'js'))//输出到js目录
+        .pipe(rev.manifest('rev-js-manifest.json'))////生成一个rev-manifest.json
+        .pipe(gulp.dest('rev'));//将 rev-manifest.json 保存到 rev 目录内
+});
+
 gulp.task('rev', function() {
     //html，针对js,css,img
     gulp.src(['rev/*.json', './*.html'])
@@ -145,7 +147,7 @@ gulp.task('test', function (cb) {
 });
 
 gulp.task('del-all', function () {
-	return del(['dist','rev','./*.html']);
+	return del(['dist','./*.html']);
 });
 gulp.task('del-dist', function () {
 	return del(['dist']);
@@ -176,6 +178,7 @@ gulp.task('minihtml', function () {
         .pipe(htmlmin(options))
         .pipe(gulp.dest('./'));
 });
+
 
 // 默认任务
 gulp.task('default', function(){
