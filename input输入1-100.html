@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="number" value="" onkeyup="num(this)"/>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+		function num(obj) {
+			var num_id = $(obj),
+			num_val = num_id.val()//强制转换成数字，避免输入数字外的其他字符
+	            int = parseInt(num_val);
+	        if (int < 0) {
+	            num_id.val(0);
+	        } 
+	        else if (int > 100) {
+	            num_id.val(100);
+	        }
+		};
+		</script>
+	</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 200px;
+            height: 224px;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ebebeb;
+            border-radius: 4px;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .pic{
+            width: 180px;
+            height: 180px;
+            background: #10a3e8;
+        }
+        .title{
+            margin-top: 10px;
+            font-size: 14px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            -webkit-transition: all .3s ease-out;
+            -moz-transition: all .3s ease-out;
+            -o-transition: all .3s ease-out;
+            -ms-transition: all .3s ease-out;
+            transition: all .3s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <h3 style="margin-left: 50px;margin-top: 20px">鼠标悬停文字上，可显示隐藏文字</h3>
+    <div class="box">
+        <div class="pic"></div>
+        <p class="title">
+            <span class="text">我是标题我是标题我是标题我是标题</span>
+        </p>
+    </div>
+    <div class="box" style="left: 300px">
+        <div class="pic"></div>
+        <p class="title">
+            <span class="text">我是标题我是标题</span>
+        </p>
+    </div>
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script>
+        $(function(){
+           $(".title").hover(function(){
+               var width_a = $(this).width();
+               var width_b = $(this).find(".text").width();
+               var indent_px = width_a - width_b;
+               if( width_a <= width_b ){
+                   $(this).css("text-indent",indent_px);
+               }
+           },function(){
+               $(this).css("text-indent","0");
+           });
+        });
+    </script>
+</body>
+</html>

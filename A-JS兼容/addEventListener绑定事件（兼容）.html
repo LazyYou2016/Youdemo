@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="Fly">
+    <title>Title</title>
+    <style>
+        *{ margin: 0; padding: 0; font-family:Microsoft yahei,serif;}
+        li{ list-style:none;}
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+//        document.onclick = function () {
+//            alert( 1 );
+//        };
+//
+//        //document.onclick = null; 取消事件
+//
+//        document.onclick = function () {
+//            alert( 2 );
+//        }
+        /*
+        .addEventListener()
+         */
+//        document.addEventListener( "click" , function () {
+//            alert( 666 );
+//        } , false );
+//        document.addEventListener("click" , function () {
+//            alert( 777 );
+//        } , false);
+
+        //IE8及以下的兼容
+//        document.attachEvent("onclick" , function () {
+//            alert(666);
+//        });
+//        document.attachEvent("onclick" , function () {
+//            alert(777);
+//        });
+
+        addEvent(document , "click" , function () {
+            alert(888);
+        });
+        addEvent(document , "click" , function () {
+            alert(999);
+        });
+        function addEvent( obj , eName , eFn ) {
+            if ( obj.attachEvent ){
+                obj.attachEvent( "on"+eName , eFn );//兼容IE8及以下
+            }else{
+                obj.addEventListener(eName , eFn , false); //兼容标准浏览器
+            }
+        }
+        function removeEvent( obj , eName , eFn ) {
+            if ( obj.attachEvent ){
+                obj.detachEvent( "on"+eName , eFn );
+            }else{
+                obj.removeEventListener(eName , eFn , false);
+            }
+        }
+
+
+    </script>
+</body>
+</html>

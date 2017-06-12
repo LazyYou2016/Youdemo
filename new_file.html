@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>close()</title>
+<body>
+	<button onclick="News()">111</button>
+	<button onclick="News2()">222</button>
+	<script src="http(s)://cdn.goeasy.io/goeasy.js" charset="utf-8"></script>
+  <script type="text/javascript">
+	  	window.onload=function(){  
+	  		News();
+	  	}
+	  	function News(){
+				var goEasy = new GoEasy({
+				appkey: "my_appkey"
+				});
+				goEasy.subscribe({
+				channel: "my_channel",
+				onMessage: function (message) {
+					alert("Channel:" + message.channel + " content:" + message.content);
+				}
+				});
+			}
+	    var g = {
+	        name : "阿飞",
+	        age : 18,
+	        marry : false,
+					onMessage: function(message) {
+						alert("Channel:" + g.name + " content:" + g.age);
+					}  		        
+	    }; // object 对象
+      function News2(){
+				g.onMessage();
+			}
+  </script>
+</head>
+<body>
+</body>
+</html>

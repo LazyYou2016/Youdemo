@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//添加事件
+	        function addEvent( obj , eName , eFn ) {
+				if(eName === "mousewheel"){
+					obj.attachEvent?obj.attachEvent( "onmousewheel" , Fn ):obj.addEventListener("mousewheel" , Fn , false);
+					document.addEventListener && obj.addEventListener("DOMMouseScroll" , Fn);
+					function Fn(e) {
+						e = e || window.event;
+						var d = -e.wheelDelta/120 || e.detail/3;
+						eFn.call(this,e,d);	
+					}
+				}else{
+					if ( obj.attachEvent ){
+						obj.attachEvent( "on"+eName , eFn );//兼容IE8及以下
+					}else{
+						obj.addEventListener(eName , eFn , false); //兼容标准浏览器
+					}
+				}
+	        }
+	        //移出事件
+	        function removeEvent( obj , eName , eFn ) {
+	            if ( obj.attachEvent ){
+	                obj.detachEvent( "on"+eName , eFn );
+	            }else{
+	                obj.removeEventListener(eName , eFn , false);
+	            }
+	        }
+		</script>
+	</body>
+</html>

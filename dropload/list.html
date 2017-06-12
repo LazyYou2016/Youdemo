@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>list dome</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/dropload.css">
+	<link rel="stylesheet" href="css/list.css">
+	<style type="text/css">
+		.outer {
+		}
+		.margin-top {
+			margin-top: 44px;
+		}
+		.om-wrap {
+			/*padding-top: 44px;*/
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 600px;
+			height: 400px;
+		}
+		.header-bar {
+			position: fixed;
+		    width: 100%;
+		    z-index: 1;
+		    height: 44px;
+		}
+		header {
+			display: flex;
+		}
+		header div {
+			flex: 1;
+		    text-align: center;
+		    background: #b0ea6c;
+		}
+		header div a {
+			display: block;
+			border-right: 1px solid #f1f1f1;
+			padding: 10px 0;
+			text-decoration: none;
+			color: #000;
+		}
+		div.om-wrap {
+			/*height: auto;*/
+			/*height: 60%;*/
+			/*position: relative;*/
+		}
+	</style>
+
+</head>
+<body>
+<div class="outer">
+	<header class="header-bar">
+		<div><a href="javascript:;" data-status="tab1">tab1</a></div>
+		<div><a href="javascript:;" data-status="tab2">tab2</a></div>
+	</header>
+	<div class="margin-top"></div>
+	<div class="om-wrap">
+		<div class="om-list-box">
+			<!-- <div class="om-list om-list-img">
+				<img src="test.jpg" class="om-list-src">
+				<div class="om-list-title om-ellipsis">这里是列表的标题这里是列表的标题</div>
+				<div class="om-list-text om-ellipsis">这里是列表的文字这里是列表的文字哈哈哈</div>
+			</div> -->
+		</div>
+	</div>
+</div>
+	<script src="http://cdn.bootcss.com/jquery/2.2.3/jquery.min.js"></script>
+	<script src="dropload1.js"></script>
+	<script>
+		str = '<div class="om-list om-list-img"><img src="test.jpg" class="om-list-src"> <div class="om-list-title om-ellipsis">tab1</div> <div class="om-list-text om-ellipsis">这里是列表的文字这里是列表的文字哈哈哈</div></div>'.repeat(10);
+		str1 = '<div class="om-list om-list-img"><img src="test.jpg" class="om-list-src"><div class="om-list-title om-ellipsis">tab2-----------------</div> <div class="om-list-text om-ellipsis">这里是列表的文字这里是列表的文字哈哈哈</div></div>'.repeat(10);
+	
+	html = str;
+	$(function(){
+			var $wrap = $('.om-wrap'),
+				$box = $('.om-list-box');
+				dropload = $wrap.dropload({
+            		// scrollArea : window,
+					// 初始化
+					initFn : function(me){
+						me.opts.initFnBefore();//必须执行
+						setTimeout(function(){ //setTimeout只是让dome效果明显，实际使用可去掉
+							$box.html(html);	//这里是加载数据的函数
+	                    	me.resetload();	//每次加载完都需要重置
+	                    	//me.unbind(); 多次调用可用此方法先解绑
+						},2000)
+						me.opts.initFnAfter();//必须执行
+					},
+					//上滑加载
+					loadDownFn : function(me){
+						setTimeout(function(){ //setTimeout只是让dome效果明显，实际使用可去掉
+							$box.append(html);	//这里是加载数据的函数
+	                    	me.resetload();	//每次加载完都需要重置
+	                    	//me.unbind(); 多次调用可用此方法先解绑
+						},1500)
+	                    
+	                },
+	                //下拉刷新
+	                loadUpFn : function(me){
+						console.log('me',me.$domUp.html())
+	                	setTimeout(function(){
+							$box.html(html);	//这里是加载数据的函数
+	                    	me.resetload();		//每次加载完都需要重置
+						},1500)
+	                }
+				});
+
+				// tab切换
+	         $('header div a').on('click',function(){
+	         	var _this = $(this);
+	         	if('tab1' === _this.attr('data-status')){
+	         		//未使用(同时未过期)
+	         		html = str;
+	         	}
+	         	if('tab2' === _this.attr('data-status')){
+	         		//已使用(过期或未过期)
+	         		html = str1;
+	         	}
+	         	dropload.opts.initFn(dropload);
+	         })
+		})
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+		<title></title>
+		<style>
+			a:link,
+			a:visited {
+				color: #1E8585;
+				text-decoration: none;
+			}
+.ie-main {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: #DED3BF url(dist/imgs/imgs/ie-bg.jpg) repeat 0 0;
+	z-index: 9999;
+}
+.ie-main a:link,
+.ie-main a:visited {
+	color: #1E8585;
+	text-decoration: none;
+}
+.ie-header {
+	text-align: center;
+	border-top: 1px solid #9DC8C3;
+	padding: 70px 0;
+	background: url(dist/imgs//ie-bg-header.png) repeat-x left bottom;
+}
+
+.ie-header h1 {
+	font: 300%/1 Impact, Helvetica, sans-serif;
+	margin: 0;
+	color: #324B4B;
+}
+
+.ie-header h1 em {
+	font-style: normal;
+	color: #bf0000;
+}
+
+.ie-footer {
+	color: #f1f1f1;
+	padding: 10px 0;
+	overflow: hidden;
+	background: url(dist/imgs/ie-bg-footer.png) repeat-x left top;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+
+.browser-list {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.browser-list li {
+	width: 180px;
+	float: left;
+	margin: 12px 53px 0;
+}
+
+.browser-list li .ie-icon {
+	width: 125px;
+	height: 135px;
+	margin: 20px auto;
+	background-image: url(dist/imgs/ie-Bbwser3.png);
+	background-repeat: no-repeat;
+}
+
+.browser-list .chrome.ie-icon {
+	background-position: 0 0;
+}
+
+.browser-list .firefox.ie-icon {
+	background-position: -125px 0;
+}
+
+.browser-list .ie360.ie-icon {
+	background-position: -253px 0;
+}
+
+.browser-list li a:link,
+.browser-list li a:visited {
+	color: #324B4B;
+	padding: 10px;
+	display: block;
+	overflow: hidden;
+}
+
+.browser-list h2 {
+	font: 140%/1 Impact, Helvetica, sans-serif;
+	text-align: center;
+	text-transform: uppercase;
+	color: #DC3228;
+	text-shadow: 0 1px 0 #fff;
+	background-color: rgba(255, 255, 255, .3);
+	margin: 0 0 10px;
+	line-height: 1;
+	padding: 8px 0;
+}
+
+.browser-list p.info {
+	padding: 0 5px;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+	color: #324B4B;
+	min-height: 120px;
+}
+
+.browser-list p.website {
+    background: #4daaa7;
+    color: #fff;
+	line-height: 1;
+	margin: 0;
+	padding: 8px 5px;
+	text-align: center;
+}
+
+.browser-list li a:hover .website {
+	background: #4daaa7;
+	color: #fff;
+}			
+		</style>
+	</head>
+	<body>
+		<div class="ie-main">
+			<div class="ie-header">
+				<h1>对不起，您当前的浏览器版本太古老了，<em>存在安全风险！</em> </h1>
+			</div>
+			<div class="browser-list clearfix">
+				<ul class="list-unstyled">
+					<li>
+						<a href="https://www.google.com/chrome" title="Google Chrome">
+							<div class="ie-icon chrome"></div>
+							<h2>谷歌浏览器</h2>
+							<p class="info">“Google 全新推出的高速浏览器。”</p>
+							<p class="website">浏览官方网站</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.firefox.com/" title="Mozilla Firefox">
+							<div class="ie-icon firefox"></div>
+							<h2>火狐浏览器</h2>
+							<p class="info">“Firefox 注重您的信息安全。汇聚各种全新特性，给你更好的上网体验！”</p>
+							<p class="website">浏览官方网站</p>
+						</a>
+					</li>
+					<li>
+						<a href="http://se.360.cn/" title="Apple Safari">
+							<div class="ie-icon ie360"></div>
+							<h2>360浏览器</h2>
+							<p class="info">“360安全浏览器是360安全中心推出的一款基于IE和Chrome双内核的浏览器。”</p>
+							<p class="website">浏览官方网站</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="ie-footer">
+			</div>
+		</div>
+		<script type="text/javascript">
+	        (function(window) {
+	            var theUA = window.navigator.userAgent.toLowerCase();
+	            if ((theUA.match(/msie\s\d+/) && theUA.match(/msie\s\d+/)[0]) || (theUA.match(/trident\s?\d+/) && theUA.match(/trident\s?\d+/)[0])) {
+	                var ieVersion = theUA.match(/msie\s\d+/)[0].match(/\d+/)[0] || theUA.match(/trident\s?\d+/)[0];
+	                if (ieVersion < 10) {
+	                    document.write('<div class="ie-main"><div class="ie-header"><h1>对不起，您当前的浏览器版本太古老了，<em>存在安全风险！</em></h1></div><div class="browser-list clearfix"><ul class="list-unstyled"><li><a href="https://www.google.com/chrome" title="Google Chrome"><div class="ie-icon chrome"></div><h2>Google Chrome</h2><p class="info">“Google 全新推出的高速浏览器。”</p><p class="website">浏览官方网站</p></a></li><li><a href="https://www.firefox.com/" title="Mozilla Firefox"><div class="ie-icon firefox"></div><h2>Mozilla Firefox</h2><p class="info">“Firefox 注重您的信息安全。汇聚各种全新特性，给你更好的上网体验！”</p><p class="website">浏览官方网站</p></a></li><li><a href="http://se.360.cn/" title="Apple Safari"><div class="ie-icon ie360"></div><h2>360浏览器</h2><p class="info">“360安全浏览器是360安全中心推出的一款基于IE和Chrome双内核的浏览器。”</p><p class="website">浏览官方网站</p></a></li></ul></div><div class="ie-footer"></div></div>');
+	                }
+	            }
+	        })(window);
+		</script>
+	</body>
+</html>

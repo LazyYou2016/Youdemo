@@ -1,0 +1,83 @@
+@charset "utf-8";
+@import "main1.less";
+//@import(less) "a.css"
+
+//嵌套规则
+//&对尾类使用,代表它的上一层选择器
+//&对连接的使用
+//&-item
+#header {
+    color: black;
+    .navigation {
+        font-size: 12px;
+    }
+    .logo {
+        width: 300px;
+        &:hover {
+            text-decoration: none
+        }
+    }
+}
+
+//css3兼容
+//@arguments包含了所有传递进来的参数. 如果你不想单独处理每一个参数的话就可以像这样写:
+.box-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+  box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  -webkit-box-shadow: @arguments;
+}
+body {
+  .box-shadow(2px, 5px);  
+}
+
+//混合模式
+.box {
+    width: 100px;
+    height: 100px;
+    background: @color;
+}
+.box2 {
+    .box;
+    height: 300px;
+    float: right;
+}
+.box3 {
+    height: 20px;
+    .border-r;
+    .border(radius);
+}
+
+//匹配模式
+.border-r(@w:4px) {
+    -webkit-border-radius: @w;
+    -moz-border-radius: @w;
+    border-radius: @w;
+}
+
+.border(radius,@w:5px,@c:#000) {
+    border-width: @w;
+    border-color: @c;
+}
+.border(@_,@w:5px,@c:#000) {
+    .border-r();   
+}
+
+.p(r){
+    position: relative;
+}
+.p(a){
+    position:absolute;
+}
+.p(f){
+    position: fixed;
+}
+body{
+    .p(r)
+}
+//避免编译
+.box-child {
+//  width: calc(300px-30px);
+    width: ~'calc(300px-30px)';
+}
+/*编译时不滤掉*/
+// 编译时自动过滤掉

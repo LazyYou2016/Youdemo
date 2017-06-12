@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../css/bootstrap.min.css"/>
+		<title></title>
+		<style>
+			a:link,
+			a:visited {
+				color: #1E8585;
+				text-decoration: none;
+			}
+			
+			.ie-main {
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background: #DED3BF url(dist/imgs/ie-bg.jpg) repeat 0 0;
+			}
+			
+			.ie-header {
+				text-align: center;
+				border-top: 1px solid #9DC8C3;
+				padding: 70px 0;
+				background: url(dist/imgs/ie-bg-header.png) repeat-x left bottom;
+			}
+			
+			.ie-header h1 {
+				font: 300%/1 Impact, Helvetica, sans-serif;
+				margin: 0;
+				color: #324B4B;
+				text-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 -1px 0 rgba(0, 0, 0, .8);
+			}
+			
+			.ie-header h1 em {
+				font-style: normal;
+				color: #F0D200;
+				text-shadow: 0 1px 0 rgba(0, 50, 40, 0.5), 0 -1px 0 rgba(255, 255, 0, 0.8);
+			}
+			
+			.ie-footer {
+				color: #f1f1f1;
+				padding: 10px 0;
+				overflow: hidden;
+				background: url(dist/imgs/ie-bg-footer.png) repeat-x left top;
+				position: absolute;
+				bottom: 0;
+				width: 100%;
+			}
+			
+			.browser-list {
+				max-width: 1152px;
+				margin: 0 auto;
+			}
+			
+			.browser-list li {
+				width: 192px;
+				float: left;
+				margin: 12px 0 0;
+			}
+			
+			.browser-list li .ie-icon {
+				width: 125px;
+				height: 135px;
+				margin: 20px auto;
+				background-image: url(dist/imgs/ie-Bbwser.png);
+				background-repeat: no-repeat;
+			}
+			
+			.browser-list .chrome.ie-icon {
+				background-position: 0 0;
+			}
+			
+			.browser-list .firefox.ie-icon {
+				background-position: -125px 0;
+			}
+			
+			.browser-list .opera.ie-icon {
+				background-position: -250px 0;
+			}
+			
+			.browser-list .safari.ie-icon {
+				background-position: -375px 0;
+			}
+			
+			.browser-list .ie.ie-icon {
+				background-position: -500px 0;
+			}
+			
+			.browser-list .edge.ie-icon {
+				background-position: -625px 0;
+			}
+			
+			.browser-list li a:link,
+			.browser-list li a:visited {
+				color: #324B4B;
+				padding: 10px;
+				display: block;
+				overflow: hidden;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+			}
+			
+			.browser-list h2 {
+				font: 140%/1 Impact, Helvetica, sans-serif;
+				text-align: center;
+				text-transform: uppercase;
+				color: #DC3228;
+				text-shadow: 0 1px 0 #fff;
+				background-color: rgba(255, 255, 255, .3);
+				margin: 0 0 10px;
+				line-height: 1;
+				padding: 8px 0;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+			}
+			
+			.browser-list p.info {
+				padding: 0 5px;
+				text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+				color: #324B4B;
+				min-height: 120px;
+			}
+			
+			.browser-list p.website {
+				background-color: rgba(255, 255, 255, .3);
+				line-height: 1;
+				margin: 0;
+				padding: 8px 5px;
+				text-align: center;
+				-webkit-border-radius: 3px;
+				-moz-border-radius: 3px;
+				border-radius: 3px;
+			}
+			
+			.browser-list li a:hover {
+				background: rgba(255, 255, 255, .3);
+				-webkit-transform: scale(1.05, 1.05);
+				-moz-transform: scale(1.05, 1.05);
+				-ms-transform: scale(1.05, 1.05);
+				-o-transform: scale(1.05, 1.05);
+				transform: scale(1.05, 1.05);
+			}
+			
+			.browser-list li a:link,
+			.browser-list li a:link .icon {
+				-webkit-transition: all .2s;
+				-moz-transition: all .2s;
+				-ms-transition: all .2s;
+				-o-transition: all .2s;
+				transition: all .2s;
+			}
+			
+			.browser-list li a:hover .website {
+				background: #4daaa7;
+				color: #fff;
+				text-shadow: 0 1px 0 #266E67;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div class="ie-main">
+			<div class="ie-header">
+				<h1>对不起，您当前的浏览器版本太古老了，<em>存在安全风险！</em> </h1>
+			</div>
+			<div class="browser-list clearfix">
+				<ul class="list-unstyled">
+					<li>
+						<a href="https://www.google.com/chrome" title="Google Chrome">
+							<div class="ie-icon chrome"></div>
+							<h2>Google Chrome</h2>
+							<p class="info">“Google 全新推出的高速浏览器。”</p>
+							<p class="website">浏览官方网站</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.firefox.com/" title="Mozilla Firefox">
+							<div class="ie-icon firefox"></div>
+							<h2>Mozilla Firefox</h2>
+							<p class="info">“Firefox 注重您的信息安全。汇聚各种全新特性，给你更好的上网体验！”</p>
+							<p class="website">浏览官方网站</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.apple.com/safari/" title="Apple Safari">
+							<div class="ie-icon safari"></div>
+							<h2>Safari</h2>
+							<p class="info">“Safari 是苹果公司充满创新设计的产品，可用于 Mac 和 Windows。”</p>
+							<p class="website">浏览官方网站</p>
+						</a>
+					</li>
+					<li>
+						<a href="http://www.opera.com/" title="Opera">
+							<div class="ie-icon opera"></div>
+							<h2>Opera</h2>
+							<p class="info">“地球上最快的浏览器。安全。强大。易用。免费。”</p>
+							<p class="website">浏览官方网站</p>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.microsoft.com/en-us/windows/microsoft-edge" title="Microsoft Edge">
+							<div class="ie-icon edge"></div>
+							<h2>Microsoft Edge</h2>
+							<p class="info">Edge浏览器是微软发布的一款不同于传统IE的浏览器，其内置于Windows 10版本中并且为Windows 10独占。</p>
+							<p class="website">浏览官方网站</p>
+						</a>
+					</li>
+					<li>
+						<a href="http://windows.microsoft.com/ie" title="Microsoft Internet Explorer">
+							<div class="ie-icon ie"></div>
+							<h2>Internet Explorer 11</h2>
+							<p class="info">“来自微软公司的免费浏览器。全新特性助您控制个人隐私。”</p>
+							<p class="website">浏览官方网站</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="ie-footer">
+				
+			</div>
+		</div>
+		<script type="text/javascript">
+	        (function(window) {
+	            var theUA = window.navigator.userAgent.toLowerCase();
+	            if ((theUA.match(/msie\s\d+/) && theUA.match(/msie\s\d+/)[0]) || (theUA.match(/trident\s?\d+/) && theUA.match(/trident\s?\d+/)[0])) {
+	                var ieVersion = theUA.match(/msie\s\d+/)[0].match(/\d+/)[0] || theUA.match(/trident\s?\d+/)[0];
+	                if (ieVersion < 10) {
+	                    document.write('<div id="bov"><div id="bov-child"><div id="bov-content"><h1> 对不起，您当前的浏览器版本太古老了，存在安全风险</h1><h3> 建议升级浏览器，获得更好的体验</h3><ul class="browser-list"><li><a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html" title="谷歌浏览器" class=""><span class="bovicon-img img-chrome" alt="chrome"></span><p>谷歌浏览器</p></a><a href="http://www.google.cn/intl/zh-CN/chrome/browser/desktop/index.html" title="下载" class="btn btn-warning">前往下载</a></li><li><a href="http://se.360.cn/" title="360浏览器" class=""><span class="bovicon-img img-360" alt="chrome"></span><p>360浏览器</p></a><a href="http://se.360.cn/" title="下载" class="btn btn-warning">前往下载</a></li><li><a href="http://www.firefox.com.cn/download/" title="firefox" class=""><span class="bovicon-img img-firefox" alt="firefox"></span><p>firefox</p></a><a href="http://www.firefox.com.cn/download/" title="下载" class="btn btn-warning">前往下载</a></li></ul></div></div></div>');
+	                }
+	            }
+	        })(window);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			
+			var indexOf = [].indexOf?
+			function(arr,item){
+				return arr.indexOf(item)
+			}:
+			function(arr,item){
+				for (var i=0;i<arr.length;i++) {
+					if(arr[i]====item){
+						return i;
+					}
+				}
+				return -1;
+			}
+			function unique(arr){
+				var ret = [];
+				for(var i=0;i<arr.length;i++){
+					var item = arr[i];
+					if(indexOf(ret,item)===-1){
+						ret.push(item)
+					}
+				}
+				return ret;
+			}
+			var arr = ['a', 'b', 'c', '1', 0, 'c', 1, '', 1, 0]
+			unique(arr);
+			console.log(unique(arr));
+		</script>
+	</body>
+</html>

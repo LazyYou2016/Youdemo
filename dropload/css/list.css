@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+.om-ellipsis {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+.outer {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction:column;
+    -webkit-box-orient:vertical;
+    box-orient:vertical;
+    -webkit-flex-direction:column;
+    flex-direction:column;
+}
+.om-wrap {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll
+}
+
+.om-list {
+    position: relative;
+    height: 70px;
+    padding: 10px 20px 10px 10px;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box
+}
+
+.om-list .om-list-title {
+    color: #333;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px
+}
+
+.om-list .om-list-text {
+    color: #999;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px
+}
+
+.om-list:after {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    content: '';
+    width: 10px;
+    height: 10px;
+    margin-top: -5px;
+    border-top: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg)
+}
+
+.om-list.om-list-img {
+    padding: 10px 20px 10px 70px
+}
+
+.om-list.om-list-img .om-list-src {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px
+}
+
+
+/*# sourceMappingURL=list.css.map */

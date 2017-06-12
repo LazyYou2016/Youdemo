@@ -9,7 +9,6 @@
 		<title>裁剪图片演示</title>
 		<link rel="stylesheet" type="text/css" href="../dist/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="../dist/font-awesome.min.css"/>
-		l
 		<style type="text/css">
 		</style>
 	</head>
@@ -54,16 +53,6 @@
 			                <h4 class="modal-title">修改头像</h4>
 			            </div>
 			            <div class="modal-body">
-			            		<div class="clip-img">
-			        				<img src="../img/headportrait.jpg"/ id="img-view">
-			        				<button type="button" class="btn btn-primary" id="fileBtn"><i class="fa fa-cloud-upload"></i> 选择图片</button>
-						    		<input class="hidden" type="file" id="file">
-			                	</div>
-							<!-- 裁剪显示区 -->
-							<div id="clip"></div>
-							<button type="button" class="btn btn-danger m-btnauto mt-15 btn-block" id="clipBtn">
-								裁剪
-							</button>
 			            </div>
 			            <div class="modal-footer">
 			            	<button class="btn btn-orang" data-dismiss="modal">取消</button>
@@ -80,11 +69,13 @@
 		<script src="../dist/photoClip.min.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			$(function() {
+				var Mhtml = "<div class="clip-img"><img src="../img/headportrait.jpg" id="img-view"> <button type="button" class="btn btn-primary" id="fileBtn"><i class="fa fa-cloud-upload"></i> 选择图片</button> <input class="hidden" type="file" id="file"></div><div id="clip"></div><button type="button" class="btn btn-danger m-btnauto mt-15 btn-block" id="clipBtn">裁剪</button>"
 				var $clip = $("#clip");
 				var $file = $("#file");
 				var $imgView = $("#img-view");
 				$("#headportrait").click(function() {
 					$('#myModal').modal();
+					$('#myModal').fin
 				});
 				$("#fileBtn").click(function() {
 				

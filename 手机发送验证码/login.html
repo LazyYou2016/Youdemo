@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="dist/css/iconfont.css">
+    <link rel="stylesheet" href="dist/css/style.css">
+</head>
+<body>
+<h1>正确手机号：18810532115</h1>
+<h1>正确验证码：123</h1>
+<div class="login-wrap1">
+    <div class="login-heading">
+    	<div class="l-h-toggle" id="phone_btn">
+    		<div class="leaf leaf-left active">
+    			<img class="img-responsive leaf-l1" src="img/leaf-left.png"/>
+    			<img class="img-responsive leaf-l2" src="img/leaf-left-1.png"/>
+    			<p>手机登录</p>
+    		</div>
+    	</div>
+    	<div class="l-h-toggle" id="user_btn">
+    		<div class="leaf leaf-right">
+    			<img class="img-responsive leaf-r1" src="img/leaf-right-1.png"/>
+    			<img class="img-responsive leaf-r2" src="img/leaf-right.png"/>
+    			<p>账号登录</p>
+    		</div>    		
+    	</div>
+    	<div class="clearfix">
+    	</div>
+    </div>
+    <div class="login-body">
+    	<div class="login-box">
+	        <form role="form" id="Form_phone">
+	            <div class="form-group">
+	                <div class="phone form-group-input">
+	                    <i class="iconfont icon-denglushoujihao"></i>
+	                    <input type="text" name="phone" placeholder="请输入手机号" id="phone_number" maxlength="11">
+	                	<span class="error-wrap"  style="margin-bottom: 10px;"></span>
+	                </div>
+	                <div class="code mt-30 form-group-input">
+	                    <i class="iconfont icon-yanzhengma1"></i>
+	                    <input type="text" name="code" id="code_text" placeholder="请输入验证码" maxlength="4" autocomplete="off">
+	                    <button type="button" class="btn" id="btnSendCode" onclick="checkMobile(phone_number.value)" code-id="0">获取验证码</button>
+	                </div>
+	            </div>
+	            <div class="clearfix"></div>
+	            <button type="button" class="login-btn" onclick="loginbtn()">登&nbsp;录</button>
+	        </form>    		
+    	</div>
+    	<div class="login-box" style="display: none;">
+	        <form role="form" id="Form_user">
+	            <div class="form-group">
+	                <div class="user form-group-input">
+	                    <i class="iconfont icon-yonghu"></i>
+	                    <input type="text" name="user" class="" required="required" placeholder="请输入用户名">
+	                </div>
+	                <div class="password mt-30 form-group-input">
+	                    <i class="iconfont icon-mima"></i>
+	                    <input type="password" name="password" class="" required="required" placeholder="请输入密码" autocomplete="off">
+	                </div>
+		            <div class="checkbox mt-20">
+		                <label class="pull-left">
+		                    <input type="checkbox"> 保持登陆状态
+		                </label>
+		                <a href="#" class="fr">忘记密码?</a>
+		            </div>	                
+	            </div>
+	            <div class="clearfix"></div>
+	            <button type="submit" class="login-btn">登&nbsp;录</button>
+	        </form>    		
+    	</div>    	
+    </div>
+</div>
+
+<script src="dist/js/jquery-1.12.0.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<script src="dist/js/layer.js"></script>
+<script src="dist/js/jquery.validate.min.js"></script>
+<script>
+    var Form_Phone = $('#Form_phone').parent();
+    var Form_User = $('#Form_user').parent();
+    $('#phone_btn').click(function(){
+    	Form_Phone.show().siblings('.login-box').hide();
+    	$('#phone_btn').find('.leaf-left').addClass('active');
+    	$('#user_btn').find('.leaf-right').removeClass('active');
+    });
+    $('#user_btn').click(function(){
+    	Form_User.show().siblings('.login-box').hide();
+    	$('#user_btn').find('.leaf-right').addClass('active');
+    	$('#phone_btn').find('.leaf-left').removeClass('active');
+    });
+    $.validator.setDefaults({
+        submitHandler: function() {
+            alert("提交事件!");
+            window.location.href="www.baidu.html";
+        }
+    });
+    $().ready(function() {
+        $("#Form_user").validate({
+            rules: {
+                password: {
+                    required: true,
+                    minlength: 6
+                },
+                user: {
+                    required: true,
+                    minlength: 2
+                }
+            },
+            messages: {
+                user: {
+                    required: "请输入用户名",
+                    minlength: "登录名必需由两个字母组成"
+                },
+                password: {
+                    required: "请输入密码",
+                    minlength: "密码长度不能小于 5 个字母"
+                }
+            },
+            errorPlacement: function(error, element) {
+                $( element )
+                .closest( "form" )
+                .find('.'+element.attr('name'))
+                .append(error);
+            },
+            errorElement: "small"
+        });
+    });
+    
+    
+        var InterValObj; //timer变量，控制时间
+        var count = 5; //间隔函数，1秒执行
+        var curCount;//当前剩余秒数
+        var code = ""; //验证码
+        var codeLength = 6;//验证码长度
+	        function sendMessage() {
+            curCount = count;
+            var dealType; //验证方式
+//产生验证码
+            for (var i = 0; i < codeLength; i++) {
+                code += parseInt(Math.random() * 9).toString();
+            }
+//设置button效果，开始计时
+            $("#btnSendCode").attr("disabled", "true").text( + curCount + "秒再获取");
+            InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
+        }
+        //timer处理函数
+        function SetRemainTime() {
+            if (curCount == 0) {
+                window.clearInterval(InterValObj);//停止计时器
+                $("#btnSendCode").removeAttr("disabled");//启用按钮
+                $("#btnSendCode").text("重新发送验证码");
+                $("#btnSendCode").attr('code-id','0');
+                code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效
+            }
+            else {
+                curCount--;
+                $("#btnSendCode").text(curCount + "秒再获取");
+            }
+        }
+
+        function checkMobile(str) {
+//        var re = /^0?1[3|4|5|8][0-9]\d{8}$/;
+//        var re = /^1\d{10}$/;
+            var re=/^1[3|4|5|8][0-9]\d{4,8}$/i;//验证手机正则(输入前7位至11位)
+            var getTel="18810532115";
+            var tel=$("#phone_number").val();
+            if( $("#phone_number").val()=="")
+            {
+                $(".error-wrap").html("请输入手机号");
+            }
+            else if($("#phone_number").val().length<11)
+            {
+                $(".error-wrap").html("手机号码格式不正确");
+            }
+            else if(!re.test($("#phone_number").val()))
+            {
+                $(".error-wrap").html("手机号码格式不正确");
+            }
+            else if(re.test(str))
+            {
+                $(".error-wrap").html("");
+                if(tel==getTel){
+                    sendMessage();
+                    $("#btnSendCode").attr('code-id','1');
+                }
+                else{
+                    alert("对不起，您暂时没有浏览权限，请与技术管理部门联系")
+                }
+            }
+        }
+        function loginbtn(){
+        	var codeId = $("#btnSendCode").attr('code-id');
+            var s="123";
+            var phone = $("#phone_number").val();
+            var code = $("#code_text").val();
+	        if(phone==""){
+	            $(".error-wrap").html("请输入手机号");
+            }else if(codeId==1&&code==s) {
+                alert("登陆成功！")
+                window.location.href="13各科室.html";
+            }else if(codeId==0){
+            	layer.msg('请点击获取验证码');
+            }else if(codeId==1&&code==""){
+            	layer.msg('请输入验证码');
+            }else if(codeId==1&&code!=s){
+            	layer.msg('验证码错误');
+            }
+        }
+</script>
+</body>	
+</html>

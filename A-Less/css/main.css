@@ -1,0 +1,48 @@
+@charset "utf-8";
+p {
+  color: #c2c2c2;
+}
+#header {
+  color: black;
+}
+#header .navigation {
+  font-size: 12px;
+}
+#header .logo {
+  width: 300px;
+}
+#header .logo:hover {
+  text-decoration: none;
+}
+body {
+  box-shadow: 2px 5px 1px #000;
+  -moz-box-shadow: 2px 5px 1px #000;
+  -webkit-box-shadow: 2px 5px 1px #000;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background: #ff0000;
+}
+.box2 {
+  width: 100px;
+  height: 100px;
+  background: #ff0000;
+  height: 300px;
+  float: right;
+}
+.box3 {
+  height: 20px;
+  border-width: 5px;
+  border-color: #000;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+body {
+  position: relative;
+}
+.box-child {
+  width: calc(300px-30px);
+}
+/*编译时不滤掉*/

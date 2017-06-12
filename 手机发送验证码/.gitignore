@@ -1,0 +1,10 @@
+# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.project
+
+videos
+.idea/
+/.idea/workspace.xml
+/.idea/*
