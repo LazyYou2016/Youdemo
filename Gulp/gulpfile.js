@@ -81,7 +81,7 @@ var buildBasePath = 'dist/';//构建输出的目录
 
 //cssmd5，压缩后并用md5进行命名，下面使用revCollector进行路径替换
 gulp.task('minifycssmd5', function (){
-    gulp.src('docs/dist/css/*.css')
+    gulp.src(['docs/dist/css/*.css', '!docs/dist/css/*.min.css'])
         //.pipe(concat('style.css'))//压缩后的css
         .pipe(minicss())//压缩css到一行
         .pipe(rev())//文件名加MD5后缀
@@ -99,7 +99,7 @@ gulp.task('minifyimgmd5', function (){
 });
 //jsmd5，压缩后并用md5进行命名，下面使用revCollector进行路径替换
 gulp.task('minifyjsmd5', function() {
-    gulp.src('docs/dist/js/*.js')
+    gulp.src(['docs/dist/js/*.js', '!docs/dist/js/*.min.js'])
         //.pipe(concat('common.min.js'))//压缩后的js
         .pipe(minijs())//压缩js到一行
         .pipe(rev())//文件名加MD5后缀
