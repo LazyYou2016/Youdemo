@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">	
+		<title></title>
+		<style>
+			* {
+			  margin: 0;
+			  padding: 0;
+			}
+			li {
+			  list-style: none;
+			}
+			img {
+			  border: none;
+			}
+			input,
+			select,
+			textarea {
+			  outline: none;
+			  border: none;
+			  background: none;
+			}
+			textarea {
+			  resize: none;
+			}
+			a {
+			  text-decoration: none;
+			}			
+			 body{font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+			     font-size: 14px;
+			    line-height: 1.42857143;
+			    color: #333;
+			    }
+			table {
+			    background-color: transparent;
+			}
+			table {
+			    border-spacing: 0;
+			    border-collapse: collapse;
+			}
+			
+			.clearfix:before,
+			.clearfix:after
+			 {
+				display: table;
+				content: " ";
+				clear: both
+			}
+
+			.container {
+			    padding-right: 15px;
+			    padding-left: 15px;
+			    margin-right: auto;
+			    margin-left: auto;
+			}
+			@media (min-width:768px) {
+				.container {
+					width: 750px;
+					padding: 0;
+				}
+			}
+			
+			@media (min-width:992px) {
+				.container {
+					width: 970px
+				}
+			}
+			
+			@media (min-width:1200px) {
+				.container {
+					width: 1170px
+				}
+			}
+			@media (max-width: 767px){
+				.container {
+					width: 100%;
+					padding: 0;
+				}
+			}			
+			.table {
+			    width: 100%;
+			    max-width: 100%;
+			    margin-bottom: 20px;
+			    position: relative;
+			}
+			.table>thead>tr>th, .table>tbody>tr>th, .table>tfoot>tr>th, .table>thead>tr>td, .table>tbody>tr>td, .table>tfoot>tr>td {
+			    padding: 8px;
+			    line-height: 1.42857143;
+			    vertical-align: top;
+			    border-top: 1px solid #ddd;
+			    text-align: center;
+			}			
+			.title {
+			    text-align: center;
+			    font-weight: initial;
+			    font-size: 30px;
+			    margin-top: 20px;
+			    margin-bottom: 10px;			    
+			}
+			.table-head p {
+				float: right;
+				display: inline-block;
+				margin: 0 5px 10px 5px;
+			}
+			.table-main thead,
+			.table-main tbody{
+				border: 1px solid #ddd
+			}
+			.table>thead tr th,
+			.table>tbody tr td {
+				word-wrap : break-word;
+				border-right: 1px solid #ddd;
+			}
+			@media (min-width: 767px) {
+				.table>tbody tr td {
+					/*max-width: 300px;*/
+					/*min-width: 100px;*/
+				}		
+			}
+			@media (max-width: 767px) {
+				.title {
+					margin-top: 10px;
+				}
+				.table {
+					display: block;
+				}
+				.table-head {
+					padding: 0 15px;
+				}
+				.table-main thead,
+				.table-main tbody,			
+				.table>tbody tr td {
+					border: none;
+				}
+				.table-main thead {
+					display: none;
+				}
+				.table-main tr,
+				.table-main tbody {
+				    position: relative;
+				    width: 100%;
+				    display: block;
+				}
+				.table-main tr{
+					border-bottom: 1px solid #ddd;
+				}
+				.table-main tr:first-child{
+					border-top: 1px solid #ddd;
+				}
+				
+				.table-main td{
+				    display: block;
+				    border-top: none !important;
+				}
+				.table-main td.name,
+				.table-main td.address {
+					text-align: left;
+				}
+				.table-main td.name {
+					padding-bottom: 0;
+				}
+				.table-main td.address {
+					width: 75%;
+				}
+				.table-main td.time,
+				.table-main td.state {
+					position: absolute;
+					right: 0;
+				}
+				.table-main td.time {
+					top: 0;
+				}
+				.table-main td.state {
+					bottom: 0;
+				}							
+			}					
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h2 class="title">
+				考勤结果日报表
+			</h2>
+			<div class="table-head clearfix">
+				<p>考勤时间：08：40-18：30</p>
+				<p>考勤日期：2017年6月13日 16:46:46</p>
+			</div>
+			<div class="table-main">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>姓名</th>
+							<th>时间</th>
+							<th>地点</th>
+							<th>结果</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="">
+							<td class="name">姓名</td>
+							<td class="time">08：40</td>
+							<td class="address">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</td>
+							<td class="state">迟到</td>
+						</tr>
+						<tr class="">
+							<td class="name">姓名</td>
+							<td class="time">08：40</td>
+							<td class="address">XXXXXXXXXXXXXXXX</td>
+							<td class="state">迟到</td>
+						</tr>					
+					</tbody>
+				</table>				
+			</div>
+		</div>
+	</body>
+</html>
