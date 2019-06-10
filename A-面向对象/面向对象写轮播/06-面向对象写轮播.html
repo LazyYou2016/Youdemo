@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+            li{ list-style-type: none;}
+            #box{
+                position: relative;
+                width: 500px;
+                height: 289px;
+                margin: 50px auto;
+            }
+            #box .pic{
+                position: relative;
+                overflow: hidden;
+                height: 289px;
+            }
+            #box .pic li{
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            #box .pic li.show{
+                display: block;
+            }
+            #box .pic li img{
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            #box .tab{
+                position: absolute;
+                width: 92px;
+                height: 10px;
+                left: 50%;
+                bottom: 10px;
+                margin-left: -45px;
+            }
+            #box .tab ul li{
+                float: left;
+                width: 10px;
+                height: 10px;
+                background: #fff;
+                border-radius: 100%;
+                margin: 0 3px;
+                cursor: pointer;
+            }
+            #box .tab ul li.on{
+                background: #f60;
+            }
+            #box .btn div{
+                position: absolute;
+                top: 50%;
+                margin-top: -20px;
+                width: 30px;
+                height: 40px;
+                background: rgba(0,0,0,.5);
+                color: #fff;
+                font-weight: bold;
+                text-align: center;
+                line-height: 40px;
+                cursor: pointer;
+            }
+            #box .btn div.left{
+                left: 0;
+            }
+            #box .btn div.right{
+                right: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <div class="pic">
+                <ul>
+                    <li><img src="img/1.jpg" alt=""></li>
+                    <li><img src="img/2.jpg" alt=""></li>
+                    <li><img src="img/3.jpg" alt=""></li>
+                    <li><img src="img/4.jpg" alt=""></li>
+                    <li><img src="img/5.jpg" alt=""></li>
+                </ul>
+            </div>
+            <div class="tab">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="btn">
+                <div class="left"> < </div>
+                <div class="right"> > </div>
+            </div>
+        </div>
+
+        <script>
+
+            //两个不同的banner图之间，哪些私有属性，哪有公共属性
+            function Banner( picLi , tabLi , btn ) {
+                this.picLi = picLi;
+                this.tabLi = tabLi;
+                this.btn = btn;
+                this.length = picLi.length;
+                this.index = 0;
+            }
+            Banner.prototype = {
+
+                exe : function () {
+                    this.init();
+                    this.tabClick();
+                    this.btnClick();
+                },
+
+                //初始化显示
+                init : function () {
+                    this.picLi[0].className = "show";
+                    this.tabLi[0].className = 'on';
+                },
+
+                //tab点击事件的设置
+                tabClick : function () {
+                    var This = this;
+                    for (var i = 0; i < this.length; i++) {
+                        (function (i) {
+                            this.tabLi[i].onclick = function () {
+                                var x = i;
+                                This.change(function () {
+                                    This.index = x;
+                                });
+                            };
+                        }).call(this,i);
+                    }
+                },
+
+                //btn点击事件的设置
+                btnClick : function () {
+                    var This = this;
+                    for (i = 0; i < 2; i++) {
+                        (function (i) {
+                            this.btn[i].onclick = function () {
+                                var x = i;
+                                This.change(function () {
+                                    if (x){
+                                        This.index ++;
+                                        This.index %= This.length;
+                                    }else{
+                                        This.index --;
+                                        if(This.index<0)This.index=This.length-1;
+                                    }
+                                });
+                            };
+                        }).call(this,i);
+                    }
+                },
+
+                //变化函数
+                change : function (fn) {
+                    this.picLi[this.index].className = "";
+                    this.tabLi[this.index].className = "";
+                    fn();
+                    this.picLi[this.index].className = "show";
+                    this.tabLi[this.index].className = "on";
+                }
+
+            };
+
+
+            //banner图1
+            (function () {
+                var oBox = document.getElementById("box"),
+                    oPicLi = oBox.querySelectorAll(".pic ul li"),
+                    oTabLi = oBox.querySelectorAll(".tab ul li"),
+                    oBtn = oBox.querySelectorAll(".btn div");
+                var banner1 = new Banner(oPicLi , oTabLi , oBtn);
+                banner1.exe();
+            })();
+
+//            oPicLi[0].className = "show";
+//            oTabLi[0].className = 'on';
+//
+//            for (var i = 0; i < length; i++) {
+//                oTabLi[i].index = i;
+//                oTabLi[i].onclick = function () {
+//                    var x = this.index;
+//                    change(function () {
+//                        index = x;
+//                    });
+//                };
+//            }
+//            for (i = 0; i < 2; i++) {
+//                oBtn[i].index = i;
+//                oBtn[i].onclick = function () {
+//                    var x = this.index;
+//                    change(function () {
+//                        if (x){
+//                            index ++;
+//                            index %= length;
+//                        }else{
+//                            index --;
+//                            if(index<0)index=length-1;
+//                        }
+//                    });
+//                };
+//            }
+//
+//            function change(fn) {
+//                oPicLi[index].className = "";
+//                oTabLi[index].className = "";
+//                fn();
+//                oPicLi[index].className = "show";
+//                oTabLi[index].className = "on";
+//            }
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

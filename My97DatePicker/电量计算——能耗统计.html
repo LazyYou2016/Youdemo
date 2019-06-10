@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>能耗统计</title>
+    <!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />-->
+    <!--[if lt IE 9]>
+    <script src="dist/js/html5shiv.min.js"></script>
+    <script src="dist/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+   
+					<div class="flex-box bl-radio">
+						<div class="labeltitle">开始日期</div>
+						<div class="flex-control"><input type="text" id="start" placeholder="请选择开始日期" onclick="var end=$dp.$('end');WdatePicker({dateFmt:'HH:00:00',onpicked:function(){end.click();},startDate:'{%H-1}:00:00',minDate:'{%H-1}:00:00',maxDate:'%H'})"></div>
+					</div>
+					<div class="flex-box bl-radio">
+						<div class="labeltitle">结束日期</div>
+						<div class="flex-control"><input type="text" id="end" placeholder="请选择结束日期" onclick="WdatePicker({dateFmt:'HH:00:00',minDate:'#F{$dp.$D(\'start\')}',maxDate:'%H'})"></div>
+					</div>		
+					<div class="flex-control"><input type="text" id="dateTime" placeholder="请选择日期" onclick="WdatePicker({dateFmt:'yyyy-MM-dd',alwaysUseStartDate:true,maxDate:'%y-%M-{%d-1}'})"></div>
+<script src="My97DatePicker/WdatePicker.js"></script>
+<script>
+	
+</script>
+</body>
+</html>

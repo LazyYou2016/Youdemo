@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+            li{ list-style-type: none;}
+             
+        </style>
+    </head>
+    <body>
+        <div id="box">
+            <p id="p1"></p>
+            <p id="p2"></p>
+        </div>
+        <script>
+			var oP1 = document.getElementById("p1"),
+				oP2 = document.getElementById("p2")
+			var val = getCookie("time");
+			if (val) {
+				oP1.innerHTML = "您上次访问的时间是："+val;
+			} else{
+				oP1.innerHTML = "欢迎！您是第一次访问本站！";
+			}
+			var date = new Date(),
+				YY = date.getFullYear(),
+				MM = date.getMonth()+1,
+				DD = date.getDate(),
+				hh = date.getHours(),
+				mm = date.getMinutes(),
+				ss = date.getSeconds();
+				
+				time = YY + '年' + MM + '月' + DD + '日' + toTwo(hh) + ':' + toTwo(mm) + ':' + toTwo(ss);  
+			oP2.innerHTML = "当前时间是：" + time;
+			setCookie({
+				time : time
+			},15)
+				
+	        function toTwo(num) {
+	        	return num*1<10?"0"+num:num;
+	        }				
+			
+
+            //获取cookie
+            function getCookie( key ) {
+                var val = document.cookie.match(new RegExp("\\b"+key+"=([^;]*)(;|$)"));
+                return val?val[1]:"";
+            }
+
+            //设置cookie
+            function setCookie(mJson , time) {
+                var data = new Date( new Date().getTime() + time*24*60*60*1000 ).toGMTString();
+                for (var key in mJson) document.cookie = key+"="+mJson[key]+"; expires="+data;
+            }
+
+            //清除cookie
+            function removeCookie( key ) {
+                var json = {};json[key] = "";
+                setCookie(json,-1);
+            }
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

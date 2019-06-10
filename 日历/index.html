@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="dist/css/buttons.css">
+</head>
+<body>
+	<style type="text/css" media="screen">
+    .auto-kal{
+        margin:0 auto;
+        display:none;
+        position: absolute;
+        z-index: 9999;
+        /*text-align: center;*/
+    }
+    .sel-box {
+        display: inline-block;
+        height: 18px;
+        line-height: 18px;
+        overflow: hidden;
+        border: 1px solid #cfcdc7;
+        margin-right: 15px;
+        position: relative;
+        padding-right: 16px;
+        text-align: center;
+        vertical-align: middle;
+        background: #eef1f8;
+    }
+    .w80 {
+        width: 80px;
+    }
+    .sear-sel .w80 {
+        width: 80px;
+    }
+    div.panel
+    {
+        height:400px;
+        width: 380px;
+        /*padding: 10px 15px;*/
+        border: 1px solid #298cce;
+        background-color: #FFFFFF;
+        display:none;
+        position: absolute;
+        top: 25px;
+        z-index: 10;
+    }
+    div.panel .quick-box-hd {
+        height: 28px;
+        line-height: 28px;
+        background: #63c7e7;
+        color: #fff;
+        padding-left: 10px;
+        font-size: 16px;
+    }
+    div.panel .quick-box-bd {
+        padding: 10px 10px 0px 30px;
+        overflow: hidden;
+        zoom: 1;
+    }
+    div.panel .list-inline{
+        padding: 0;
+        margin: 0;
+    }
+    /*日历样式*/
+    .date1 .btn{
+         border: 1px solid #0088cc;
+         margin-bottom: 3px;
+     }
+    .date1 .btn1{
+        border: 1px solid #0088cc;
+        background-color: #63c7e7;
+        margin-bottom: 3px;
+    }
+</style>
+
+<div class="col-md-12">
+    <div>
+        <label>日期:</label>
+        <button class="button button-pill button-tiny" id="flip">请选择</button>
+        <span class="yue-btn"></span>
+        <!--滑动-->
+        <div class="panel">
+            <form class="form-inline">
+                <div class="quick-box-hd">选择日期
+                    <a class="btn btn-default btn-xs pull-right btn-close"
+                       style="margin-top: 3px;margin-right: 3px"><span
+                            class="glyphicon glyphicon-remove"></span></a>
+                </div>
+                <div class="quick-box-bd">
+                    <div class="text-center" style="margin-bottom: 5px">
+                        <label>请选择:</label>
+                        <select class="form-control" id="year" onchange="dateInput()">
+                            <option selected>年度</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                        </select>
+                        <!--<label>月份:</label>-->
+                        <select class="form-control" id="month" onchange="dateInput()">
+                            <option selected>月份</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="4">5</option>
+                            <option value="4">6</option>
+                            <option value="4">7</option>
+                            <option value="4">8</option>
+                            <option value="4">9</option>
+                            <option value="4">10</option>
+                            <option value="4">11</option>
+                            <option value="4">12</option>
+                        </select>
+                    </div>
+                    <!--创建复选框日期-->
+                    <div class="date1" style="display: inline-block"></div>
+                </div>
+            </form>
+            <div class="text-center">
+                <p>
+                    <button class="button button-tiny" id="all">全选</button>
+                    <button class="button button-tiny" id="delAll1">取消</button>
+                    <button class="button button-tiny" id="antiAll">反选</button>
+                </p>
+                <button class="button button-border button-rounded button-primary button-tiny" onclick="fun()">确定</button>
+                <a class="button button-border button-rounded button-caution button-tiny btn-close">关闭</a>
+            </div>
+        </div>
+        <!--滑动结束-->
+    </div>
+    <div class="text-center" style="margin-top: 5px">
+        <button class="button button-rounded button-primary  button-small">查询</button>
+        <button id="delAll"  class="button button-rounded  button-small">重置</button>
+    </div>
+</div>
+
+
+<script src="dist/js/jquery-1.8.3.min.js"></script>
+<!-- <script src="dist/js/bootstrap.min.js"></script> -->
+<script>
+                function teston1(){
+                    $(".k-selected").each(function(){
+                        var aa=$(this).attr("data-date");
+                        alert(aa);
+                    });
+                }
+                /*日期*/
+                function teston(){
+                    check_vals = [];
+                    $(".k-selected").each(function(){
+                        var date = $(this).attr("data-date");
+                        var value = $(".date-get").attr("value");
+//                        alert(value);
+                        var input = "<button class='btn btn-default empty-qing btn-xs date-get' value='"+date+"' style='margin:0 3px'>" + date+"</button>";
+                        check_vals.push(input);
+                    });
+                    $(".btn-date").empty("");
+                    $(".btn-date").append(check_vals);
+                }
+
+                /*日期*/
+                function fun1() {
+                    obj = document.getElementsByName("abc");
+                    check_val = [];
+                    var year=$("#year").attr("value");
+                    var month=$("#month").attr("value");
+                    var yearMonth=year+"-"+month;
+                    for (k in obj) {
+                        if (obj[k].checked) {
+                            var day = obj[k].value;
+                            var date=yearMonth+"-"+day;
+                            var input = "<button class='btn btn-default empty-qing btn-xs' style='margin:0 3px'>" + date+"</button>";
+                            check_val.push(input);
+                        }
+                    }
+                    $(".yue-btn").append(check_val);
+                }
+                //滑动
+                $(document).ready(function(){
+                    //月份盒子滑动
+                    $("#flip").click(function(){
+                        $(".panel").slideToggle("slow");
+                    });
+                });
+
+                //关闭
+                $(document).ready(function(){
+                    $(".btn-close").click(function(){
+                    $(this).closest('.panel').slideUp();
+                    });
+                })
+            </script>
+
+<script>
+    //创建补0函数
+    function p(s) {
+        return s < 10 ? '0' + s: s;
+    }
+    //创建复选框日期
+    function dateInput(){
+        var html=[];
+        var input;
+        var year=$("#year").attr("value");
+        var month=$("#month").attr("value");
+        input ="<ul class='list-inline'>";
+        for (var i=1;i<=31;i++)
+        {
+            i = p(i);
+            var dateStr=year+month+i;
+            input +="<li><span class='blueBox btn'  name='abc' onclick='yesBox("+dateStr+")' value='"+i+"' id='"+dateStr+"'>"+i+"</span></li>";
+
+        }
+        input +=("</ul>");
+        $(".date1").empty();
+        $(".date1").append(input);
+    }
+
+    function yesBox(id){
+    	
+        var id=p(id);
+        console.log(id)
+        $("#"+id).toggleClass("btn1");
+    }
+
+    function fun() {
+        var year=$("#year").attr("value");
+        var month=$("#month").attr("value");
+        var yearMonth=year+"-"+month;
+        var day=$(".btn1").attr("value");
+        var date;
+        var dateBox;
+        var check_val=[];
+        if(day){
+            $(".btn1").each(function(){
+                days=$(this).attr("value");
+                date=yearMonth+"-"+days;
+                var dateBox = "<span class='empty-qing btn-xs' style='margin:0 3px;border: 1px solid #e0e0e0;padding: 5px 0px 5px 10px'>" + date+"<button class='btn btn-default btn-xs' style='border: 0'><span class='glyphicon glyphicon-remove'></span></button></span>";
+                check_val.push(dateBox);
+            });
+            $(".yue-btn").append(check_val);
+
+        }else{
+        }
+        $(".blueBox").removeClass("btn1");
+    }
+    $(document).ready(function(){
+        //创建复选框日期
+            dateInput();
+        fun();
+
+       //全选
+        $("#all").click(function(){
+            $(".blueBox").addClass("btn1");
+        });
+        //取消
+        $("#delAll1").click(function(){
+            $(".blueBox").removeClass("btn1");
+        });
+        //反选
+        $("#antiAll").click(function() {
+            $(".blueBox").toggleClass("btn1");
+        });
+        //重置
+        $("#delAll").click(function(){
+            $(".blueBox").removeClass("btn1");
+            $(".empty-qing").remove();
+//            fun();
+        });
+    });
+
+    $(function(){
+    $("body").delegate(".empty-qing button","click",function(){
+        console.log(this);
+        $(this).parent().remove();
+    })  
+})
+</script>
+
+</body>
+</html>

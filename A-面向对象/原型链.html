@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+            li{ list-style-type: none;}
+             
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <script>
+            function Fn(name , age) {
+                this.y = 55;
+            }
+            Fn.prototype.x = 20;
+            Object.prototype.num = 30;
+
+            var obj = new Fn();
+
+            //alert(   obj.num   );
+
+            //alert(  obj.__proto__ === Fn.prototype  );
+
+            console.log( obj );
+
+
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

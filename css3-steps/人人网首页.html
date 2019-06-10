@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.intro {
+			    width: 600px;
+			    margin: 20px auto;
+			    height: 130px;
+			}
+			.intro .item {
+			    width: 150px;
+			    height: 150px;
+			    float: left;
+			}
+			.intro .item .content {
+			    display: block;
+			    outline: 0;
+			    width: 150px;
+			    height: 150px;
+			    cursor: pointer;
+			}			
+			.intro .qrcode {
+			    background: url(imgs/qrcode1-t.jpg) 0 0 no-repeat;
+			}
+			.intro .phone {
+			    background: url(imgs/phone1-t.jpg) 0 0 no-repeat;
+			}
+			.intro .pad {
+			    background: url(imgs/pad1-t.jpg) 0 0 no-repeat;
+			}
+			.intro .other {
+			    background: url(imgs/other1-t.jpg) 0 0 no-repeat;
+			}
+			.unactive .content {
+			    -moz-animation: moveup .3s steps(7) forwards;
+			    -webkit-animation: moveup .3s steps(7) forwards;
+			}
+			.active .content {
+			    background-position: 0 -1800px;
+			    -moz-animation: movedown .5s steps(12) forwards;
+			    -webkit-animation: movedown .5s steps(12) forwards;
+			}
+			@-webkit-keyframes moveup {
+			    0% {
+			        background-position: 0 -1800px
+			    }
+			
+			    100% {
+			        background-position: 0 -2850px
+			    }
+			}
+			@keyframes moveup {
+			    0% {
+			        background-position: 0 -1800px
+			    }
+			
+			    100% {
+			        background-position: 0 -2850px
+			    }
+			}
+			@-webkit-keyframes movedown {
+			    0% {
+			        background-position: 0 0
+			    }
+			
+			    100% {
+			        background-position: 0 -1800px
+			    }
+			}
+			@keyframes movedown {
+			    0% {
+			        background-position: 0 0
+			    }
+			
+			    100% {
+			        background-position: 0 -1800px
+			    }
+			}
+
+		</style>
+	</head>
+	<body>
+		<div class="intro">
+			<div class="item">
+				<a class="qrcode content" href="#" target="_blank"></a>
+			</div>
+			<div class="item">
+				<a class="phone content" href="#" target="_blank"></a>
+			</div>
+			<div class="item">
+				<a class="pad content" href="#" target="_blank"></a>
+			</div>
+			<div class="item">
+				<a class="other content" href="#" target="_blank"></a>
+			</div>
+		</div>	
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script>
+			$(".item").hover(function(){
+				$(this).removeClass("unactive").addClass("active")
+			},function(){
+				$(this).removeClass("active").addClass("unactive")
+			})
+		</script>
+	</body>
+</html>

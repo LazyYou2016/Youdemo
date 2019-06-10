@@ -1,0 +1,73 @@
+{
+  "width": 60,
+  "height": 30,
+  "comps": [
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "shadowColor": "#1ABC9C",
+      "points": [
+        1.4262,
+        14.93626,
+        51.46768,
+        14.93626
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "shadowColor": "#1ABC9C",
+      "rotation": -1.5708,
+      "points": [
+        47.94049,
+        9.00362,
+        52.77895,
+        20.56598,
+        57.64471,
+        9.00362
+      ]
+    },
+    {
+      "type": "shape",
+      "borderWidth": 1,
+      "borderColor": "rgb(255,0,0)",
+      "shadowColor": "#1ABC9C",
+      "rotation": -1.5708,
+      "points": [
+        45.07701,
+        12.42624,
+        49.67493,
+        17.12432,
+        54.30898,
+        12.42624
+      ]
+    },
+    {
+      "type": "rect",
+      "background": {
+        "func": "attr@lightBg",
+        "value": "rgb(255,0,0)"
+      },
+      "borderColor": "#979797",
+      "shadow": {
+        "func": "attr@shadow",
+        "value": false
+      },
+      "shadowColor": {
+        "func": "attr@shadowColor",
+        "value": "rgba(255,0,0,0.7)"
+      },
+      "shadowBlur": 32,
+      "shadowOffsetX": 0,
+      "shadowOffsetY": 0,
+      "rect": [
+        11.44694,
+        10.43626,
+        30,
+        9
+      ]
+    }
+  ]
+}

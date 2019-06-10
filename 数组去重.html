@@ -12,6 +12,8 @@
 				for (var i=0;i<arr.length;i++) {
 					var item = arr[i];
 					var key = typeof(item)+item;
+//					console.log(key)
+//					console.log(hash[key])
 					if(hash[key]!==1){
 						ret.push(item)
 						hash[key]=1;
@@ -21,7 +23,7 @@
 			}
 			var arr = ['a', 'b', 'c', '1', 0, 'c', 1, '', 1, 0]
 			unique(arr);
-			console.log(unique(arr));			
+			console.log(unique(arr));
 		</script>
 	</body>
 </html>

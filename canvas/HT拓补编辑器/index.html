@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	<canvas id="canvas" width="1200" height="560"/>  
+	<!--<script src="light.json"></script>-->
+	<script src="../../animate.css/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript">
+		    var data;
+			$.ajax({ 
+//				url: "灯-红.json",
+				url: "arrow.json",
+				success: function(data){
+		        	data=data;
+			        var canvas = document.getElementById("canvas");  
+			        var context = canvas.getContext('2d');  
+			        for(var i = 0;i<data.comps.length;i++){
+			        	var x,y,w,h;
+						if(data.comps[i].type=="shape"){
+							context.beginPath();
+							
+							context.moveTo(data.comps[i].points[0],data.comps[i].points[1]);
+							for(var j = 0;j<data.comps[i].points.length;j=j+2){
+								context.lineTo(data.comps[i].points[j],data.comps[i].points[j+1]);
+							}
+							context.lineWidth=data.comps[i].borderWidth;
+							context.strokeStyle = data.comps[i].borderColor;			    
+//							context.shadowColor	= data.comps[i].shadowColor;
+							
+					//		context.translate(45.07701,12.42624);
+					//		context.translate(-1.5708,-1.5708)
+									var n = data.comps[i].rotation*Math.PI/180;
+									console.log(n)
+								context.rotate(n);
+							context.stroke();	
+						}
+			        	if(data.comps[i].type=="rect"){
+			        		x = data.comps[i].rect[0];
+			        		y = data.comps[i].rect[1];
+			        		w = data.comps[i].rect[2];
+			        		h = data.comps[i].rect[3];			        	
+				        	//背景色
+						    context.fillStyle=data.comps[i].background.value;
+					        //边框
+							context.lineWidth = data.comps[i].borderWidth; 
+							context.strokeStyle = data.comps[i].borderColor;			        
+							context.strokeRect(x,y,w,h);
+							
+							//阴影
+							context.shadowColor	= data.comps[i].shadowColor;
+							context.shadowBlur = data.comps[i].shadowBlur;
+							context.shadowOffsetX = data.comps[i].shadowOffsetX;
+							context.shadowOffsetY = data.comps[i].shadowOffsetY;
+							
+							//图形rect
+							context.fillRect(x,y,w,h);
+							context.rotate(0);
+							context.stroke();	
+			        	}
+			        }
+			        
+		      	}
+			});
+	</script>  		
+	</body>
+</html>

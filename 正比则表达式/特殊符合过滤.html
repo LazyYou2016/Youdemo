@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input onkeyup="checkVal(this)" id="addNickName" maxlength="10" type="text" placeholder="请输入安全员姓名">
+		<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+	
+	//()_-[]*&<>/
+	function checkVal(inputBox,flag){
+		if (inputBox.value!=inputBox.value.replace(/[^\(\)\（\）\_\-\——\-\[\]\*\&\<\>\/\【\】\《\》\/\u4e00-\u9fa5\d\a-zA-Z]/g,'')) {
+			inputBox.value = inputBox.value.replace(/[^\(\)\（\）\_\-\——\-\[\]\*\&\<\>\/\【\】\《\》\/\u4e00-\u9fa5\d\a-zA-Z]/g,'');
+		}
+	}
+	
+	
+	//设置输入框的可输入类型：
+	//@param flag 1.可输入汉字字母数字下划线 2.可输入汉字、数字、字母 3.可输入数字
+  	function checkVal(inputBox,flag){
+		if(flag==1)
+			inputBox.value = inputBox.value.replace(/[^\w\u4e00-\u9fa5]/g,'');
+		if(flag==2)
+			inputBox.value = inputBox.value.replace(/[^\u4e00-\u9fa5\d\a-zA-Z]/g,'');
+		if(flag==3)
+			inputBox.value = inputBox.value.replace(/[^\d]/g,'');
+	}  
+ 	function checkVal(inputBox,flag){
+		if(flag==1){
+			if(inputBox.value != inputBox.value.replace(/[^\w\u4e00-\u9fa5]/g,'')){
+				inputBox.value = inputBox.value.replace(/[^\w\u4e00-\u9fa5]/g,'');
+			}
+		}
+		else if(flag==2){
+			if(inputBox.value != inputBox.value.replace(/[^\u4e00-\u9fa5\d\a-zA-Z]/g,'')){
+				inputBox.value.replace(/[^\u4e00-\u9fa5\d\a-zA-Z]/g,'');
+			}
+		}
+		else if(flag==3){
+			if(inputBox.value != inputBox.value.replace(/[^\d]/g,'')){
+				inputBox.value = inputBox.value.replace(/[^\d]/g,'');
+			}
+		}		
+	} 
+</script>
+	</body>
+</html>

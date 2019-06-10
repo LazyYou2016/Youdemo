@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Vue 测试实例 - 菜鸟教程(runoob.com)</title>
+  <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+</head>
+
+<body>
+  <form id="upload-form" action="http://220.249.21.130:50232/warehouse/workLog/saveWorkLog" method="post" enctype="multipart/form-data" >
+    　　　<input type="file" id="upload" name="upload" /> <br />
+    <input type="text" name="aabbcc" value="2222"></input>
+    　　　<input type="submit" value="Upload" />
+    </form>
+  <script type="text/javascript">
+    var arr = [{
+      key: '01',
+      value: '乐乐'
+   }, {
+      key: '02',
+      value: '博博'
+   }, {
+      key: '01',
+      value: '淘淘'
+   },{
+      key: '04',
+      value: '哈哈'
+   },{
+      key: '01',
+      value: '乐乐'
+   }];
+
+
+   //  方法1：利用对象访问属性的方法，判断对象中是否存在key
+   var result = [];
+   var obj = {};
+   for(var i =0; i<arr.length; i++){
+     console.log(!obj[arr[i].key],i)
+      if(!obj[arr[i].key]){
+         result.push(arr[i]);
+         obj[arr[i].key] = true;
+//       console.log(obj,i)
+      }
+   }
+// console.log(result); // [{key: "01", value: "乐乐"},{key: "02", value: "博博"},{key: "03", value: "淘淘"},{key: "04", value: "哈哈"}]
+  </script>
+</body>
+
+</html>

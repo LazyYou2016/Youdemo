@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+    <meta name="ProgId" content="FrontPage.Editor.Document">
+    <title>MxDraw控件</title>
+</head>
+
+<body topmargin="0" leftmargin="0">
+<p align="center">
+    <object classid="clsid:74A777F8-7A8F-4e7c-AF47-7074828086E2" id="MxDrawXCtrl"  codeBase=http://www.mxdraw.com/MxDrawX52.CAB#version=4.0.0.1  width=100% height=90%>
+        <param name="_Version" value="65536">
+        <param name="_ExtentX" value="24262">
+        <param name="_ExtentY" value="16219">
+        <param name="_StockProps" value="0">
+        <param name="IsRuningAtIE" value="1">
+        <param name="DwgFilePath" value="">
+        <param name="ShowCommandWindow" value="1">
+        <param name="ShowToolBars" value="1">
+        <param name="ShowModelBar" value="1">
+        <param name="Iniset" value="">
+        <param name="ToolBarFiles" value="">
+        <param name="ShowMenuBar" value="1">
+        <param name="EnableUndo" value="1">
+        <param name="ShowPropertyWindow" value="1">
+        <param name="DwgFilePath" value="http://127.0.0.1/ProjectData/files/2014煤改电切改方案（云宫路换线）送调.dwg" >
+    </object>
+</p>
+<script type="text/javascript">
+    //初始化
+    function InitMxDrawX() {
+        var mxOcx = document.getElementById("MxDrawXCtrl");
+        if (mxOcx) {
+            if (!mxOcx.IsIniting())
+            {
+                clearInterval(mxtime);
+                // 控件初始化完成，需要在启动做的事，在这里做
+
+                // 启动时打开文件
+                mxOcx. OpenWebDwgFile ("http://127.0.0.1/ProjectData/files/2014煤改电切改方案（云宫路换线）送调.dwg");
+                //....
+            }
+        }
+    }
+
+    mxtime = setInterval(InitMxDrawX, 100);
+</script>
+</body>
+</html>

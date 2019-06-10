@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>2017-07-05</li>
+			<li>2017-07-06</li>
+			<li>2017-07-07</li>
+			<li>2017-07-08</li>
+			<li>2017-07-09</li>
+			<li>2017-07-10</li>
+			<li>2017-07-11</li>
+			<li>2017-07-12</li>
+			<li>2017-07-13</li>
+		</ul>
+<script>
+	        var date=date;
+	        var year=date.getFullYear(); 
+	        var month=date.getMonth()+1;
+	        var day=date.getDate();
+	        //0~9,前面补0
+	        month =(month<10 ? "0"+month:month); 
+	        day =(day<10 ? "0"+day:day); 
+	        var mydate = (year.toString()+"-"+month.toString()+"-"+day.toString());
+			console.log(mydate)
+	        //在这儿，某个日期添加高亮
+	        var dates = ['2017-07-08', '2017-07-10', '2017-07-11','2017-08-11'];  
+	
+	        for(var i = 0;i<dates.length;i++){
+	            if(dates[i] == mydate){
+	            	return['tips-red']
+	            }
+	        }
+</script>		
+	</body>
+</html>

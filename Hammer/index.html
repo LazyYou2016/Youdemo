@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	  <style type="text/css">
+	  	#target {
+	  	  width: 100px;
+	  	  height: 100px;
+	  	  background: red;
+	  	  position: absolute;
+	  	}
+	  </style>
+	  <div id="target">
+	  	31231231
+	  </div>
+	  <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	  <script src="hammer.js"></script>
+	  <script>
+	  	var rotateVal=0;//旋转值
+var scaleVal=1;//缩放值
+var catHammer = {
+    init:function (objHammer) {
+        objHammer.add(new Hammer.Pan({ threshold: 0, pointers: 0 }));
+        objHammer.add(new Hammer.Swipe()).recognizeWith(objHammer.get('pan'));
+        objHammer.add(new Hammer.Rotate({ threshold: 0 })).recognizeWith(objHammer.get('pan'));
+        objHammer.add(new Hammer.Pinch({ threshold: 0 })).recognizeWith([objHammer.get('pan'), objHammer.get('rotate')]);
+ 
+        objHammer.add(new Hammer.Tap({ event: 'doubletap', taps: 2 }));
+        objHammer.add(new Hammer.Tap());
+    },
+    //拖动
+    drag:function (objHammer,element) {
+        var START_X =0,START_Y=0;
+        objHammer.on('panstart panmove',function (event) {//拖动开始、移动
+            event.preventDefault();
+            element.style.left =START_X  +event.deltaX+ 'px';
+            element.style.top = START_Y +event.deltaY+'px';
+        });
+        objHammer.on('panend',function (event) {//拖动结束
+            event.preventDefault();
+            START_X += event.deltaX ;
+            START_Y += event.deltaY;
+            console.log("START_X==="+START_X);
+            console.log("START_Y==="+START_Y)
+        });
+    },
+    //旋转
+    setrotate:function (objHammer, element) {
+        var initAngle = 0;
+        objHammer.on('rotatestart rotatemove',function (event) {
+            event.preventDefault();
+            rotateVal = initAngle+event.rotation
+            element.style.transform = 'rotate('+rotateVal+'deg) scale('+scaleVal+')';
+        });
+        objHammer.on('rotateend',function (event) {
+            event.preventDefault();
+            initAngle = initAngle+event.rotation;
+        })
+    },
+    //缩放
+    setScale:function (objHammer, element) {
+        var initScale = 1;
+        var currentScale;
+        objHammer.on('pinchstart pinchmove ',function (event) {
+            event.preventDefault();
+            currentScale = event.scale - 1;
+            currentScale = initScale + currentScale
+            scaleVal = currentScale;
+            element.style.transform = 'rotate('+rotateVal+'deg) scale('+scaleVal+')';
+        });
+        objHammer.on('pinchend',function (event) {
+            event.preventDefault();
+            initScale = currentScale;
+        })
+    },
+    //解除事件
+    setoff:function (objHammer) {
+        // objHammer.off("");
+        console.log('off');
+        objHammer.off("panstart panmove panend pinchstart pinchmove  pinchend rotatestart rotatemove pinchend")
+    }
+}
+$(function(){
+  
+   var element = document.getElementById('target');
+   var objHammer = new Hammer(element);//创建一个实例objHammer
+  catHammer.init(objHammer);//初始化
+  catHammer.drag(objHammer,element);//拖曳
+   catHammer.setrotate(objHammer,element);//旋转
+  catHammer.setScale(objHammer,element);//缩放
+})
+
+	  </script>
+	</body>
+</html>

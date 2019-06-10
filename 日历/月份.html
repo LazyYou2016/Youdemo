@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="dist/css/buttons.css">
+</head>
+<body>
+	<style type="text/css" media="screen">
+    .auto-kal{
+        margin:0 auto;
+        display:none;
+        position: absolute;
+        z-index: 9999;
+        /*text-align: center;*/
+    }
+    .sel-box {
+        display: inline-block;
+        height: 18px;
+        line-height: 18px;
+        overflow: hidden;
+        border: 1px solid #cfcdc7;
+        margin-right: 15px;
+        position: relative;
+        padding-right: 16px;
+        text-align: center;
+        vertical-align: middle;
+        background: #eef1f8;
+    }
+    .w80 {
+        width: 80px;
+    }
+    .sear-sel .w80 {
+        width: 80px;
+    }
+    div.panel
+    {
+        height:270px;
+        width: 300px;
+        /*padding: 10px 15px;*/
+        border: 1px solid #298cce;
+        background-color: #FFFFFF;
+        display:none;
+        position: absolute;
+        top: 25px;
+        z-index: 10;
+    }
+    div.panel .quick-box-hd {
+        height: 28px;
+        line-height: 28px;
+        background: #63c7e7;
+        color: #fff;
+        padding-left: 10px;
+        font-size: 16px;
+    }
+    div.panel .quick-box-bd {
+        padding: 10px 5px;
+        overflow: hidden;
+        zoom: 1;
+    }
+    div.panel .list-inline{
+        padding: 0;
+        margin: 0;
+    }
+    /*日历样式*/
+    #yearListBox{
+        text-align: center;
+        width: 280px;
+    }
+    #yearListBox .btn{
+        border: 1px solid #0088cc;
+        margin-bottom: 3px;
+    }
+    #yearListBox .btn1{
+        border: 1px solid #0088cc;
+        background-color: #63c7e7;
+        margin-bottom: 3px;
+    }
+</style>
+
+
+<div class="col-md-12">
+    <div>
+        <label>月份：</label>
+        <button class="button button-pill button-tiny" id="flip">请选择</button>
+        <span class="yue-btn"></span>
+    </div>
+
+        <div class="panel">
+
+            <div class="quick-box-hd">选择月份
+                <a class="btn btn-default btn-xs pull-right btn-close" style="margin-top: 3px;margin-right: 3px"><span class="glyphicon glyphicon-remove"></span></a>
+            </div>
+
+            <div class="quick-box-bd">
+                <form class="form-inline">
+                    <div class="text-center" style="margin-bottom: 5px">
+                        <!--<label>年度:</label>-->
+                        <select class="form-control" id="year" onchange="yearList()">
+                            <option selected>请选择年度</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                        </select>
+                    </div>
+
+              <div id="yearListBox"></div>
+                </form>
+            </div>
+            <div class="text-center">
+                <p>
+                    <button class="button button-tiny" id="all">全选</button>
+                    <button class="button button-tiny" id="delAll1">取消</button>
+                    <button class="button button-tiny" id="antiAll">反选</button>
+                </p>
+                <button class="button button-border button-rounded button-primary button-tiny" onclick="fun()">确定</button>
+                <a class="button button-border button-rounded button-caution button-tiny btn-close">关闭</a>
+            </div>
+        </div>
+
+    <div class="text-center" style="margin-top: 5px">
+        <button class="button button-primary  button-rounded button-small">查询</button>
+        <button id="delAll" class="button button-rounded button-small">重置</button>
+    </div>
+</div>
+
+
+
+<script src="dist/js/jquery-1.8.3.min.js"></script>
+<!-- <script src="dist/js/bootstrap.min.js"></script> -->
+ <script>
+            //创建补0函数
+            function p(s) {
+                return s < 10 ? '0' + s: s;
+            }
+            function yearList() {
+
+                var year=$("#year").attr("value");
+
+                var box;
+                box="<ul class='list-inline'>";
+                for (var i=1;i<=12;i++)
+                {
+                    var i=p(i);
+                    var yearMonth=year+"-"+i;
+                    var yearMonthStr=year+i;
+                    box +=("<li><span class='blueBox btn' name='abc' onclick='yesBox("+yearMonthStr+")' value='"+i+"' id='"+yearMonthStr+"'>"+i+"月</span></li>");
+                }
+                box +=("</ul>");
+                $("#yearListBox").empty();
+                $("#yearListBox").append(box);
+            }
+
+            function yesBox(id){
+                $("#"+id).toggleClass("btn1");
+            }
+
+            function fun() {
+                var year=$("#year").attr("value");
+                var month=$(".btn1").attr("value");
+                var date;
+                var dateBox;
+                var check_val=[];
+                if(month){
+                    $(".btn1").each(function(){
+                        month=$(this).attr("value");
+                        date=year+"-"+month;
+                        var dateBox = "<button class='btn btn-default empty-qing btn-xs' style='margin:0 3px'>" + date+"</button>";
+                        check_val.push(dateBox);
+                    });
+                    $(".yue-btn").append(check_val);
+
+                }else{
+                }
+                $(".blueBox").removeClass("btn1");
+            }
+
+            function yearListBox(){
+                var box="<ul class='list-inline'><li><input class='s' type='checkbox' name='abc' value='2015-01' id='in1'/><label for='in1'>2015-01</label></li></ul>";
+                $("#yearListBox").append(box);
+            }
+
+                $(document).ready(function() {
+                    yearList();
+
+                    //全选
+                    $("#all").click(function(){
+                        $(".blueBox").addClass("btn1");
+                    });
+                     //取消
+                    $("#delAll1").click(function(){
+                        $(".blueBox").removeClass("btn1");
+                    });
+                    //反选
+                    $("#antiAll").click(function() {
+                        $(".blueBox").toggleClass("btn1");
+                    });
+                    //重置
+                    $("#delAll").click(function(){
+                        $(".blueBox").removeClass("btn1");
+                        $(".empty-qing").remove();
+                    });
+
+                });
+        </script>
+<script>
+                /*日期box*/
+                function teston(){
+                    check_vals = [];
+                    $(".k-selected").each(function(){
+                        var date = $(this).attr("data-date");
+                        var value = $(".date-get").attr("value");
+//                        alert(value);
+                        var input = "<button class='btn btn-default empty-qing btn-xs date-get' value='"+date+"' style='margin:0 3px'>" + date+"</button>";
+                        check_vals.push(input);
+                    });
+                    $(".btn-date").empty("");
+                    $(".btn-date").append(check_vals);
+                }
+
+                //滑动
+                $(document).ready(function(){
+                    //月份滑动
+                    $("#flip").click(function(){
+                        $(".panel").slideToggle("slow");
+                    });
+                });
+
+                //关闭
+                $(document).ready(function(){
+                    $(".btn-close").click(function(){
+                    $(this).closest('.panel').slideUp();
+//                        $("#panel").slideUp();
+                    });
+                })
+            </script>
+
+
+
+</body>
+</html>

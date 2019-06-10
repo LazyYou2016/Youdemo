@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="dist/css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="dist/css/bootstrap-datetimepicker.min.css"/>
+</head>
+
+<body>
+<div class="container">
+    <form action="" class="form-horizontal"  role="form">
+        <fieldset>
+            <legend>Test</legend>
+            <div class="form-group">
+                <label class="col-md-2 control-label">开始</label>
+                <div id="starttime" class="input-group date col-md-5">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                </div>
+				<input type="hidden" id="dtp_input1" value="" /><br/>
+            </div>
+		<div class="form-group">
+                <label for="dtp_input1" class="col-md-2 control-label">结束</label>
+                <div id="endtime" class="input-group date  col-md-5" data-link-field="dtp_input1">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                </div>
+                <input type="hidden" id="dtp_input1" value="" /><br/>
+            </div>
+        </fieldset>
+    </form>
+</div>
+
+<script src="dist/js/jquery.min.js"></script>
+<script src="dist/js/bootstrap.min.js"></script>
+<!--bs日期选择S-->
+<script src="dist/js/bootstrap-datetimepicker.min.js"></script>
+<script src="dist/js/bootstrap-datetimepicker.zh-CN.js"></script>
+<script>
+    $('#starttime').datetimepicker({
+        format: "yyyy",
+        language: "zh-CN",
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: 2,
+        minView: 2,
+        forceParse: 0
+    }).on('changeDate',function(e){
+        console.log(e.date)
+       
+        // var starttime=$("#starttime input").val();
+         console.log(starttime)
+        $("#endtime").datetimepicker('setStartDate',e.date);
+        // $("#starttime").datetimepicker('hide')
+      
+
+    });
+
+    $('#endtime').datetimepicker({
+        format: "yyyy",
+        language: "zh-CN",
+        weekStart: 1,
+        todayBtn:  1,
+        autoclose: 1,
+        todayHighlight: 1,
+        startView: ,
+        minView: 0,
+        forceParse: 0
+      
+    }).on('changeDate',function(e){
+        // var starttime=$("#starttime input").val();
+        // var endtime=$("#endtime input").val();
+        $("#starttime").datetimepicker('setEndDate',e.date);
+        // $("#starttime").datetimepicker('hide');
+    });
+</script>
+
+</body>
+</html>

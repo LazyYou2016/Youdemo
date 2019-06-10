@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>验证码的倒计时</title>
+	<style type="text/css">
+		*{ margin: 0; padding: 0}
+		#btn{
+				background: #fff; 
+				border-radius: 20%; 
+				text-align: center; 
+				font-size: 18px; 
+				font-weight: bold; 
+				color: #fff; 
+				margin: 100px auto; 
+				height: 50px; 
+				width: 150px;
+				color: #000;
+			}
+		#btn.set {
+			background: #666;
+			color: #fff;
+		}
+	</style>
+</head>
+<body>
+<input type="button" id="btn" value="免费获取验证码" />
+<script type="text/javascript">
+var wait=12;
+function time(o) {
+	if (wait == 0) {
+		o.removeAttribute("disabled");
+		o.className = "";
+		o.value="免费获取验证码";
+		wait = 12;
+	}
+	else {
+		if(wait<10){
+			o.value="重新发送(0"+wait+")";
+			wait--;
+			setTimeout(function() {
+				time(o)
+			},1000)
+		}
+		else{
+			o.setAttribute("disabled", true);
+			o.className = "set";
+			o.value="重新发送(" + wait + ")";
+			wait--;
+			setTimeout(function() {
+				time(o)
+			},1000)
+		}
+	}
+}
+document.getElementById("btn").onclick=function(){
+	time(this);
+}  
+</script>
+</body>
+</html>

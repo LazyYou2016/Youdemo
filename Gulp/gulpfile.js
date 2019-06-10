@@ -21,14 +21,15 @@ var docs_html = "docs/*.html",
 	docs_img = "docs/dist/imgs/**",
 	docs_font = "docs/dist/fonts/**",
 	docs_less = "docs/dist/css/*.less",
-	dist_del = "dist",
-	dist_html = "./",
-	dist_html_edit = "./*.html",
-	dist_css = "dist/css",
-	dist_js = "dist/js",
-	dist_img = "dist/imgs",
-	dist_font = "dist/fonts"
-	buildBasePath = 'dist/';//构建输出的目录
+	dist_all = "online/*",
+	dist_del = "online/dist",
+	dist_html = "online/",
+	dist_html_edit = "online/*.html",
+	dist_css = "online/dist/css",
+	dist_js = "online/dist/js",
+	dist_img = "online/dist/imgs",
+	dist_font = "online/dist/fonts"
+	buildBasePath = 'online/dist/';//构建输出的目录
 //分离文件
 gulp.task('fileinclude', function() {
     gulp.src(docs_html)
@@ -38,6 +39,12 @@ gulp.task('fileinclude', function() {
         }))
     .pipe(gulp.dest(dist_html));
 //  .pipe(notify({ message: 'head and foot task ok' }));	//提示
+});
+//favicon.ico
+gulp.task('ico', function() {
+	return gulp.src('docs/favicon.ico') //路径
+	    .pipe(gulp.dest('online/'))	//输出文件夹
+//	    .pipe(notify({ message: 'css task ok' }));	//提示
 });
 // 合并、压缩、重命名css
 gulp.task('minicss', function() {
@@ -149,27 +156,27 @@ gulp.task('auto', function () {
 });
 //上线任务——不带md5
 gulp.task('online', function (cb) {
-	runSequence('del-all','fileinclude','minicss','css-min','minijs','js-min','img','fonts','minihtml',cb)
+	runSequence('del-all','fileinclude','minicss','css-min','minijs','js-min','img','fonts','minihtml','ico',cb)
 });
 //不带md5（上线任务——带md5前提下）
 gulp.task('notmd5', function (cb) {
-	runSequence('del-all','fileinclude','css-min','js-min','fonts',cb)
+	runSequence('del-all','fileinclude','css-min','js-min','fonts','ico',cb)
 });
 
 //本地测试任务——不带md5
 gulp.task('test', function (cb) {
-	runSequence('del-all','fileinclude','css','js','img','fonts','css-min','js-min',cb)
+	runSequence('del-all','fileinclude','css','js','img','fonts','css-min','js-min','ico',cb)
 });
 
 gulp.task('del-all', function () {
-	return del([dist_del,dist_html_edit]);
+	return del(dist_all);
 });
 gulp.task('del-dist', function () {
 	return del([dist_del]);
 });
 //上线任务——带md5
 gulp.task('online-md5', function(cb) {  
-    runSequence('notmd5','minifyjsmd5','minifycssmd5','minifyimgmd5','rev','revimg',cb);
+    runSequence('notmd5','img','minifyjsmd5','minifycssmd5','rev','revimg',cb);
 });
 gulp.task('online-md5-rev', function(cb) {  
     runSequence('rev','revimg',cb);

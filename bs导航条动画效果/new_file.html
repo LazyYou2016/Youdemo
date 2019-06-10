@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="renderer" content="webkit">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>科雷特智能管理平台</title>
+	<!--<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />-->
+	<link rel="stylesheet" href="bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/iconfont.css"/>
+	<link rel="stylesheet" href="css/dataTables.bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/bootstrap-datetimepicker.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	<!--[if lt IE 9]>
+	<script src="dist/js/html5shiv.min.js"></script>
+	<script src="dist/js/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	<style>
+		td .btn{
+			margin: 0 0 0 -1px!important;
+		}
+		td .btn-group>.btn:first-child:not(:last-child):not(.dropdown-toggle){
+		    border-top-right-radius: 0!important;
+			border-bottom-right-radius: 0!important;
+		}
+		td .btn.btn-default[disabled],td .btn.btn-default:hover[disabled] {
+		    background-color: #a7a7a7;
+		    border-color: #a7a7a7;
+		    color: #fff;
+		    cursor: not-allowed;			
+		}
+	</style>
+<div class="main">
+	<div class="row card">
+		<div class="title-line">
+			<span>查看日志</span>
+		</div>
+		<div class="table-default">
+			<table id="sample-table" class="table table-striped table-hover table-bordered">
+				<thead>
+				<tr>
+					<th>工地项目</th>
+					<th>今日上报数</th>
+					<th>累计上报数</th>
+					<th>操作</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>岳各庄办公室</td>
+					<td>23</td>
+					<td>3</td>
+					<td>
+						<a href="javascript:;" class="btn btn-xs btn-primary" onclick="open_logdet()"><i class="iconfont icon-chakan icon-lg"></i>  查看</a>
+					</td>
+				</tr>
+				<tr>
+					<td>宋庄研发中心</td>
+					<td>2</td>
+					<td>30</td>
+					<td>
+						<a href="javascript:;" class="btn btn-xs btn-primary" onclick="open_logdet()"><i class="iconfont icon-chakan icon-lg"></i>  查看</a>
+					</td>
+					<td>
+						<div class="btn-group" id="id1">
+						  <button type="button" class="btn btn-default" disabled>未审核</button>
+						  <button type="button" class="btn btn-danger">审核不通过</button>
+						  <button type="button" class="btn btn-success" disabled="">审核通过</button>
+						</div>
+					</td>
+				</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script>
+$(".btn-group .btn").click(function(){
+	$(this).attr("disabled",true).siblings().attr("disabled",false)
+})
+
+</script>
+</body>
+</html>

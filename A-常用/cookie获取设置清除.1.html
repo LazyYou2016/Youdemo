@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+            //获取cookie
+            function getCookie( key ) {
+                var val = document.cookie.match(new RegExp("\\b"+key+"=([^;]*)(;|$)"));
+                return val?val[1]:"";
+            }
+
+            //设置cookie
+            function setCookie(mJson , time) {
+                var data = new Date( new Date().getTime() + time*24*60*60*1000 ).toGMTString();
+                for (var key in mJson) document.cookie = key+"="+mJson[key]+"; expires="+data;
+            }
+
+            //清除cookie
+            function removeCookie( key ) {
+                var json = {};json[key] = "";
+                setCookie(json,-1);
+            }
+			
+		</script>		
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>撞球游戏</title>
+	</head>
+	<body>
+	  
+	  <script src="scripts/phaser.min.js"></script>
+	  <script>
+	    var gameSet = {
+	      width:1920,
+	      height:1080
+	    }
+	    
+	    var blueBall;
+	    var yellowBall;
+	    var redBall;
+	    
+  	  var game = new Phaser.Game(
+  	    gameSet.width,
+  	    gameSet.height,
+  	    {
+    	    preload: preload,
+    	    create: create,
+    	    update: update
+    	  }
+  	  )
+  	  
+  	  function Ball () {
+  	    this.sprite = game.add.sprite(x,y,style);
+  	    game.physics.enable(this.sprite);
+  	    //开启世界边界碰撞
+  	    this.sprite.body.callideWorldBounds = true;
+  	    return this.spritel;
+  	  }
+  	  
+	  	function preload () {
+	  	  game.load.image("yellow","assets/yellow.png");
+	  	  game.load.image("blue","assets/blue.png");
+	  	  game.load.image("red","assets/red.png");
+	  	}
+	  	function create () {
+	  	  game.physics.startSystem(Phaser.Physics.ARCADE);
+	  	  game.input.mouse.capture = true;
+	  	  game.stage.backgroudColor = "#273D4A"
+	  	  //游戏的主角
+	  	  yellowBall = new Ball(0,0,"yellow");
+	  	  blueBall = new Ball(50,0,"blue");
+	  	  //电脑玩家
+	  	  redBall = new Ball(80,0,"red");
+	  	  blueBall.body.immoveable = true;
+	  	  redBall.body.immoveable = true;
+	  	}
+	    function colldeHandler (e) {
+//	      yellowBall.body.immoveable = false;
+//        todos的速度
+          yellowBall.body.velocity.copFrom();
+	    }
+	  	
+	  	function update () {
+	  		game.physics.arcade.collide([blueBall,redBall],yellowBall,colldeHandler)
+	  	}
+	  </script>
+	</body>
+</html>

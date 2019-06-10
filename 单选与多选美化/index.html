@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+/*单选  多选S*/
+.radio-btn input[type="radio"],
+.check-box input[type="checkbox"] {
+  visibility: hidden;
+}
+.radio-box-container label,
+.check-box-container label{
+	font-weight: normal;
+}
+.radio-box-container label{
+	display: inline-block;
+	margin-right: 10px;
+}
+.check-box-container span {
+	vertical-align: super;
+	margin-right: 10px;
+}
+ .check-box {
+ 	width: 22px;
+ 	height: 22px;
+ 	cursor: pointer;
+ 	display: inline-block;
+ 	margin: 2px 7px 0 0;
+ 	position: relative;
+ 	overflow: hidden;
+ 	box-shadow: 0 0 1px #ccc;
+ 	-webkit-border-radius: 3px;
+ 	-moz-border-radius: 3px;
+ 	border-radius: 3px;
+ 	background: rgb(255, 255, 255);
+ 	background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+ 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+ 	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+ 	background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+ 	background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+ 	background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+ 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+ 	border: 1px solid #ccc;
+ }
+ 
+ .check-box i {
+ 	background: url(check_mark.png) no-repeat center center;
+ 	position: absolute;
+ 	left: 3px;
+ 	bottom: -15px;
+ 	width: 16px;
+ 	height: 16px;
+ 	opacity: .5;
+ 	-webkit-transition: all 300ms ease-in-out;
+ 	-moz-transition: all 300ms ease-in-out;
+ 	-ms-transition: all 300ms ease-in-out;
+ 	-o-transition: all 300ms ease-in-out;
+ 	transition: all 300ms ease-in-out;
+ 	-webkit-transform: rotateZ(-180deg);
+ 	-moz-transform: rotateZ(-180deg);
+ 	-ms-transform: rotateZ(-180deg);
+ 	-o-transform: rotateZ(-180deg);
+ 	transform: rotateZ(-180deg);
+ }
+ 
+ .checkedBox {
+ 	-webkit-box-shadow: inset 0 0 5px 1px #ccc;
+ 	-moz-box-shadow: inset 0 0 5px 1px #ccc;
+ 	-ms-box-shadow: inset 0 0 5px 1px #ccc;
+ 	-o-box-shadow: inset 0 0 5px 1px #ccc;
+ 	box-shadow: inset 0 0 5px 1px #ccc;
+ 	border-bottom-color: #fff;
+ }
+ 
+ .checkedBox i {
+ 	bottom: 2px;
+ 	-webkit-transform: rotateZ(0deg);
+ 	-moz-transform: rotateZ(0deg);
+ 	-ms-transform: rotateZ(0deg);
+ 	-o-transform: rotateZ(0deg);
+ 	transform: rotateZ(0deg);
+ }
+ 
+ .radio-btn {
+ 	width: 20px;
+ 	height: 20px;
+ 	display: inline-block;
+ 	float: left;
+ 	margin: 3px 7px 0 0;
+ 	cursor: pointer;
+ 	position: relative;
+ 	-webkit-border-radius: 100%;
+ 	-moz-border-radius: 100%;
+ 	border-radius: 100%;
+ 	border: 1px solid #ccc;
+ 	box-shadow: 0 0 1px #ccc;
+ 	background: rgb(255, 255, 255);
+ 	background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+ 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 1)), color-stop(47%, rgba(246, 246, 246, 1)), color-stop(100%, rgba(237, 237, 237, 1)));
+ 	background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+ 	background: -o-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+ 	background: -ms-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+ 	background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%);
+ 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed', GradientType=0);
+ }
+ 
+ .checkedRadio {
+ 	-webkit-box-shadow: inset 0 0 5px 1px #ccc;
+ 	-moz-box-shadow: inset 0 0 5px 1px #ccc;
+ 	-ms-box-shadow: inset 0 0 5px 1px #ccc;
+ 	-o-box-shadow: inset 0 0 5px 1px #ccc;
+ 	box-shadow: inset 0 0 5px 1px #ccc;
+ }
+ 
+ .radio-btn i {
+ 	border: 1px solid #E1E2E4;
+ 	width: 10px;
+ 	height: 10px;
+ 	position: absolute;
+ 	left: 4px;
+ 	top: 4px;
+ 	-webkit-border-radius: 100%;
+ 	-moz-border-radius: 100%;
+ 	border-radius: 100%;
+ }
+ 
+ .checkedRadio i {
+ 	background-color: #898A8C;
+ }
+/*单选  多选E*/			
+		</style>
+	</head>
+	<body>
+						<div class="radio-box">
+				            <div class="radio-box-container">
+				            	<label><div class="radio-btn"><i><input type="radio" name="1"/></i></div>4143</label>
+				            	<label><div class="radio-btn"><i><input type="radio" name="1"></i></div>4143</label>
+				            </div>
+				            <div class="check-box-container">
+				            	<div class="check-box"><i><input type="checkbox" name="check-box"></i></div><span>Rock music</span>
+				            	<div class="check-box"><i><input type="checkbox" name="check-box"></i></div><span>Rock music</span>
+				            </div>
+						</div>
+						<script src="js/jquery.js"></script>
+						<script>
+	/*单选  多选S*/
+//	$('input[name="radio-btn"]').wrap('<div class="radio-btn"><i></i></div>');
+	$("body").delegate(".radio-btn","click",function(){
+	//$(".radio-btn").on('click', function () {
+	    var _this = $(this),
+	        block = _this.parent().parent();
+	    block.find('input').prop('checked', false);
+	    block.find(".radio-btn").removeClass('checkedRadio');
+	    _this.addClass('checkedRadio');
+	    _this.find('input').prop('checked', true);
+	});
+//	$('input[name="check-box"]').wrap('<div class="check-box"><i></i></div>');
+	$.fn.toggleCheckbox = function () {
+	    this.attr('checked', !this.attr('checked'));
+	}
+	$("body").delegate(".check-box","click",function(){
+//	$('.check-box').on('click', function () {
+	    $(this).find(':checkbox').toggleCheckbox();
+	    $(this).toggleClass('checkedBox');
+	});
+	
+//	$("body").delegate(".check-box-all","click",function(){
+//		console.log($(this).parent(".check-box-container").find('.checkbox'))
+//		if ($(this).find(":checkbox").attr("checked")) {
+//			$(this).parents(".check-box-container").find(".check-box").removeClass("checkedBox")
+//			$(this).parents(".check-box-container").find(':checkbox').attr("checked",false);
+//			return false
+//		} else if ($(this).find(":checkbox").attr("checked")){
+//			$(this).parents(".check-box-container").find(".check-box").addClass("checkedBox")
+//			$(this).parents(".check-box-container").find(':checkbox').attr("checked",true);					
+//		}
+//	})	
+	
+	/*单选  多选E*/			
+						</script>
+	</body>
+</html>

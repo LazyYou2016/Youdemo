@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="dataTables.bootstrap.min.css"/>
+	</head>
+	<body>
+	   <table id="table" class="table text-center table-bordered">
+      <thead>
+        <tr>
+          <th>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" value="" />
+                <span class="tw-checkbox-inner" id="checkAll"></span>
+              </label>
+            </div>
+          </th>
+          <th>姓名</th>
+          <th>位置</th>
+          <th>办公</th>
+          <th>人数</th>
+          <th>日期</th>
+          <th>薪水</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+    </table>
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="jquery.dataTables.min.js"></script>
+	  <script>
+      var language = {
+        sProcessing: '处理中...',
+        sLengthMenu: '显示 _MENU_ 项结果',
+        sZeroRecords: '没有匹配结果',
+        sInfo: '显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项',
+        sInfoEmpty: '显示第 0 至 0 项结果，共 0 项',
+        sInfoFiltered: '(由 _MAX_ 项结果过滤)',
+        sInfoPostFix: '',
+        sSearch: '搜索:',
+        sUrl: '',
+        sEmptyTable: '未搜索到数据',
+        sLoadingRecords: '载入中...',
+        sInfoThousands: ',',
+        oPaginate: {
+          sFirst: '首页',
+          sPrevious: '上页',
+          sNext: '下页',
+          sLast: '末页',
+        },
+        oAria: {
+          sSortAscending: ': 以升序排列此列',
+          sSortDescending: ': 以降序排列此列',
+        },
+      };	    
+	  	$('#table').dataTable({
+        ajax: {
+          url: 'https://www.easy-mock.com/mock/5bf22c3d7a08cf70839ea4e1/example/objects.json',
+          data: {time: '2018-12-17'},
+          type: 'get',
+          //请求后台路径
+          error: function (jqXHR, textStatus, errorMsg) {
+          }
+        },
+        columns: [{
+            data: 'checkval',
+          },
+          {
+            data: 'name',
+          },
+          {
+            data: 'position',
+          },
+          {
+            data: 'office',
+          },
+          {
+            data: 'extn',
+          },
+          {
+            data: 'start_date',
+          },
+          {
+            data: 'salary',
+          },
+          {
+            data: 'name',
+          }
+        ],
+        language: language,
+        initComplete: function () {
+          $(".dataTables_filter").before("<button>已插入成功</button>")
+          alert('插入成功')
+        }
+      })
+	  </script>
+	</body>
+</html>

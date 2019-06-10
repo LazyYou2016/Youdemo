@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <style>
+            *{ margin:0; padding:0; font-family:"Microsoft yahei",serif;}
+            li{ list-style-type: none;}
+             
+        </style>
+    </head>
+    <body>
+        <div id="box"></div>
+        <script>
+            /*
+            原型
+                构造函数才有原型概念
+                构造函数.prototype
+
+            总结：
+                不用的 属性/方法 写在构造函数里面
+                相同的 属性/方法 写在原型里面
+             */
+            function Person(name , age) {
+                this.name = name;
+                this.age = age;
+            }
+            Person.prototype.showName = function () {
+                alert( this.name );
+            };
+
+            var p1 = new Person("阿飞" , 18);
+            var p2 = new Person("aoliann" , 28);
+            var p3 = new Person("只为一个结果" , 22);
+            var p4 = new Person("一难哦" , 25);
+
+            alert( p1.showName === p2.showName );
+
+//            p4.showName();
+//            p3.showName();
+        </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
