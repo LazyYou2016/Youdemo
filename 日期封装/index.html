@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+</head>
+<body>
+
+<script type = "text/javascript">
+//昨天
+function getDate(i) {
+  if (i == undefined) {
+    i = 0
+  }
+  return new Date(new Date().getTime() - 24 * 60 * 60 * 1000 * i);
+}
+
+Date.prototype.format = function (format) {
+  var args = {
+    "M+": this.getMonth() + 1,
+    "d+": this.getDate(),
+    "h+": this.getHours(),
+    "m+": this.getMinutes(),
+    "s+": this.getSeconds(),
+    "q+": Math.floor((this.getMonth() + 3) / 3), //quarter
+    "S": this.getMilliseconds()
+  };
+  if (/(y+)/.test(format)) format = format.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+  for (var i in args) {
+    var n = args[i];
+    if (new RegExp("(" + i + ")").test(format)) format = format.replace(RegExp.$1, RegExp.$1.length == 1 ? n : ("00" + n).substr(("" + n).length));
+  }
+  return format;
+};
+
+
+function getMonthWeek(a, b, c) {
+      /**
+  * a = d = 当前日期
+  * b = 6 - w = 当前周的还有几天过完(不算今天)
+  * a + b 的和在除以7 就是当天是当前月份的第几周
+  */
+  var date = new Date(a, parseInt(b) - 1, c),
+      w = date.getDay(),
+      d = date.getDate();
+  if(w==0){
+      w=7;
+  }
+  var config={
+      getMonth:date.getMonth()+1,
+      getYear:date.getFullYear(),
+      getWeek:Math.ceil((d + 6 - w) / 7),
+  }
+  return config;
+};
+var getDateHtml=getMonthWeek(getDate().format('yyyy'),getDate().format('MM'), getDate().format('dd'));
+console.log("今天是 " + getDateHtml.getYear + " 年的第 "+ getDateHtml.getMonth + " 月的第 " + getDateHtml.getWeek + " 周");
+console.log(getDateHtml);
+
+var div=document.createElement("div");
+document.body.appendChild(div);
+setInterval(function(){
+  var html = ''
+  html += '获取当前时间的原型:' + getDate() + '<br/>'
+  html += '获取当前日期 减i天:' + getDate(1).format('yyyy-MM-dd') + '<br/>'
+  html += '获取当前日期:' + getDate().format('yyyy-MM-dd') + '<br/>'
+  html += '获取当前时间:' + getDate().format('hh:mm:ss') + '<br/>'
+  html += '获取当前具体:' + getDate().format('hh:mm:ss:qq S')
+  html +=  getDateHtml.getYear + " 年的第 "+ getDateHtml.getMonth + " 月的第 " + getDateHtml.getWeek + " 周"
+  document.getElementsByTagName('div')[0].innerHTML = html
+},1000)
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style>
+  .cube {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    /* Other transform properties here */
+  }
+</style>
+</head>
+<body>
+  <select>
+    <option value ="volvo">Volvo</option>
+    <option value ="saab">Saab</option>
+    <option value="opel">Opel</option>
+    <option value="audi">Audi</option>
+  </select>
+
+<script type = "text/javascript">
+const table = []
+for (var i = 0; i <= 2; i++) {
+  table[i] = function(){
+    return i*2
+  }
+}
+console.log(table[1]());
+
+</script>
+</body>
+</html>

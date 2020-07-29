@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+<title>Insert title here</title> 
+<style>
+img {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-select: none; 
+  user-select: none;  
+}
+</style>
+</head> 
+<body> 
+    <p>I <strong>insist</strong> that you <strong>try</strong> selecting the <strong>strong words</strong>.</p>
+    <button>Select strong words</button>
+  <p>
+    <span ><img src="./imgs/beijing.png" id="selectable"></span>
+  </p>
+  <input id="input" type="text">
+  <button id="button1" onclick="fz(this)">选择文字后点击</button>
+  <button id="button2">点击后将选中指定的节点</button>
+
+  <div id="editable" contenteditable="true" >
+      <p>this is an editable div area</p>
+      <p>paste the image into here.</p>
+  </div>  
+  <script src="./js/jquery-1.10.2.min.js"></script>
+  <SCRIPT LANGUAGE="JScript"> 
+  let button = document.querySelector('button')
+ function fz(o){
+    let selection = window.getSelection();
+    let strongs = document.getElementById('selectable')
+    console.log(strongs);
+    if (selection.rangeCount > 0) {
+      selection.removeAllRanges();
+    }
+    // for (let i = 0; i < strongs.length; i++) {
+      let range = document.createRange();
+      range.selectNode(strongs);
+      selection.addRange(range);
+      document.execCommand("Copy");
+    // }
+}
+function paste_img(e) {
+  var e = e||window.event
+
+    // alert('support clipboardData.items(chrome ...)');
+    console.log(e.clipboardData.items);
+    if ( e.clipboardData.items ) {
+    // google-chrome 
+        ele = e.clipboardData.items
+        for (var i = 0; i < ele.length; ++i) {
+          console.log(ele[i].getAsFile())
+            if ( ele[i].kind == 'file' && ele[i].type.indexOf('image/') !== -1 ) {
+                var blob = ele[i].getAsFile();
+                window.URL = window.URL || window.webkitURL;
+                var blobUrl = window.URL.createObjectURL(blob);
+                console.log(blobUrl);
+                var new_img= document.createElement('img');
+                new_img.setAttribute('src', blobUrl);
+                var new_img_intro = document.createElement('p');
+                new_img_intro.innerHTML = 'the pasted img url(open it in new tab): <br /><a target="_blank" href="' + blobUrl + '">' + blobUrl + '</a>';
+                document.getElementById('editable').appendChild(new_img);
+                document.getElementById('editable').appendChild(new_img_intro);
+            }
+
+        }
+    } else {
+        alert('non-chrome');
+    }
+}
+document.onpaste=function(){paste_img(event)};
+  </SCRIPT>   
+</BODY> 
+</body> 
+</html>

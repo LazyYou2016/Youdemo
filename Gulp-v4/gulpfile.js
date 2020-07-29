@@ -31,7 +31,7 @@ var docs_html = "docs/*.html",
 	dist_font = "online/dist/fonts"
 	buildBasePath = 'online/dist/';//构建输出的目录
 //分离文件
-gulp.task('fileinclude', function() {
+gulp.task('fileinclude', function(done) {
     gulp.src(docs_html)
         .pipe(fileinclude({
 	        prefix: '@@',
@@ -39,70 +39,81 @@ gulp.task('fileinclude', function() {
         }))
     .pipe(gulp.dest(dist_html));
 //  .pipe(notify({ message: 'head and foot task ok' }));	//提示
+    done();
 });
 //favicon.ico
-gulp.task('ico', function() {
+gulp.task('ico', function(done) {
 	return gulp.src('docs/favicon.ico') //路径
 	    .pipe(gulp.dest('online/'))	//输出文件夹
 //	    .pipe(notify({ message: 'css task ok' }));	//提示
+  done();
 });
 // 合并、压缩、重命名css
-gulp.task('minicss', function() {
+gulp.task('minicss', function(done) {
 	return gulp.src([docs_css, docs_cssmin_not]) //路径
 //		.pipe(concat('style.css'))	//合并css
 //	    .pipe(rename({ suffix: '.min' })) //重命名
 	    .pipe(minicss())	//压缩
 	    .pipe(gulp.dest(dist_css))	//输出文件夹
 //	    .pipe(notify({ message: 'mincss task ok' }));	//提示
+  done();
 });
 //默认css
-gulp.task('css', function() {
+gulp.task('css', function(done) {
 	return gulp.src(docs_css) //路径
 	    .pipe(gulp.dest(dist_css))	//输出文件夹
 //	    .pipe(notify({ message: 'css task ok' }));	//提示
+  done();
 });
-gulp.task('css-min', function() {
+gulp.task('css-min', function(done) {
 	return gulp.src(docs_cssmin) //路径
 	    .pipe(gulp.dest(dist_css))	//输出文件夹
 //	    .pipe(notify({ message: 'css task ok' }));	//提示
+  done();
 });
 // 合并、压缩js文件
-gulp.task('minijs', function() {
+gulp.task('minijs', function(done) {
 	return gulp.src([docs_js, docs_jsmin_not])
 //		.pipe(concat('common.js'))	//合并js
 //	    .pipe(rename({ suffix: '.min' }))
 	    .pipe(minijs())
 	    .pipe(gulp.dest(dist_js))
 //	    .pipe(notify({ message: 'minijs task ok' }));
+  done();
 });
-gulp.task('js', function() {
+gulp.task('js', function(done) {
 	return gulp.src(docs_js)
 	    .pipe(gulp.dest(dist_js))
 //	    .pipe(notify({ message: 'js task ok' }));
+  done();
 });
-gulp.task('js-min', function() {
+gulp.task('js-min', function(done) {
 	return gulp.src(docs_jsmin)
-	    .pipe(gulp.dest(dist_js))
+      .pipe(gulp.dest(dist_js))
+  done();
 });
-gulp.task('img', function() {
+gulp.task('img', function(done) {
 	return gulp.src(docs_img)
 	    .pipe(gulp.dest(dist_img))
 //	    .pipe(notify({ message: 'imgs task ok' }));
+  done();
 });
-gulp.task('fonts', function() {
+gulp.task('fonts', function(done) {
 	return gulp.src(docs_font)
-	    .pipe(gulp.dest(dist_font))
+      .pipe(gulp.dest(dist_font))
+  done();
 });
-gulp.task('less', function () {
+gulp.task('less', function (done) {
     gulp.src(docs_less)
         .pipe(less())
         .pipe(minicss()) //兼容IE7及以下需设置compatibility属性 .pipe(cssmin({compatibility: 'ie7'}))
         .pipe(gulp.dest(dist_css));
+  done();
 });
 
 
 //cssmd5，压缩后并用md5进行命名，下面使用revCollector进行路径替换
-gulp.task('minifycssmd5', function (){
+gulp.task('minifycssmd5', function (done){
     gulp.src([docs_css, docs_cssmin_not])
         //.pipe(concat('style.css'))//压缩后的css
         .pipe(minicss())//压缩css到一行
@@ -110,17 +121,19 @@ gulp.task('minifycssmd5', function (){
         .pipe(gulp.dest(dist_css))//输出到css目录
         .pipe(rev.manifest('rev-css-manifest.json'))//生成一个rev-manifest.json
         .pipe(gulp.dest('rev'));//将 rev-manifest.json 保存到 rev 目录内
+  done();
 });
 //imgmd5，压缩后并用md5进行命名，下面使用revCollector进行路径替换
-gulp.task('minifyimgmd5', function (){
+gulp.task('minifyimgmd5', function (done){
     gulp.src([docs_img])
         .pipe(rev())//文件名加MD5后缀
         .pipe(gulp.dest(dist_img))//输出到css目录
         .pipe(rev.manifest('rev-img-manifest.json'))//生成一个rev-manifest.json
         .pipe(gulp.dest('rev'));//将 rev-manifest.json 保存到 rev 目录内
+        done();
 });
 //jsmd5，压缩后并用md5进行命名，下面使用revCollector进行路径替换
-gulp.task('minifyjsmd5', function() {
+gulp.task('minifyjsmd5', function(done) {
     gulp.src([docs_js, docs_jsmin_not])
         //.pipe(concat('common.min.js'))//压缩后的js
         .pipe(minijs())//压缩js到一行
@@ -128,61 +141,58 @@ gulp.task('minifyjsmd5', function() {
         .pipe(gulp.dest(dist_js))//输出到js目录
         .pipe(rev.manifest('rev-js-manifest.json'))////生成一个rev-manifest.json
         .pipe(gulp.dest('rev'));//将 rev-manifest.json 保存到 rev 目录内
+        done();
 });
 
-gulp.task('rev', function() {
+gulp.task('rev', function(done) {
     //html，针对js,css,img
     gulp.src(['rev/*.json', dist_html_edit])
         .pipe(revCollector({replaceReved:true }))
         .pipe(gulp.dest(dist_html));
+        done();
 }); 
 
-gulp.task('revimg', function() {
+gulp.task('revimg', function(done) {
     //css，主要是针对img替换
     gulp.src(['rev/rev-img-manifest.json',buildBasePath+'css/*.css'])
         .pipe(revCollector({replaceReved:true }))
         .pipe(gulp.dest(dist_css));
+        done();
 });
 
 
 // 在命令行使用 gulp auto 启动此任务
-gulp.task('auto', function () {
+gulp.task('auto', function (done) {
 // 监听文件修改，当文件被修改则执行 css 任务
  	gulp.watch('fileinclude');
 	gulp.watch('minicss');
 	gulp.watch('css')
 	gulp.watch('minjs');
-	gulp.watch('js')
-});
-//上线任务——不带md5
-gulp.task('online', function (cb) {
-	runSequence('del-all','fileinclude','minicss','css-min','minijs','js-min','img','fonts','minihtml','ico',cb)
-});
-//不带md5（上线任务——带md5前提下）
-gulp.task('notmd5', function (cb) {
-	runSequence('del-all','fileinclude','css-min','js-min','fonts','ico',cb)
+  gulp.watch('js')
+  done();
 });
 
-//本地测试任务——不带md5
-gulp.task('test', function (cb) {
-	runSequence('del-all','fileinclude','css','js','img','fonts','css-min','js-min','ico',cb)
+ gulp.task('del-all', function (done) {
+  return del(dist_all);
+  done()
 });
-
-gulp.task('del-all', function () {
-	return del(dist_all);
-});
-gulp.task('del-dist', function () {
-	return del([dist_del]);
+gulp.task('del-dist', function (done) {
+  return del([dist_del]);
+  done();
 });
 //上线任务——带md5
 gulp.task('online-md5', function(cb) {  
-    runSequence('notmd5','img','minifyjsmd5','minifycssmd5','rev','revimg',cb);
+  gulp.series('notmd5','img','minifyjsmd5','minifycssmd5','rev','revimg');
+    // runSequence('notmd5','img','minifyjsmd5','minifycssmd5','rev','revimg',cb);
+    // done();
 });
 gulp.task('online-md5-rev', function(cb) {  
-    runSequence('rev','revimg',cb);
+  gulp.series('rev','revimg')
+    // runSequence('rev','revimg',cb);
+    // done();
 });
 
-gulp.task('minihtml', function () {
+gulp.task('minihtml', function (done) {
     var options = {
         removeComments: true,//清除HTML注释
 		//collapseInlineTagWhitespace: true,//不要在显示器之间留下空格
@@ -199,12 +209,14 @@ gulp.task('minihtml', function () {
     gulp.src(dist_html_edit)
         .pipe(htmlmin(options))
         .pipe(gulp.dest(dist_html));
+        done();
 });
 
 
 // 默认任务
-gulp.task('default', function(){
-	gulp.start('help');
+gulp.task('default', function(done){
+  gulp.start('help');
+  done();
 });
 
 
@@ -217,9 +229,28 @@ gulp.task('default', function(){
 //	gulp.watch(docs_js, ['minijs']);
 //	gulp.watch(docs_js, ['js']);
 //});
+//上线任务——不带md5
+gulp.task('online',
+  gulp.series(
+    'del-all','fileinclude','minicss','css-min','minijs','js-min','img','fonts','minihtml','ico'
+  )
+  // runSequence('del-all','fileinclude','minicss','css-min','minijs','js-min','img','fonts','minihtml','ico',cb)
+);
+//不带md5（上线任务——带md5前提下）
+gulp.task('notmd5', function (cb) {
+  gulp.series('del-all','fileinclude','css-min','js-min','fonts','ico')
+  // runSequence('del-all','fileinclude','css-min','js-min','fonts','ico',cb)
+  // done();
+});
 
+//本地测试任务——不带md5
+gulp.task('test', function (cb) {
+  gulp.series('del-all','fileinclude','css','js','img','fonts','css-min','js-min','ico')
+  // runSequence('del-all','fileinclude','css','js','img','fonts','css-min','js-min','ico',cb)
+  // done();
+});
 //帮助
-gulp.task('help',function () {
+gulp.task('help',function (done) {
 	console.log('	gulp				打开gulp参数说明');
 	console.log('	gulp auto			执行自动任务（监听修改）');
 	console.log('	gulp online			执行上线任务（合并html、压缩css js min版)');
@@ -233,7 +264,8 @@ gulp.task('help',function () {
 	console.log('	gulp css			css默认');
 	console.log('	gulp minijs			js压缩');
 	console.log('	gulp js				js默认');
-	console.log('	gulp help			gulp参数说明');
+  console.log('	gulp help			gulp参数说明');
+  done();
 });
 
 

@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>自定义focusColor插件</title>
+        <script type="text/javascript" src="https://www.imooc.com/data/jquery-1.8.2.min.js"></script>
+        <style>
+        </style>
+    </head>
+    
+    <body>
+      <div id="dom1"></div>
+        
+        
+        <script type = "text/javascript">
+          //  var swiper = {
+          //    dom: '#dom',
+          //    load: function(n){
+          //       $(this.dom).html('1')
+          //    }
+          //  }
+          //   swiper.load({
+          //     dom: '#dom1'
+          //   })
+        (function () {
+          var swiper = function(options){
+            if(!(this instanceof swiper)){return new swiper(options)};
+            this.options = this.extend({
+                "x": "1",
+                "y": "2",
+                "z": "3",
+                dom: 'dom'
+            }, options);  
+            this.init();          
+          }
+          swiper.prototype = {
+            init: function () {
+                this.event();
+            },
+            // 参数合并方法体
+            extend: function (obj, obj2) {
+                for (var key in obj2) {
+                    obj[key] = obj2[key];
+                //    确保参数唯一
+                }
+                return obj
+            },
+            event:function () {
+                var _this = this;
+
+                //方法调用前的回调
+                _this.options.open&&_this.options.open();
+
+                //此处执行方法体，使用 this.options.x\this.options.y\this.options.z进行访问
+
+                //打印参数
+                console.log(document.getElementById(this.options.dom))
+                // document.getElementById(this.options.dom).innerHTML='1'
+                // 方法结束的回调
+                _this.options.close&&_this.options.close();
+            }
+          }
+        //暴露对象
+        window.swiper = swiper;        
+      }());    
+
+      swiper({
+        dom: 'dom1',
+        close: function(){
+          // console.log(this.dom);
+          
+          $('#'+this.dom).html('1')
+        }
+      })
+        </script>
+    </body>
+</html>
